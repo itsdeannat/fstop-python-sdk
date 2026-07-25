@@ -21,7 +21,7 @@ class Bookings(BaseSDK):
     ) -> List[models.Booking]:
         r"""List all bookings
 
-        Retrieve a list of all bookings. Optionally filter by project_id.
+        Retrieve a list of all bookings. Optionally, filter by project_id.
 
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -110,7 +110,7 @@ class Bookings(BaseSDK):
     ) -> List[models.Booking]:
         r"""List all bookings
 
-        Retrieve a list of all bookings. Optionally filter by project_id.
+        Retrieve a list of all bookings. Optionally, filter by project_id.
 
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method

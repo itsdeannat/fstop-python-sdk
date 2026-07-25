@@ -13,7 +13,7 @@
 
 ## list_bookings
 
-Retrieve a list of all bookings. Optionally filter by project_id.
+Retrieve a list of all bookings. Optionally, filter by project_id.
 
 ### Example Usage
 

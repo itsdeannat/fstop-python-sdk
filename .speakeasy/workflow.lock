@@ -2,8 +2,8 @@ speakeasyVersion: 1.791.0
 sources:
     Fstop:
         sourceNamespace: fstop
-        sourceRevisionDigest: sha256:80e919cd2cd63cd1a67ae161ff0e09a089f0195c0cc56eb7358c640960acfac0
-        sourceBlobDigest: sha256:487fb6e07f9529cb7048be887c9e50846a251241dc0d3419698f6a927ba36dde
+        sourceRevisionDigest: sha256:72fde9bbea780901729b5e388accd639bf82f065e52e2ee35f8c4b4f85b3548d
+        sourceBlobDigest: sha256:f860ba102bda69d6b7033de8b708749c3f662e3b06da183d7ceec77c21f3a66d
         tags:
             - latest
             - 1.0.0
@@ -11,10 +11,10 @@ targets:
     fstop:
         source: Fstop
         sourceNamespace: fstop
-        sourceRevisionDigest: sha256:80e919cd2cd63cd1a67ae161ff0e09a089f0195c0cc56eb7358c640960acfac0
-        sourceBlobDigest: sha256:487fb6e07f9529cb7048be887c9e50846a251241dc0d3419698f6a927ba36dde
+        sourceRevisionDigest: sha256:72fde9bbea780901729b5e388accd639bf82f065e52e2ee35f8c4b4f85b3548d
+        sourceBlobDigest: sha256:f860ba102bda69d6b7033de8b708749c3f662e3b06da183d7ceec77c21f3a66d
         codeSamplesNamespace: fstop-python-code-samples
-        codeSamplesRevisionDigest: sha256:45a9e884ef55ee32a917926a0a0fa562a8f8f830859d0f3bef37b8a95ae27907
+        codeSamplesRevisionDigest: sha256:f4acf80ce4c782f5f1bff428838a99f084486e266a91df142eac2609154c24db
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest

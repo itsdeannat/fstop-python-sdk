@@ -1,16 +1,16 @@
 lockVersion: 2.0.0
 id: b687547f-fec7-4913-85fd-aadcbdde3e3e
 management:
-  docChecksum: 162a7f8546cecb7cb9735f2c0a538142
+  docChecksum: e8645648842c0a8a3ede2c92b8210333
   docVersion: 1.0.0
   speakeasyVersion: 1.791.0
   generationVersion: 2.924.0
-  releaseVersion: 0.0.1
-  configChecksum: 9c2a7e07c605fbda617dbc5ccfe39094
+  releaseVersion: 0.0.2
+  configChecksum: ac37a832ec4a501a009de6eda2812665
 persistentEdits:
-  generation_id: ff9ba804-fd12-4be1-9450-10a2cde3c05a
-  pristine_commit_hash: 9ee96dd543b740c7f02391ee57a7602caa17abb6
-  pristine_tree_hash: a977fcdc23d9c02f310da79fb1fa01ac22007ddf
+  generation_id: 616ef4fa-ebf9-4c66-a5ca-e16514e3e33a
+  pristine_commit_hash: b14c740933dd04c7390e538a3497229624f4d29d
+  pristine_tree_hash: 0959cfef4c50a7646bd0d8debf1d6629be200700
 features:
   python:
     additionalDependencies: 1.1.0
@@ -234,8 +234,8 @@ trackedFiles:
     pristine_git_object: 69dd549ec7f5f885101d08dd502e25748183aebf
   docs/sdks/bookings/README.md:
     id: e45a5ceed45e
-    last_write_checksum: sha1:28aa093f3e6e3f0cda18e437c8e0d7973ef9f42e
-    pristine_git_object: dda0b26c68654a1731f3e5205c333041e760854b
+    last_write_checksum: sha1:4625d66496a751f3bad70d9c378f51b203647472
+    pristine_git_object: 181b8200262adba77ee42c96a9d31bc60f206fc6
   docs/sdks/clients/README.md:
     id: ba883fd0c1cf
     last_write_checksum: sha1:4b28d8ca3e87b9586984372a836398faace25e60
@@ -262,8 +262,8 @@ trackedFiles:
     pristine_git_object: c00200cfd072e9febac5d6be783da1925d11dac0
   pyproject.toml:
     id: 5d07e7d72637
-    last_write_checksum: sha1:63d9b5a30a91d9aa11a5417080e7c1392c96b109
-    pristine_git_object: 9c839761c862181495893d8d42b4d816ef64faac
+    last_write_checksum: sha1:abd1ab214e3eb426661938a4e69b97ad310a412f
+    pristine_git_object: 1577ad79e40100ea5f6bd654faa9926b78bd94ef
   scripts/publish.sh:
     id: fe273b08f514
     last_write_checksum: sha1:adc9b741c12ad1591ab4870eabe20f0d0a86cd1a
@@ -286,16 +286,16 @@ trackedFiles:
     pristine_git_object: f5caddbdd4194f713d85fcb5b61f5d009060bf95
   src/fstop/_version.py:
     id: da1b63a68197
-    last_write_checksum: sha1:13af1e38772ee6216fc36222482347377b3a373e
-    pristine_git_object: 85beaf5a4db8be6bfb3f39b7aca175a6cb821e65
+    last_write_checksum: sha1:ed5d0bcd827023e6ea612d2dd468006371a9172e
+    pristine_git_object: 7de3caeff4baddc4642fe26ac8f04d0f13f305d9
   src/fstop/basesdk.py:
     id: 2db7f058957d
     last_write_checksum: sha1:bd2aab994353b217b642e94a2db57e630e022105
     pristine_git_object: 267fcd9e988bd717aae9da1384a36eea9cfa3bf1
   src/fstop/bookings.py:
     id: 972c7cb1ce04
-    last_write_checksum: sha1:c74937d64689f26075848b22b7696fc0f5df8c0a
-    pristine_git_object: 3ef66e1ab31dbe60f39d428ac90eb77888e66d39
+    last_write_checksum: sha1:56a554278c733060444618ffe20faadb2dd1b092
+    pristine_git_object: 8ee6048af2c4e64fd77e97cce4ac428894d9a289
   src/fstop/clients.py:
     id: dd2f15460b7c
     last_write_checksum: sha1:49ccf041e6dc7e334fbc856a0a22551c89cf0f96
