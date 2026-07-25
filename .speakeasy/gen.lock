@@ -1,0 +1,1214 @@
+lockVersion: 2.0.0
+id: b687547f-fec7-4913-85fd-aadcbdde3e3e
+management:
+  docChecksum: 162a7f8546cecb7cb9735f2c0a538142
+  docVersion: 1.0.0
+  speakeasyVersion: 1.791.0
+  generationVersion: 2.924.0
+  releaseVersion: 0.0.1
+  configChecksum: 9c2a7e07c605fbda617dbc5ccfe39094
+persistentEdits:
+  generation_id: ff9ba804-fd12-4be1-9450-10a2cde3c05a
+  pristine_commit_hash: 9ee96dd543b740c7f02391ee57a7602caa17abb6
+  pristine_tree_hash: a977fcdc23d9c02f310da79fb1fa01ac22007ddf
+features:
+  python:
+    additionalDependencies: 1.1.0
+    constsAndDefaults: 1.0.7
+    core: 6.0.34
+    defaultEnabledRetries: 0.2.0
+    devContainers: 3.0.0
+    enumUnions: 0.1.1
+    envVarSecurityUsage: 0.3.3
+    flatRequests: 1.0.1
+    flattening: 3.1.1
+    globalSecurity: 3.0.7
+    globalSecurityCallbacks: 1.0.0
+    globalSecurityFlattening: 1.0.0
+    globalServerURLs: 3.2.1
+    inputOutputModels: 3.0.0
+    methodArguments: 1.1.1
+    responseFormat: 1.1.0
+    retries: 3.0.7
+    sdkHooks: 1.3.0
+trackedFiles:
+  .devcontainer/README.md:
+    id: b170c0f184ac
+    last_write_checksum: sha1:3c63dfd4dcea8df0d4add09e975a6887e6da4aab
+    pristine_git_object: 396929ab2e57cf09dd25ec83bd4496f733b95701
+  .devcontainer/devcontainer.json:
+    id: b34062a34eb1
+    last_write_checksum: sha1:94309e8c8eab5ab063986bf625f513a59825e947
+    pristine_git_object: 75edff51e68d2934c825764459ba3071044ce2ab
+  .devcontainer/setup.sh:
+    id: 5f1dfbfeb8eb
+    last_write_checksum: sha1:234faaf21a8a7028346590d1eb3fac0429f4991c
+    pristine_git_object: b39c28c38cf46135982ab5576b4723ea777bf510
+  .gitattributes:
+    id: 24139dae6567
+    last_write_checksum: sha1:53134de3ada576f37c22276901e1b5b6d85cd2da
+    pristine_git_object: 4d75d59008e4d8609876d263419a9dc56c8d6f3a
+  .vscode/settings.json:
+    id: 89aa447020cd
+    last_write_checksum: sha1:f84632c81029fcdda8c3b0c768d02b836fc80526
+    pristine_git_object: 8d79f0abb72526f1fb34a4c03e5bba612c6ba2ae
+  USAGE.md:
+    id: 3aed33ce6e6f
+    last_write_checksum: sha1:dcb338e82d0afc37435ccd7b03366f8ce9e25b84
+    pristine_git_object: 699bb7140dfa4d3d8d09d35d2ce73081aa39be23
+  docs/errors/badrequesterror.md:
+    id: 75b54f860141
+    last_write_checksum: sha1:8d0a2dcbe7ffec999e9f9d57ba554e460a45f267
+    pristine_git_object: 9ad3b93414db63e891f2fd1c70fc8f96aa712f97
+  docs/errors/notfounderror.md:
+    id: 2bd9ff5d704d
+    last_write_checksum: sha1:b07fe4a02837b97acec75c85c081caf6cf82c454
+    pristine_git_object: 4a608b79d5a2eb261a7cd94bdc969830a07117f3
+  docs/errors/unauthorizederror.md:
+    id: c54ee3b4e5ad
+    last_write_checksum: sha1:51fd905a2ad07c274f9ed357da06dda74aa0ce07
+    pristine_git_object: 4d9f40d80a1ba7c4355666abae422972f22ccdda
+  docs/models/booking.md:
+    id: 9aa3049a9461
+    last_write_checksum: sha1:7258c8139c37755eef8a3e763c4496e267fcd811
+    pristine_git_object: 1ccf58b94252f943acac98efaaf55e6a9c2404a1
+  docs/models/bookingclient.md:
+    id: 991a6b1f5ee5
+    last_write_checksum: sha1:395a522b806fee32f7e91985064dd2c96cc584d9
+    pristine_git_object: 414fe5a5504525440de20527f570a1b105546880
+  docs/models/bookingcreate.md:
+    id: a206f8e7cf15
+    last_write_checksum: sha1:7c95687511893fbbae06aa3b1a94895845956254
+    pristine_git_object: 1fdc0f1752d537d86710263827393b5d2070900e
+  docs/models/bookingproject.md:
+    id: 4b3f4810c6d9
+    last_write_checksum: sha1:e5eb5955b49e67566c40371a3e07169b349f7308
+    pristine_git_object: 86061710e0d36f418205c11b5c384e4697cfc1d5
+  docs/models/client.md:
+    id: 67a7a58f44b4
+    last_write_checksum: sha1:8ac0b269af9bc4bc9d1203867f0823a91b402e51
+    pristine_git_object: 7619a16861e4897e791531fdb41e695af2dfb144
+  docs/models/clientcreate.md:
+    id: 7fe701987267
+    last_write_checksum: sha1:5ee8466d6d9f85905edac8c04ce747b8853be46c
+    pristine_git_object: df72fc6b0a31ab141bbb8a2797888c30b06e96e0
+  docs/models/deletebookingrequest.md:
+    id: b7b396f4828d
+    last_write_checksum: sha1:bac3ed392a0ead5be556b06f6e7b40c488a5ba71
+    pristine_git_object: 568cddf1c63bbdab7dce1677d7043324960de577
+  docs/models/deleteclientrequest.md:
+    id: 4afe7e5bd225
+    last_write_checksum: sha1:229401baafdc21372e03d4b5cadb574fd8ea9951
+    pristine_git_object: 46cdfa909ea6e89212c126a76d0b43201b1dd81f
+  docs/models/deletegalleryrequest.md:
+    id: fc8a7385f646
+    last_write_checksum: sha1:0e18555697fa965f6dac3f9cfbb3d6b8089c6ae6
+    pristine_git_object: 3eea49641b51299beb7ad85ec2433b02516bffe9
+  docs/models/deleteprojectrequest.md:
+    id: 34b3d46b94fd
+    last_write_checksum: sha1:e048ba27008c36e61336d4273ba26233e7a4e45c
+    pristine_git_object: c5e07d209a558dba2fe0e9b7f0e1cb92d4ae2c3b
+  docs/models/gallery.md:
+    id: fa1a5016317a
+    last_write_checksum: sha1:089260663d9041614b33f377709f01fe080dea76
+    pristine_git_object: 4650a9b38aa707b01d67eed2d1325c8f23152ff7
+  docs/models/gallerybooking.md:
+    id: b85c240e912c
+    last_write_checksum: sha1:5c3368425e990a8bec0a0389256e3db6fed37591
+    pristine_git_object: 4ae4de0655702c18225fc3c5ac020b34f0cd125e
+  docs/models/galleryclient.md:
+    id: da49e19f2ce5
+    last_write_checksum: sha1:0d58d1e1193ae01b9ad45d36f86130c1c3171400
+    pristine_git_object: de08dad8feb3452fc2613466cba6c47e62815088
+  docs/models/gallerycreate.md:
+    id: 22722dc44d6c
+    last_write_checksum: sha1:f6b996298b6be47f9418b6f0329fc7365cbdf36e
+    pristine_git_object: dc80d5c9f1448b95f4ab0a1d11926529f72daf77
+  docs/models/galleryproject.md:
+    id: d33a7ac9cbf3
+    last_write_checksum: sha1:961cd4a2ba1ee34960e82ee206a5afacf7041973
+    pristine_git_object: 02f084b7d021adf1874ebc8be43268bddb815220
+  docs/models/obtaintokenresponse.md:
+    id: 9429c94e27c6
+    last_write_checksum: sha1:3ecf7477a744ffa5aa60ff968e2d4914f49e2efd
+    pristine_git_object: 6dadf178b0a6715914c765f177d1d83d3662f973
+  docs/models/partiallyupdatebookingrequest.md:
+    id: fae1cb44fc01
+    last_write_checksum: sha1:4db8c0e9aa59727d7af83acfaaf30cb5bcbe044f
+    pristine_git_object: 052e033f6a9d876e5953dff31877cdb86c350f33
+  docs/models/partiallyupdateclientrequest.md:
+    id: b67181003be1
+    last_write_checksum: sha1:0222e01c030390e3d5687857c4c1c464e737b53c
+    pristine_git_object: eb02348ad2fbb696eb6dc36e983e945b7bfd1822
+  docs/models/partiallyupdategalleryrequest.md:
+    id: 8197680d045e
+    last_write_checksum: sha1:82a145cdaaedab6fa6756c83fdb77bcbe8200e99
+    pristine_git_object: 124a631d1da2b0c2adfaf9db140569831b7447f6
+  docs/models/partiallyupdateprojectrequest.md:
+    id: fae7e61618b8
+    last_write_checksum: sha1:6092d43f47ce3452ce07045ca1d0bc0f34b70fba
+    pristine_git_object: 479f2ac686a7b0b60f937f666eef8d0b9a7472ee
+  docs/models/patchedbookingcreate.md:
+    id: 70b6fc153d4f
+    last_write_checksum: sha1:2289e547f76a9b2c8a49174c31d8370b4ff0c3ad
+    pristine_git_object: ce3c082c15241f6c37b099ab2dcae6e910e944f8
+  docs/models/patchedclientcreate.md:
+    id: babb826aa5ef
+    last_write_checksum: sha1:e389e76c8b134f330a313e168435212819f086ad
+    pristine_git_object: 2612457fec842216dbeed52573ebd2e88bdf0b00
+  docs/models/patchedgallerycreate.md:
+    id: b033a9bf6a22
+    last_write_checksum: sha1:8387c58b71c47e1de8e78c01924d6f865fd1248c
+    pristine_git_object: 13022c5dd84bcba76cd5609eed066c99bbcf9b18
+  docs/models/patchedprojectcreate.md:
+    id: cbdc30c27ebe
+    last_write_checksum: sha1:cec6c1d1786f83b574e9fc8ad1181a712f44a765
+    pristine_git_object: 9ca895c6176155b095dc0b37481ad85406043484
+  docs/models/project.md:
+    id: 90bdd121a0a9
+    last_write_checksum: sha1:dff1d9c7a87491fd1507d18664cf28c2fdee6d10
+    pristine_git_object: bac6bd2cb6247d23402f746803df7663af5098cf
+  docs/models/projectclient.md:
+    id: e3638df53ad6
+    last_write_checksum: sha1:4c280c47d1d1ad84f19e31057dfe80aa380b12e6
+    pristine_git_object: a758cb337c14630515cabeda5187368f3b438294
+  docs/models/projectcreate.md:
+    id: 34c18464b144
+    last_write_checksum: sha1:bd355cd230a7bf608a9c9ca10577f1360b79e039
+    pristine_git_object: a20be31779821bc973f19a59de890edfec1a1cd5
+  docs/models/projecttypeenum.md:
+    id: a2e7c85ac6c7
+    last_write_checksum: sha1:b94516502e330ba75993d1f931950d4afdb37242
+    pristine_git_object: 190f3400c2debeb1a36c003ac78b67886c58fb37
+  docs/models/refreshtokenresponse.md:
+    id: c6b7a6b2b353
+    last_write_checksum: sha1:e026fb3c76d46e9218d23e4886a5879b88dee42e
+    pristine_git_object: c6f883f2b3c796367574fa46b63020c96c524396
+  docs/models/retrievebookingrequest.md:
+    id: de697a17cd34
+    last_write_checksum: sha1:d55e9af4f57b883b399948fcdd6af7cb9a7a2c94
+    pristine_git_object: c33f5136a881cd6ba08618725e4851fa8040243e
+  docs/models/retrieveclientrequest.md:
+    id: f13380c3e63b
+    last_write_checksum: sha1:9cc99065eebe9e3350a30a29f091d24a18645f8f
+    pristine_git_object: d4383d2b389b3f624865093adea833a363c080d4
+  docs/models/retrievegalleryrequest.md:
+    id: fc7ed513f535
+    last_write_checksum: sha1:1aa14090037990e7936dadee16ec2274bbd46aad
+    pristine_git_object: ac45f8583242ebb7ff1aa26d3dd1edd8117ed99e
+  docs/models/retrieveprojectrequest.md:
+    id: 8b141622bbdc
+    last_write_checksum: sha1:baef203e024e7a9c6643fc4f74c035f0b131c736
+    pristine_git_object: 6ca6887225fccd91db8b214c690ecb3f9b8fa52c
+  docs/models/security.md:
+    id: 452e4d4eb67a
+    last_write_checksum: sha1:7283a43d427a46398ed99624663dabaee7adef4b
+    pristine_git_object: ece3bc5fe005e22a83587b2eb68d5bc87f07df25
+  docs/models/tokenobtainpair.md:
+    id: 42f9b3eb89dc
+    last_write_checksum: sha1:35bc6f0456dde2ab81d65d383faf856bff621d9e
+    pristine_git_object: b8e52dbfb437ee1d2646745ec634fd1bdb7ab9e0
+  docs/models/tokenrefresh.md:
+    id: a4df197e8956
+    last_write_checksum: sha1:93f1df15f197ad80d9099e794053e4b521a2e1f5
+    pristine_git_object: 9ac77efe9313303e30f706eee570f755ca1752db
+  docs/models/updatebookingrequest.md:
+    id: b176e3c31866
+    last_write_checksum: sha1:cd92954dc08dba76b393df30215de68739db9bb6
+    pristine_git_object: ad4dd8e49ba2479790fdae9cc8d478f15bee2533
+  docs/models/updateclientrequest.md:
+    id: daad9f9d2c0e
+    last_write_checksum: sha1:3ea2b6576532d30a268e793b8b3e178c6ea570f1
+    pristine_git_object: fc9e237544f2be1c719f9b903088e74983c2a7ca
+  docs/models/updategalleryrequest.md:
+    id: 2430364b4f55
+    last_write_checksum: sha1:5b41872efe87d3dce638108e590d2c002771fcbb
+    pristine_git_object: 8529c0e6169f8f50ecba671f65fa6971b6058ffa
+  docs/models/updateprojectrequest.md:
+    id: 7aabbc2a33da
+    last_write_checksum: sha1:39db3841c0f3a6d5e882bf914f94ecd9be1456ce
+    pristine_git_object: 211eeb1c10897b23ffc1797822327969841e78b4
+  docs/models/utils/retryconfig.md:
+    id: 4343ac43161c
+    last_write_checksum: sha1:562c0f21e308ad10c27f85f75704c15592c6929d
+    pristine_git_object: 69dd549ec7f5f885101d08dd502e25748183aebf
+  docs/sdks/bookings/README.md:
+    id: e45a5ceed45e
+    last_write_checksum: sha1:28aa093f3e6e3f0cda18e437c8e0d7973ef9f42e
+    pristine_git_object: dda0b26c68654a1731f3e5205c333041e760854b
+  docs/sdks/clients/README.md:
+    id: ba883fd0c1cf
+    last_write_checksum: sha1:4b28d8ca3e87b9586984372a836398faace25e60
+    pristine_git_object: cf8e55b8028e7aa620c5a33c8bcd77e3b681aec6
+  docs/sdks/galleries/README.md:
+    id: 5459c0245c90
+    last_write_checksum: sha1:0b816d993ebdda82a879325879ac07953bdc0912
+    pristine_git_object: 406bb3bcbf8d4a3d9780d42e548af0c99d0bd006
+  docs/sdks/projects/README.md:
+    id: 1c5f71754e17
+    last_write_checksum: sha1:5067c1b8ab470af5b28caa443bc282a728b7e19d
+    pristine_git_object: 49e33b72bd4852a3c2eb7bffcd417a4147cf852d
+  docs/sdks/token/README.md:
+    id: 627ae416a06f
+    last_write_checksum: sha1:a780275af693ef281cb4ee977ecb2cdfe23d4461
+    pristine_git_object: a2041b27ae385031fc05c8c9530987ad4b30989e
+  py.typed:
+    id: 258c3ed47ae4
+    last_write_checksum: sha1:8efc425ffe830805ffcc0f3055871bdcdc542c60
+    pristine_git_object: 3e38f1a929f7d6b1d6de74604aa87e3d8f010544
+  pylintrc:
+    id: 7ce8b9f946e6
+    last_write_checksum: sha1:cb40e5fd2885dcf20f7c572a590b2656efe282a0
+    pristine_git_object: c00200cfd072e9febac5d6be783da1925d11dac0
+  pyproject.toml:
+    id: 5d07e7d72637
+    last_write_checksum: sha1:63d9b5a30a91d9aa11a5417080e7c1392c96b109
+    pristine_git_object: 9c839761c862181495893d8d42b4d816ef64faac
+  scripts/publish.sh:
+    id: fe273b08f514
+    last_write_checksum: sha1:adc9b741c12ad1591ab4870eabe20f0d0a86cd1a
+    pristine_git_object: ef28dc10c60d7d6a4bac0c6a1e9caba36b471861
+  src/fstop/__init__.py:
+    id: 86826831ded6
+    last_write_checksum: sha1:da077c0bdfcef64a4a5aea91a17292f72fa2b088
+    pristine_git_object: 833c68cd526fe34aab2b7e7c45f974f7f4b9e120
+  src/fstop/_hooks/__init__.py:
+    id: 7c205cff4f91
+    last_write_checksum: sha1:45a380490e968d8d95994dd97554ac60eeb6ae60
+    pristine_git_object: e763be4b171bbcf9c16caeaf381f8c92ce8d8e6e
+  src/fstop/_hooks/sdkhooks.py:
+    id: 50169ff59784
+    last_write_checksum: sha1:aa30d79687fae80b10c5e89fe185fcad227fef63
+    pristine_git_object: 50ca26a95ce16e218834b5130b9c064e0ea512c9
+  src/fstop/_hooks/types.py:
+    id: 7ac401e33471
+    last_write_checksum: sha1:1ff4285c8d296f6426532347d5093ab136d8d25c
+    pristine_git_object: f5caddbdd4194f713d85fcb5b61f5d009060bf95
+  src/fstop/_version.py:
+    id: da1b63a68197
+    last_write_checksum: sha1:13af1e38772ee6216fc36222482347377b3a373e
+    pristine_git_object: 85beaf5a4db8be6bfb3f39b7aca175a6cb821e65
+  src/fstop/basesdk.py:
+    id: 2db7f058957d
+    last_write_checksum: sha1:bd2aab994353b217b642e94a2db57e630e022105
+    pristine_git_object: 267fcd9e988bd717aae9da1384a36eea9cfa3bf1
+  src/fstop/bookings.py:
+    id: 972c7cb1ce04
+    last_write_checksum: sha1:c74937d64689f26075848b22b7696fc0f5df8c0a
+    pristine_git_object: 3ef66e1ab31dbe60f39d428ac90eb77888e66d39
+  src/fstop/clients.py:
+    id: dd2f15460b7c
+    last_write_checksum: sha1:49ccf041e6dc7e334fbc856a0a22551c89cf0f96
+    pristine_git_object: 4ad32c74ebb3cf6bfccbe769b6492aa6f7034adf
+  src/fstop/errors/__init__.py:
+    id: e9624734caba
+    last_write_checksum: sha1:ae7875d2bd25e3881c8d95b35f5c5943e4a531ef
+    pristine_git_object: 739632119ecee7389af45b8e20133fcf699b5743
+  src/fstop/errors/badrequest_error.py:
+    id: 9a19f58f9241
+    last_write_checksum: sha1:b7249ddca853f56d054665d81b7ee758a297d37b
+    pristine_git_object: 790d2714db659b0c0410e5078efbd8c837262265
+  src/fstop/errors/fstopdefaulterror.py:
+    id: f672524e0b55
+    last_write_checksum: sha1:6ed3dd0aadd068622e41bd096e0c9fb65eae1fb4
+    pristine_git_object: 3de5d2fecc37b4995eecde629c3cef4f21e40c8c
+  src/fstop/errors/fstoperror.py:
+    id: 3469cfc977d0
+    last_write_checksum: sha1:776ca0c3a2c51f4cd206b91001f9c5859d8f63ee
+    pristine_git_object: ce728131948f0b946109eee88d865dec39fb7ede
+  src/fstop/errors/no_response_error.py:
+    id: eaf228a62287
+    last_write_checksum: sha1:7f326424a7d5ae1bcd5c89a0d6b3dbda9138942f
+    pristine_git_object: 1deab64bc43e1e65bf3c412d326a4032ce342366
+  src/fstop/errors/notfound_error.py:
+    id: 20a05afd739f
+    last_write_checksum: sha1:a87573ae4ffbaa67000f0ea06bfc7c3a6e983cb9
+    pristine_git_object: 7ddde8d69bb0267879e2bcbd6d126ef5adf742c4
+  src/fstop/errors/responsevalidationerror.py:
+    id: 8baf6919577a
+    last_write_checksum: sha1:3dd1450be5d7712f14e33090886b5e95d71f3647
+    pristine_git_object: 1c6c92f229b6b2c5704ae3a653d06513d16cc819
+  src/fstop/errors/unauthorized_error.py:
+    id: a64e4d8dc3dc
+    last_write_checksum: sha1:01b56e0289669643a1f647856b7874b8e7b8f03c
+    pristine_git_object: 6f84b55f455e5d5e9934693f33a75917bcc7a098
+  src/fstop/galleries.py:
+    id: fa8dfde81a01
+    last_write_checksum: sha1:b69a458f950f6dcc3a8a349df2d468402d9d38e9
+    pristine_git_object: c760c71f7ca62f37f22a1a741dd0af1aee82b7df
+  src/fstop/httpclient.py:
+    id: 3f5f7a8d3dc5
+    last_write_checksum: sha1:5e55338d6ee9f01ab648cad4380201a8a3da7dd7
+    pristine_git_object: 89560b566073785535643e694c112bedbd3db13d
+  src/fstop/models/__init__.py:
+    id: 09c58fa99167
+    last_write_checksum: sha1:85dd5990fe68961535192746f48afb9e74b47e47
+    pristine_git_object: c339de247bd7318fd668d04404a85dfc1495ef95
+  src/fstop/models/booking.py:
+    id: af5ce8e47784
+    last_write_checksum: sha1:e59bb68cb3e96b1c5139f93c2bd0f848f3a7101c
+    pristine_git_object: 7e11003a9a2f01cca0d738266412ade61825019a
+  src/fstop/models/bookingcreate.py:
+    id: 0d2e23e8d7e7
+    last_write_checksum: sha1:e9dba78df4101c7bf14cc3d6432f7d3720eef5d3
+    pristine_git_object: c7fc209c8668c6a7f6ac4784653d52433b285ed1
+  src/fstop/models/client.py:
+    id: afc8e6707595
+    last_write_checksum: sha1:f96270729f84eca1126a4c9b9f9bce4d7f7386e3
+    pristine_git_object: d3080a09517f991ae26f81e2dfb6281e0cd9ff34
+  src/fstop/models/clientcreate.py:
+    id: b1e7b8f7c388
+    last_write_checksum: sha1:dafe68e6292283fc4f4be7841b6041f0038175dc
+    pristine_git_object: 40c8b9b2cffb17c155ca21926faca8f24d5ff0d8
+  src/fstop/models/delete_bookingop.py:
+    id: 8876beaa79a8
+    last_write_checksum: sha1:fad40283ed761dcb230061431bed9d37edda30df
+    pristine_git_object: 452aaa3c76d69b537bb2d9c13a880d833aeacf19
+  src/fstop/models/delete_clientop.py:
+    id: c02fdb0e63b1
+    last_write_checksum: sha1:e9d8a662724b4f1c00cb981fd3fce81bc5961426
+    pristine_git_object: 16f9ad7a22150b7c65bd12a9a9c65bd986d75c7f
+  src/fstop/models/delete_galleryop.py:
+    id: 360c5a11627a
+    last_write_checksum: sha1:876dc687db48eb26807600db246d3c39159ba45a
+    pristine_git_object: 76bca93dc37ac7f8dcac9f6a2b6d70059606aa63
+  src/fstop/models/delete_projectop.py:
+    id: 8e8113cde4fb
+    last_write_checksum: sha1:1cbd459eadfaec6cf76cb16757b8a27e617d20ce
+    pristine_git_object: 6695e7e849e61baa945ff7af7336c165a818b008
+  src/fstop/models/gallery.py:
+    id: 03d3e6bd2a82
+    last_write_checksum: sha1:60352b585df2e9502e95cab0eaec7fd0f9efc772
+    pristine_git_object: a0bdf49937e5509faf40295daee2baa80c36ce1b
+  src/fstop/models/gallerycreate.py:
+    id: fafee641a7ac
+    last_write_checksum: sha1:93429882508013b82e7bbd1a6a950686dea637dd
+    pristine_git_object: 65875ba41583c18f6d0ea3757d2df63d36751a94
+  src/fstop/models/obtain_tokenop.py:
+    id: 1a3df5444017
+    last_write_checksum: sha1:bd7e10c6ff61f79415f18b21c6473beb276fc834
+    pristine_git_object: 13a53cfc471fdc93f2fab3bd30ee25841c343dc1
+  src/fstop/models/partially_update_bookingop.py:
+    id: 654e86c5785e
+    last_write_checksum: sha1:3d6c5838fd887bc60f4bbb5f8615765960b76328
+    pristine_git_object: bffcadfddf1dc5d3e57e333779b9616bd8ec0731
+  src/fstop/models/partially_update_clientop.py:
+    id: ad46d949d55d
+    last_write_checksum: sha1:23c6a5ed91f9687134a806934498be4ca37d2a4a
+    pristine_git_object: 9736f2cf68a9c160f934106ba654da23774717ac
+  src/fstop/models/partially_update_galleryop.py:
+    id: 5934ed03a073
+    last_write_checksum: sha1:28bcb178b6ec89aeabdf151fbfe8b89854f0c848
+    pristine_git_object: a5da558f8ec7fc05a5b0808d63d5dc2887f12221
+  src/fstop/models/partially_update_projectop.py:
+    id: 5b0be2975da0
+    last_write_checksum: sha1:083dabe672acb348c6ef4ccdcfaada23559351e9
+    pristine_git_object: fa4555e08bad0380884983c72bea542e6e83b06e
+  src/fstop/models/patchedbookingcreate.py:
+    id: b8638b1ecc01
+    last_write_checksum: sha1:5ade7996304dbcc28015c14641c9088e9019e853
+    pristine_git_object: 1de731aca1ccc4149321b0aeef5e7f776383708b
+  src/fstop/models/patchedclientcreate.py:
+    id: 717b96d328d1
+    last_write_checksum: sha1:c27e097e395a43a13f53634ed3a9f1f0222ddf54
+    pristine_git_object: c42960a18d59b0a1fb46c04ee569d3ad149957a4
+  src/fstop/models/patchedgallerycreate.py:
+    id: 00b3edded800
+    last_write_checksum: sha1:3b7edb7ecfba86d87fa8300d5388cb561a4a0a02
+    pristine_git_object: 4a1c4f9a405cd9ba4925c71139daf5dae1d9a2f3
+  src/fstop/models/patchedprojectcreate.py:
+    id: 5fb2cdc66422
+    last_write_checksum: sha1:87fc7df9b40afeac9e6f4ca5848cbf3d2ebd0152
+    pristine_git_object: 48bee562279d127c56ea7452eec2ad9d5966d062
+  src/fstop/models/project.py:
+    id: 438e4e5e67b5
+    last_write_checksum: sha1:1ee7d69140e8fd45a43e367cc3c06ffa4820b525
+    pristine_git_object: 09bd6e93a90e0afb46e404fee1567327a96c6e57
+  src/fstop/models/projectcreate.py:
+    id: 90d49055cc1e
+    last_write_checksum: sha1:b0701cab7c76ce74ef16f0f6bb90114220b50eea
+    pristine_git_object: 777d24eeb0127764d24a9be7ab8efd78c2196a2c
+  src/fstop/models/projecttypeenum.py:
+    id: ee29e262cb52
+    last_write_checksum: sha1:0107a1049dd68d9fc678bddf250a8d10c50a6c4e
+    pristine_git_object: e7eb2a80b8d153682a40b909045991b16f5563f9
+  src/fstop/models/refresh_tokenop.py:
+    id: 37cab7a2f039
+    last_write_checksum: sha1:d029fb2a32d3d4680249b985e832f103709de702
+    pristine_git_object: 0d113b830066800d96967e9754f49483cad6131b
+  src/fstop/models/retrieve_bookingop.py:
+    id: db54fd78fc69
+    last_write_checksum: sha1:54ff89742ef018ab6d38a51f96857d6ff2e59e90
+    pristine_git_object: d617d530152349f5ce1d73a8378b67fa105c596f
+  src/fstop/models/retrieve_clientop.py:
+    id: 681758066cd7
+    last_write_checksum: sha1:71400d13c621379cf7ec966f48ad8d2cb99ab070
+    pristine_git_object: 559164df91cf5ba8aba45d9bd4aef938fa4f1d8a
+  src/fstop/models/retrieve_galleryop.py:
+    id: 728bdacb44d6
+    last_write_checksum: sha1:7d8edff1d72714f92036daf06e50e4e6b1a443d0
+    pristine_git_object: aa5e2bc11d54e520adc71c32671a9851b948ef04
+  src/fstop/models/retrieve_projectop.py:
+    id: 224b76b9358c
+    last_write_checksum: sha1:dbf383c7fac2d0a6eb0c79c271bbab4d0636df2b
+    pristine_git_object: cd3c9f1eb980139c72326f80c11045eaea9b8b8f
+  src/fstop/models/security.py:
+    id: 248c4aefb0f1
+    last_write_checksum: sha1:6fb3389e8308dbfdad2c304a120e943e70e5f3ee
+    pristine_git_object: df6ea9ad43bd325e274a0bc8d7adecacbd966c21
+  src/fstop/models/tokenobtainpair.py:
+    id: 0ea1f548deb7
+    last_write_checksum: sha1:885f110407827d456cd78af951fcafb8722be457
+    pristine_git_object: 7fb598bda5cdcbbe0380e54701b20f18eab0fce0
+  src/fstop/models/tokenrefresh.py:
+    id: 409360b5ce44
+    last_write_checksum: sha1:f92dfd5c16fdee2c34570eda063d8697bafb87cb
+    pristine_git_object: fac702e77c98c71449e75d4563e23c0022f45a07
+  src/fstop/models/update_bookingop.py:
+    id: 5125f43ab002
+    last_write_checksum: sha1:1f8fc838bc0f08371f96912e836ae587db9c6948
+    pristine_git_object: f52f2c4cb7d726c57fd101214ac198fb5edb9a5f
+  src/fstop/models/update_clientop.py:
+    id: b8feadf1f458
+    last_write_checksum: sha1:4ec5076b723553dc825bbf2ec991cbe6cd5ae638
+    pristine_git_object: dc4b6f16fb63a155ca06e9183972d2c75eebc7a6
+  src/fstop/models/update_galleryop.py:
+    id: 14a6431ea12b
+    last_write_checksum: sha1:b51de27371d98feeec53bb530ef563424e0f95e8
+    pristine_git_object: 644edd3958deb06b925f7456283e1eab0b10d062
+  src/fstop/models/update_projectop.py:
+    id: 7c09f9d63fa5
+    last_write_checksum: sha1:e94f687da9252453714e2091c5cae60857f789ca
+    pristine_git_object: 298bd2f6b44b4fdc1467a47111685bcbf28ba674
+  src/fstop/projects.py:
+    id: 400367694ad0
+    last_write_checksum: sha1:ad426080d380366d7f99d02ef6ee4b7e1c2cdfb3
+    pristine_git_object: 2e0d56ee36dab5550851027ffca3056f2a33f032
+  src/fstop/py.typed:
+    id: 75b61d6e45ec
+    last_write_checksum: sha1:8efc425ffe830805ffcc0f3055871bdcdc542c60
+    pristine_git_object: 3e38f1a929f7d6b1d6de74604aa87e3d8f010544
+  src/fstop/sdk.py:
+    id: 01f114f7c7f7
+    last_write_checksum: sha1:0673cd43d10cb9ea15d774c033554bd020d91640
+    pristine_git_object: 5be517835c3bc293c9fe8dea9e7426bf1bbf87b6
+  src/fstop/sdkconfiguration.py:
+    id: 4b69995424ed
+    last_write_checksum: sha1:ffeb3b6dcf89970e1816df704f1836faf54da8d9
+    pristine_git_object: c209e1394ce687ecf9704cae1ffedc1c8ee2af0d
+  src/fstop/token.py:
+    id: d90237b4df24
+    last_write_checksum: sha1:baab7abacf96bf28ebef52120f638168c471117a
+    pristine_git_object: ff8166699f0099ff1af7211d944053b2aada0b76
+  src/fstop/types/__init__.py:
+    id: 6e2e702c3b11
+    last_write_checksum: sha1:f9ad14217f832e74f594285960125add50324be9
+    pristine_git_object: faa268137bc01c9d08cfadc4797017db48747a96
+  src/fstop/types/base64fileinput.py:
+    id: fe3c36a2108e
+    last_write_checksum: sha1:1522687ae3398374c35710cad993a6e82b5ab99d
+    pristine_git_object: 862566fe2b1db830276b390e136e65090e5963d2
+  src/fstop/types/basemodel.py:
+    id: b936ecb2ca7b
+    last_write_checksum: sha1:10d84aedeb9d35edfdadf2c3020caa1d24d8b584
+    pristine_git_object: a9a640a1a7048736383f96c67c6290c86bf536ee
+  src/fstop/utils/__init__.py:
+    id: 7ca6288f6503
+    last_write_checksum: sha1:527db7a6c93948ecdec6a33f56b6551ae44f0180
+    pristine_git_object: c48a36ca3d6e47e384b133bc0bcb482c6d8589b9
+  src/fstop/utils/annotations.py:
+    id: 19472511986d
+    last_write_checksum: sha1:a4824ad65f730303e4e1e3ec1febf87b4eb46dbc
+    pristine_git_object: 12e0aa4f1151bb52474cc02e88397329b90703f6
+  src/fstop/utils/datetimes.py:
+    id: cc6a77286b12
+    last_write_checksum: sha1:fa47d54c549ff9b95496ce91930fadfb04a36be9
+    pristine_git_object: adad24762cf452d137abe94fda0fd26224cef593
+  src/fstop/utils/dynamic_imports.py:
+    id: 3a288627a272
+    last_write_checksum: sha1:a1940c63feb8eddfd8026de53384baf5056d5dcc
+    pristine_git_object: 673edf82a97d0fea7295625d3e092ea369a36b79
+  src/fstop/utils/enums.py:
+    id: 9ae325139ca1
+    last_write_checksum: sha1:bc8c3c1285ae09ba8a094ee5c3d9c7f41fa1284d
+    pristine_git_object: 3324e1bc2668c54c4d5f5a1a845675319757a828
+  src/fstop/utils/eventstreaming.py:
+    id: b88e97e9ec05
+    last_write_checksum: sha1:7d1dc68f8b48486ab646653aa05cc38752e1f912
+    pristine_git_object: a8d4fe5cc88d3c7337339e1b36a61bbf7ca8c4eb
+  src/fstop/utils/forms.py:
+    id: e80405280fc2
+    last_write_checksum: sha1:dcf527960992b8baef3b21937c7e6c4e652630c0
+    pristine_git_object: 193f264960f3014c81d41543b9023c14c44c12e6
+  src/fstop/utils/headers.py:
+    id: 6b02d532f1e5
+    last_write_checksum: sha1:7c6df233ee006332b566a8afa9ce9a245941d935
+    pristine_git_object: 37864cbbbc40d1a47112bbfdd3ba79568fc8818a
+  src/fstop/utils/logger.py:
+    id: 1006a1693038
+    last_write_checksum: sha1:2769bad2da5adcdcea993a7ca5b229e51e13de4d
+    pristine_git_object: 51a94fb2002593bdd95480f0a1657eae1db4d616
+  src/fstop/utils/metadata.py:
+    id: 6995ea65f5dd
+    last_write_checksum: sha1:e703e5cbb5255144aacf86898d1420529afaaff8
+    pristine_git_object: 5abddd588837ac297050ca3b543627faadb350a9
+  src/fstop/utils/queryparams.py:
+    id: 5cca819222d9
+    last_write_checksum: sha1:b94c3f314fd3da0d1d215afc2731f48748e2aa59
+    pristine_git_object: c04e0db82b68eca041f2cb2614d748fbac80fd41
+  src/fstop/utils/requestbodies.py:
+    id: 7e0fdccf39d0
+    last_write_checksum: sha1:e1fef575283b7fe7fe2ad392dbbb3fb105309124
+    pristine_git_object: 591415af8e64baa410627b507d2740afb5387d13
+  src/fstop/utils/retries.py:
+    id: 836b8902dd7b
+    last_write_checksum: sha1:3585b891142f30a597fbf7a2f0340700babef8e4
+    pristine_git_object: ca7b59efebbbd9545744d0207ef42725c4cc5143
+  src/fstop/utils/security.py:
+    id: f2370e5c2849
+    last_write_checksum: sha1:85d0f667f79f649b6fe8d56826c9c38e9c74bedb
+    pristine_git_object: 06f05c0f75ac101ce91343f996b13c1f8ff518a0
+  src/fstop/utils/serializers.py:
+    id: dd20fe936731
+    last_write_checksum: sha1:7485f1425b0661fd84836186570df90207eec6af
+    pristine_git_object: 1031ed930bad5ece220cf7416a56c29f40f0588b
+  src/fstop/utils/unmarshal_json_response.py:
+    id: 1bbf5941586c
+    last_write_checksum: sha1:1ab2486d745650e16ead35de234cb3c0145caa23
+    pristine_git_object: 44cfccd5d87be2154196c3dad425cadaa90db777
+  src/fstop/utils/url.py:
+    id: 12021a399e28
+    last_write_checksum: sha1:6479961baa90432ca25626f8e40a7bbc32e73b41
+    pristine_git_object: c78ccbae426ce6d385709d97ce0b1c2813ea2418
+  src/fstop/utils/values.py:
+    id: d0448ccde8f6
+    last_write_checksum: sha1:acaa178a7c41ddd000f58cc691e4632d925b2553
+    pristine_git_object: dae01a44384ac3bc13ae07453a053bf6c898ebe3
+examples:
+  list_bookings:
+    SuccessfulResponse:
+      responses:
+        "200":
+          application/json: [{"id": "92ba99d5-15c4-46d6-a247-4068e4c8f017", "project": {"id": "18d32576-da90-47df-a7fb-3b6e57638f76", "project_name": "<value>", "project_type": "event", "client": {"id": "315e856c-d926-4483-a3d7-c2c029c8d58e", "first_name": "Laura", "last_name": "Hettinger", "city": "Rialto", "state": "Maryland", "zip_code": "40279", "email": "Eleanore_Cassin86@gmail.com", "phone_number": "763-899-3638", "created_at": "2024-09-28T08:28:22.698Z"}, "created_at": "2024-12-02T07:42:44.772Z"}, "date": "2025-11-24", "time": "<value>", "duration": 2962, "location": "<value>", "created_at": "2025-10-02T19:53:36.216Z"}]
+    Unauthorized:
+      responses:
+        "401":
+          application/json: {"detail": "Authentication credentials were not provided."}
+  create_booking:
+    Request:
+      requestBody:
+        application/json: {"project_id": "660e8400-e29b-41d4-a716-446655440000", "date": "2026-06-15", "time": "14:00:00", "duration": 480, "location": "Downtown Venue"}
+        application/x-www-form-urlencoded: {"project_id": "660e8400-e29b-41d4-a716-446655440000", "date": "2026-06-15", "time": "14:00:00", "duration": 480, "location": "Downtown Venue"}
+        multipart/form-data: {"project_id": "660e8400-e29b-41d4-a716-446655440000", "date": "2026-06-15", "time": "14:00:00", "duration": 480, "location": "Downtown Venue"}
+      responses:
+        "201":
+          application/json: {"id": "b06bc9c9-e118-489f-995e-540fc248f70a", "project": {"id": "6d481144-09a3-448f-9fa7-5aa6f5ffcbba", "project_name": "<value>", "project_type": "party", "client": {"id": "dae0ec74-cead-4725-8c10-3963525c7be3", "first_name": "Rusty", "last_name": "Witting-Braun", "city": "Shaynashire", "state": "Rhode Island", "zip_code": "17375", "email": "Noble73@hotmail.com", "phone_number": "531.979.1872 x7102", "created_at": "2025-01-04T23:09:21.284Z"}, "created_at": "2025-01-13T01:14:18.643Z"}, "date": "2026-04-18", "time": "<value>", "duration": 724689, "location": "<value>", "created_at": "2026-06-21T07:38:20.065Z"}
+        "400":
+          application/json: {"detail": "Invalid JSON in request body"}
+        "401":
+          application/json: {"detail": "Authentication credentials were not provided."}
+    SuccessfulResponse:
+      requestBody:
+        application/json: {"project_id": "60827b2d-0bbc-4e41-9c36-c85909e61c5c", "date": "2026-09-24", "time": "<value>", "duration": 241323, "location": "<value>"}
+        application/x-www-form-urlencoded: {"project_id": "60827b2d-0bbc-4e41-9c36-c85909e61c5c", "date": "2026-09-24", "time": "<value>", "duration": 241323, "location": "<value>"}
+        multipart/form-data: {"project_id": "60827b2d-0bbc-4e41-9c36-c85909e61c5c", "date": "2026-09-24", "time": "<value>", "duration": 241323, "location": "<value>"}
+      responses:
+        "201":
+          application/json: {"id": "770e8400-e29b-41d4-a716-446655440001", "project": {"id": "660e8400-e29b-41d4-a716-446655440000", "project_name": "Wedding", "project_type": "event", "client": {"id": "550e8400-e29b-41d4-a716-446655440000", "first_name": "John", "last_name": "Doe", "city": "Cleveland", "state": "OH", "zip_code": "44122", "email": "john.doe@example.com", "phone_number": "+12161231234", "created_at": "2026-05-21T10:00:00Z"}, "created_at": "2026-05-21T10:15:00Z"}, "date": "2026-06-15", "time": "14:00:00", "duration": 480, "location": "Downtown Venue", "created_at": "2026-05-21T10:30:00Z"}
+    BadRequest:
+      requestBody:
+        application/json: {"project_id": "60827b2d-0bbc-4e41-9c36-c85909e61c5c", "date": "2026-09-24", "time": "<value>", "duration": 241323, "location": "<value>"}
+        application/x-www-form-urlencoded: {"project_id": "60827b2d-0bbc-4e41-9c36-c85909e61c5c", "date": "2026-09-24", "time": "<value>", "duration": 241323, "location": "<value>"}
+        multipart/form-data: {"project_id": "60827b2d-0bbc-4e41-9c36-c85909e61c5c", "date": "2026-09-24", "time": "<value>", "duration": 241323, "location": "<value>"}
+      responses:
+        "400":
+          application/json: {"detail": "Invalid JSON in request body"}
+    Unauthorized:
+      requestBody:
+        application/json: {"project_id": "60827b2d-0bbc-4e41-9c36-c85909e61c5c", "date": "2026-09-24", "time": "<value>", "duration": 241323, "location": "<value>"}
+        application/x-www-form-urlencoded: {"project_id": "60827b2d-0bbc-4e41-9c36-c85909e61c5c", "date": "2026-09-24", "time": "<value>", "duration": 241323, "location": "<value>"}
+        multipart/form-data: {"project_id": "60827b2d-0bbc-4e41-9c36-c85909e61c5c", "date": "2026-09-24", "time": "<value>", "duration": 241323, "location": "<value>"}
+      responses:
+        "401":
+          application/json: {"detail": "Authentication credentials were not provided."}
+  retrieve_booking:
+    SuccessfulResponse:
+      parameters:
+        path:
+          id: "df9d5751-02dd-4ef8-994f-db398aac0109"
+      responses:
+        "200":
+          application/json: {"id": "770e8400-e29b-41d4-a716-446655440000", "project": {"id": "660e8400-e29b-41d4-a716-446655440000", "project_name": "Wedding", "project_type": "event", "client": {"id": "550e8400-e29b-41d4-a716-446655440000", "first_name": "John", "last_name": "Doe", "city": "Cleveland", "state": "OH", "zip_code": "44122", "email": "john.doe@example.com", "phone_number": "+12161231234", "created_at": "2026-05-21T10:00:00Z"}, "created_at": "2026-05-21T10:15:00Z"}, "date": "2026-06-15", "time": "14:00:00", "duration": 480, "location": "Downtown Venue", "created_at": "2026-05-21T10:30:00Z"}
+    Unauthorized:
+      parameters:
+        path:
+          id: "e3ad28b2-9121-44ec-9237-aec12c455b9f"
+      responses:
+        "401":
+          application/json: {"detail": "Authentication credentials were not provided."}
+    NotFound:
+      parameters:
+        path:
+          id: "e5f0e63a-9151-4bc4-9139-bab36f7c92bc"
+      responses:
+        "404":
+          application/json: {"detail": "Not found."}
+  update_booking:
+    SuccessfulResponse:
+      parameters:
+        path:
+          id: "ddba4ec1-a29c-4b73-a0e0-ae5608cc6d7c"
+      requestBody:
+        application/json: {"project_id": "0b402684-4137-4f75-8dad-69d7335c4dfc", "date": "2025-08-19", "time": "<value>", "duration": 279246, "location": "<value>"}
+        application/x-www-form-urlencoded: {"project_id": "0b402684-4137-4f75-8dad-69d7335c4dfc", "date": "2025-08-19", "time": "<value>", "duration": 279246, "location": "<value>"}
+        multipart/form-data: {"project_id": "0b402684-4137-4f75-8dad-69d7335c4dfc", "date": "2025-08-19", "time": "<value>", "duration": 279246, "location": "<value>"}
+      responses:
+        "200":
+          application/json: {"id": "770e8400-e29b-41d4-a716-446655440000", "project": {"id": "660e8400-e29b-41d4-a716-446655440000", "project_name": "Wedding", "project_type": "event", "client": {"id": "550e8400-e29b-41d4-a716-446655440000", "first_name": "John", "last_name": "Doe", "city": "Cleveland", "state": "OH", "zip_code": "44122", "email": "john.doe@example.com", "phone_number": "+12161231234", "created_at": "2026-05-21T10:00:00Z"}, "created_at": "2026-05-21T10:15:00Z"}, "date": "2026-06-16", "time": "15:00:00", "duration": 480, "location": "Downtown Venue - Updated", "created_at": "2026-05-21T10:30:00Z"}
+    BadRequest:
+      parameters:
+        path:
+          id: "88ebe37f-3886-4ec4-a35e-bb09c20e744a"
+      requestBody:
+        application/json: {"project_id": "0b402684-4137-4f75-8dad-69d7335c4dfc", "date": "2025-08-19", "time": "<value>", "duration": 279246, "location": "<value>"}
+        application/x-www-form-urlencoded: {"project_id": "0b402684-4137-4f75-8dad-69d7335c4dfc", "date": "2025-08-19", "time": "<value>", "duration": 279246, "location": "<value>"}
+        multipart/form-data: {"project_id": "0b402684-4137-4f75-8dad-69d7335c4dfc", "date": "2025-08-19", "time": "<value>", "duration": 279246, "location": "<value>"}
+      responses:
+        "400":
+          application/json: {"detail": "Invalid JSON in request body"}
+    Unauthorized:
+      parameters:
+        path:
+          id: "bfe904dc-10a9-4d1e-8a26-33a34c60d950"
+      requestBody:
+        application/json: {"project_id": "0b402684-4137-4f75-8dad-69d7335c4dfc", "date": "2025-08-19", "time": "<value>", "duration": 279246, "location": "<value>"}
+        application/x-www-form-urlencoded: {"project_id": "0b402684-4137-4f75-8dad-69d7335c4dfc", "date": "2025-08-19", "time": "<value>", "duration": 279246, "location": "<value>"}
+        multipart/form-data: {"project_id": "0b402684-4137-4f75-8dad-69d7335c4dfc", "date": "2025-08-19", "time": "<value>", "duration": 279246, "location": "<value>"}
+      responses:
+        "401":
+          application/json: {"detail": "Authentication credentials were not provided."}
+    NotFound:
+      parameters:
+        path:
+          id: "7686ac22-bf10-4da3-89b3-00ac870e7c51"
+      requestBody:
+        application/json: {"project_id": "0b402684-4137-4f75-8dad-69d7335c4dfc", "date": "2025-08-19", "time": "<value>", "duration": 279246, "location": "<value>"}
+        application/x-www-form-urlencoded: {"project_id": "0b402684-4137-4f75-8dad-69d7335c4dfc", "date": "2025-08-19", "time": "<value>", "duration": 279246, "location": "<value>"}
+        multipart/form-data: {"project_id": "0b402684-4137-4f75-8dad-69d7335c4dfc", "date": "2025-08-19", "time": "<value>", "duration": 279246, "location": "<value>"}
+      responses:
+        "404":
+          application/json: {"detail": "Not found."}
+  partially_update_booking:
+    speakeasy-default-partially-update-booking:
+      parameters:
+        path:
+          id: "d46f14d5-70f1-4c96-9b1c-9e8136cbec1e"
+      responses:
+        "200":
+          application/json: {"id": "911ee832-f3a6-4ca7-baec-12e348abd529", "project": {"id": "e20a29b4-209e-4768-83fb-7646fb9274d4", "project_name": "<value>", "project_type": "party", "client": {"id": "ec53c130-7fce-4ced-a12b-3206b7b14bf6", "first_name": "Yolanda", "last_name": "Moen", "city": "Visalia", "state": "Wisconsin", "zip_code": "23770-0900", "email": "Karlee_Kulas-Cole89@hotmail.com", "phone_number": "597-609-9018 x357", "created_at": "2026-03-07T09:55:06.523Z"}, "created_at": "2026-02-02T14:24:36.271Z"}, "date": "2024-05-28", "time": "<value>", "duration": 983605, "location": "<value>", "created_at": "2024-10-13T03:28:01.887Z"}
+        "400":
+          application/json: {"detail": "Invalid JSON in request body"}
+        "401":
+          application/json: {"detail": "Authentication credentials were not provided."}
+        "404":
+          application/json: {"detail": "The requested resource was not found."}
+  delete_booking:
+    Unauthorized:
+      parameters:
+        path:
+          id: "78878836-4c9e-4e9b-8667-4316dc94f27e"
+      responses:
+        "401":
+          application/json: {"detail": "Authentication credentials were not provided."}
+    NotFound:
+      parameters:
+        path:
+          id: "3e30324b-d169-4c37-be17-eb12d2b23cad"
+      responses:
+        "404":
+          application/json: {"detail": "Not found."}
+    speakeasy-default-delete-booking:
+      parameters:
+        path:
+          id: "13cd0d4c-412b-4406-93f0-45e84edd1cb4"
+      responses:
+        "401":
+          application/json: {"detail": "Authentication credentials were not provided."}
+        "404":
+          application/json: {"detail": "The requested resource was not found."}
+  list_clients:
+    SuccessfulResponse:
+      responses:
+        "200":
+          application/json: [{"id": "b53f7252-a982-418d-842d-e85a6be486b3", "first_name": "Emile", "last_name": "Hirthe", "city": "New Faustino", "state": "Louisiana", "zip_code": "55894-6315", "email": "Graciela_Metz@hotmail.com", "phone_number": "450.269.6447", "created_at": "2024-11-20T01:03:30.816Z"}]
+    Unauthorized:
+      responses:
+        "401":
+          application/json: {"detail": "Authentication credentials were not provided."}
+  create_client:
+    Request:
+      requestBody:
+        application/json: {"first_name": "Alice", "last_name": "Johnson", "city": "Cincinnati", "state": "OH", "zip_code": "45202", "email": "alice.johnson@example.com", "phone_number": "+12161239999"}
+        application/x-www-form-urlencoded: {"first_name": "Alice", "last_name": "Johnson", "city": "Cincinnati", "state": "OH", "zip_code": "45202", "email": "alice.johnson@example.com", "phone_number": "+12161239999"}
+        multipart/form-data: {"first_name": "Alice", "last_name": "Johnson", "city": "Cincinnati", "state": "OH", "zip_code": "45202", "email": "alice.johnson@example.com", "phone_number": "+12161239999"}
+      responses:
+        "201":
+          application/json: {"id": "4b25441b-1dc6-4733-afaa-e515cfaa0c42", "first_name": "Brian", "last_name": "Dickinson", "city": "Milwaukee", "state": "Georgia", "zip_code": "39793", "email": "Princess9@yahoo.com", "phone_number": "1-939-582-2902 x7338", "created_at": "2026-03-19T23:35:00.377Z"}
+        "400":
+          application/json: {"detail": "Invalid JSON in request body"}
+        "401":
+          application/json: {"detail": "Authentication credentials were not provided."}
+    SuccessfulResponse:
+      requestBody:
+        application/json: {"first_name": "Adonis", "last_name": "Bahringer", "city": "Fort Nova", "state": "Georgia", "zip_code": "50179", "email": "Clotilde.Hintz8@yahoo.com", "phone_number": "312.391.3315 x8251"}
+        application/x-www-form-urlencoded: {"first_name": "Adonis", "last_name": "Bahringer", "city": "Fort Nova", "state": "Georgia", "zip_code": "50179", "email": "Clotilde.Hintz8@yahoo.com", "phone_number": "312.391.3315 x8251"}
+        multipart/form-data: {"first_name": "Adonis", "last_name": "Bahringer", "city": "Fort Nova", "state": "Georgia", "zip_code": "50179", "email": "Clotilde.Hintz8@yahoo.com", "phone_number": "312.391.3315 x8251"}
+      responses:
+        "201":
+          application/json: {"id": "550e8400-e29b-41d4-a716-446655440002", "first_name": "Alice", "last_name": "Johnson", "city": "Cincinnati", "state": "OH", "zip_code": "45202", "email": "alice.johnson@example.com", "phone_number": "+12161239999", "created_at": "2026-05-21T10:10:00Z"}
+    BadRequest:
+      requestBody:
+        application/json: {"first_name": "Adonis", "last_name": "Bahringer", "city": "Fort Nova", "state": "Georgia", "zip_code": "50179", "email": "Clotilde.Hintz8@yahoo.com", "phone_number": "312.391.3315 x8251"}
+        application/x-www-form-urlencoded: {"first_name": "Adonis", "last_name": "Bahringer", "city": "Fort Nova", "state": "Georgia", "zip_code": "50179", "email": "Clotilde.Hintz8@yahoo.com", "phone_number": "312.391.3315 x8251"}
+        multipart/form-data: {"first_name": "Adonis", "last_name": "Bahringer", "city": "Fort Nova", "state": "Georgia", "zip_code": "50179", "email": "Clotilde.Hintz8@yahoo.com", "phone_number": "312.391.3315 x8251"}
+      responses:
+        "400":
+          application/json: {"detail": "Invalid JSON in request body"}
+    Unauthorized:
+      requestBody:
+        application/json: {"first_name": "Adonis", "last_name": "Bahringer", "city": "Fort Nova", "state": "Georgia", "zip_code": "50179", "email": "Clotilde.Hintz8@yahoo.com", "phone_number": "312.391.3315 x8251"}
+        application/x-www-form-urlencoded: {"first_name": "Adonis", "last_name": "Bahringer", "city": "Fort Nova", "state": "Georgia", "zip_code": "50179", "email": "Clotilde.Hintz8@yahoo.com", "phone_number": "312.391.3315 x8251"}
+        multipart/form-data: {"first_name": "Adonis", "last_name": "Bahringer", "city": "Fort Nova", "state": "Georgia", "zip_code": "50179", "email": "Clotilde.Hintz8@yahoo.com", "phone_number": "312.391.3315 x8251"}
+      responses:
+        "401":
+          application/json: {"detail": "Authentication credentials were not provided."}
+  retrieve_client:
+    SuccessfulResponse:
+      parameters:
+        path:
+          id: "f41dee16-4754-4fa4-9c82-d6079305f54c"
+      responses:
+        "200":
+          application/json: {"id": "550e8400-e29b-41d4-a716-446655440000", "first_name": "John", "last_name": "Doe", "city": "Cleveland", "state": "OH", "zip_code": "44122", "email": "john.doe@example.com", "phone_number": "+12161231234", "created_at": "2026-05-21T10:00:00Z"}
+    Unauthorized:
+      parameters:
+        path:
+          id: "15edc3fa-9cc9-4e00-a56b-96304b7dfc81"
+      responses:
+        "401":
+          application/json: {"detail": "Authentication credentials were not provided."}
+    NotFound:
+      parameters:
+        path:
+          id: "09b47996-24c7-4371-a0f1-789588a9789f"
+      responses:
+        "404":
+          application/json: {"detail": "Not found."}
+  update_client:
+    SuccessfulResponse:
+      parameters:
+        path:
+          id: "2b946d1c-c429-41ce-8472-c4615bf253ad"
+      requestBody:
+        application/json: {"first_name": "Maxwell", "last_name": "Hoeger", "city": "Schmittshire", "state": "Michigan", "zip_code": "14512-8813", "email": "Madelynn77@hotmail.com", "phone_number": "917-654-0044 x6213"}
+        application/x-www-form-urlencoded: {"first_name": "Maxwell", "last_name": "Hoeger", "city": "Schmittshire", "state": "Michigan", "zip_code": "14512-8813", "email": "Madelynn77@hotmail.com", "phone_number": "917-654-0044 x6213"}
+        multipart/form-data: {"first_name": "Maxwell", "last_name": "Hoeger", "city": "Schmittshire", "state": "Michigan", "zip_code": "14512-8813", "email": "Madelynn77@hotmail.com", "phone_number": "917-654-0044 x6213"}
+      responses:
+        "200":
+          application/json: {"id": "550e8400-e29b-41d4-a716-446655440000", "first_name": "John", "last_name": "Doe Updated", "city": "Cleveland", "state": "OH", "zip_code": "44122", "email": "john.updated@example.com", "phone_number": "+12161231234", "created_at": "2026-05-21T10:00:00Z"}
+    BadRequest:
+      parameters:
+        path:
+          id: "8b32958e-9502-42e2-90c2-4d406cd0fdfe"
+      requestBody:
+        application/json: {"first_name": "Maxwell", "last_name": "Hoeger", "city": "Schmittshire", "state": "Michigan", "zip_code": "14512-8813", "email": "Madelynn77@hotmail.com", "phone_number": "917-654-0044 x6213"}
+        application/x-www-form-urlencoded: {"first_name": "Maxwell", "last_name": "Hoeger", "city": "Schmittshire", "state": "Michigan", "zip_code": "14512-8813", "email": "Madelynn77@hotmail.com", "phone_number": "917-654-0044 x6213"}
+        multipart/form-data: {"first_name": "Maxwell", "last_name": "Hoeger", "city": "Schmittshire", "state": "Michigan", "zip_code": "14512-8813", "email": "Madelynn77@hotmail.com", "phone_number": "917-654-0044 x6213"}
+      responses:
+        "400":
+          application/json: {"detail": "Invalid JSON in request body"}
+    Unauthorized:
+      parameters:
+        path:
+          id: "96d2995a-51d6-4485-b92b-eb1525c03a13"
+      requestBody:
+        application/json: {"first_name": "Maxwell", "last_name": "Hoeger", "city": "Schmittshire", "state": "Michigan", "zip_code": "14512-8813", "email": "Madelynn77@hotmail.com", "phone_number": "917-654-0044 x6213"}
+        application/x-www-form-urlencoded: {"first_name": "Maxwell", "last_name": "Hoeger", "city": "Schmittshire", "state": "Michigan", "zip_code": "14512-8813", "email": "Madelynn77@hotmail.com", "phone_number": "917-654-0044 x6213"}
+        multipart/form-data: {"first_name": "Maxwell", "last_name": "Hoeger", "city": "Schmittshire", "state": "Michigan", "zip_code": "14512-8813", "email": "Madelynn77@hotmail.com", "phone_number": "917-654-0044 x6213"}
+      responses:
+        "401":
+          application/json: {"detail": "Authentication credentials were not provided."}
+    NotFound:
+      parameters:
+        path:
+          id: "b496550f-2ed3-4503-9e52-dbd9e6c8f688"
+      requestBody:
+        application/json: {"first_name": "Maxwell", "last_name": "Hoeger", "city": "Schmittshire", "state": "Michigan", "zip_code": "14512-8813", "email": "Madelynn77@hotmail.com", "phone_number": "917-654-0044 x6213"}
+        application/x-www-form-urlencoded: {"first_name": "Maxwell", "last_name": "Hoeger", "city": "Schmittshire", "state": "Michigan", "zip_code": "14512-8813", "email": "Madelynn77@hotmail.com", "phone_number": "917-654-0044 x6213"}
+        multipart/form-data: {"first_name": "Maxwell", "last_name": "Hoeger", "city": "Schmittshire", "state": "Michigan", "zip_code": "14512-8813", "email": "Madelynn77@hotmail.com", "phone_number": "917-654-0044 x6213"}
+      responses:
+        "404":
+          application/json: {"detail": "Not found."}
+  partially_update_client:
+    speakeasy-default-partially-update-client:
+      parameters:
+        path:
+          id: "5da8c191-5f1a-43a9-b0f9-227f0080cc26"
+      responses:
+        "200":
+          application/json: {"id": "db8de4b7-97e6-493a-b74c-bd089eb20588", "first_name": "Joan", "last_name": "Lang", "city": "Brockmouth", "state": "Massachusetts", "zip_code": "32073", "email": "Floy_OConnell@hotmail.com", "phone_number": "266.733.9064 x12142", "created_at": "2026-10-24T00:24:27.484Z"}
+        "400":
+          application/json: {"detail": "Invalid JSON in request body"}
+        "401":
+          application/json: {"detail": "Authentication credentials were not provided."}
+        "404":
+          application/json: {"detail": "The requested resource was not found."}
+  delete_client:
+    Unauthorized:
+      parameters:
+        path:
+          id: "313d4aeb-2558-4a20-acec-571613331767"
+      responses:
+        "401":
+          application/json: {"detail": "Authentication credentials were not provided."}
+    NotFound:
+      parameters:
+        path:
+          id: "b4b7bd9e-f22c-4c6a-ad97-11ba977980c9"
+      responses:
+        "404":
+          application/json: {"detail": "Not found."}
+    speakeasy-default-delete-client:
+      parameters:
+        path:
+          id: "9ece59e8-1fbd-4a14-b48d-f3d6d54e51c9"
+      responses:
+        "401":
+          application/json: {"detail": "Authentication credentials were not provided."}
+        "404":
+          application/json: {"detail": "The requested resource was not found."}
+  list_galleries:
+    SuccessfulResponse:
+      responses:
+        "200":
+          application/json: [{"id": "0eb660cf-5779-4b16-ba4b-618c30cc4ce0", "booking": {"id": "084d39c4-63cd-40fc-b8df-d6a8f1cb0e3e", "project": {"id": "f71b66d0-d706-4a6e-95e7-4cb806e5258f", "project_name": "<value>", "project_type": "party", "client": {"id": "f79fc798-3079-422f-83a6-855d148cb737", "first_name": "Ignacio", "last_name": "Jast", "city": "Fort Rayberg", "state": "Texas", "zip_code": "41594-8730", "email": "Keven28@yahoo.com", "phone_number": "560-935-7968 x035", "created_at": "2026-03-29T00:13:16.112Z"}, "created_at": "2025-12-19T03:04:01.621Z"}, "date": "2026-04-18", "time": "<value>", "duration": 802840, "location": "<value>", "created_at": "2024-08-25T04:56:52.092Z"}, "gallery_name": "<value>", "picture_count": 198986, "is_visible": true, "url": "https://exotic-produce.net/", "created_at": "2026-10-17T10:15:16.746Z"}]
+    Unauthorized:
+      responses:
+        "401":
+          application/json: {"detail": "Authentication credentials were not provided."}
+  create_gallery:
+    Request:
+      requestBody:
+        application/json: {"project_id": "660e8400-e29b-41d4-a716-446655440000", "gallery_name": "Reception Photos", "picture_count": 89, "is_visible": true, "url": "https://example.com/galleries/reception"}
+        application/x-www-form-urlencoded: {"project_id": "660e8400-e29b-41d4-a716-446655440000", "gallery_name": "Reception Photos", "picture_count": 89, "is_visible": true, "url": "https://example.com/galleries/reception"}
+        multipart/form-data: {"project_id": "660e8400-e29b-41d4-a716-446655440000", "gallery_name": "Reception Photos", "picture_count": 89, "is_visible": true, "url": "https://example.com/galleries/reception"}
+      responses:
+        "201":
+          application/json: {"id": "c051cf71-e5b0-4382-ab88-cc2ee1db1ee3", "booking": {"id": "cc61db0b-bd29-45fe-b437-a2f6627a9582", "project": {"id": "205f45fa-e0e8-460d-a031-56d3109f65ea", "project_name": "<value>", "project_type": "portrait", "client": {"id": "da3820df-a90f-4a2f-874e-7aba95818a4e", "first_name": "Carolyn", "last_name": "Hayes", "city": "East Diamond", "state": "Ohio", "zip_code": "41680", "email": "Laurel.Schroeder75@yahoo.com", "phone_number": "(444) 305-8612 x454", "created_at": "2026-12-16T07:49:50.619Z"}, "created_at": "2025-04-05T21:23:06.115Z"}, "date": "2024-10-05", "time": "<value>", "duration": 510480, "location": "<value>", "created_at": "2026-02-24T07:12:56.493Z"}, "gallery_name": "<value>", "picture_count": 559518, "is_visible": true, "url": "https://burly-lobster.biz/", "created_at": "2026-11-08T08:55:23.039Z"}
+        "400":
+          application/json: {"detail": "Invalid JSON in request body"}
+        "401":
+          application/json: {"detail": "Authentication credentials were not provided."}
+    SuccessfulResponse:
+      requestBody:
+        application/json: {"project_id": "c2542d62-2158-40d7-958e-d3f200cf14bc", "gallery_name": "<value>", "picture_count": 470532, "is_visible": false, "url": "https://close-soybean.org"}
+        application/x-www-form-urlencoded: {"project_id": "c2542d62-2158-40d7-958e-d3f200cf14bc", "gallery_name": "<value>", "picture_count": 470532, "is_visible": false, "url": "https://close-soybean.org"}
+        multipart/form-data: {"project_id": "c2542d62-2158-40d7-958e-d3f200cf14bc", "gallery_name": "<value>", "picture_count": 470532, "is_visible": false, "url": "https://close-soybean.org"}
+      responses:
+        "201":
+          application/json: {"id": "880e8400-e29b-41d4-a716-446655440001", "booking": {"id": "cc61db0b-bd29-45fe-b437-a2f6627a9582", "project": {"id": "205f45fa-e0e8-460d-a031-56d3109f65ea", "project_name": "<value>", "project_type": "portrait", "client": {"id": "da3820df-a90f-4a2f-874e-7aba95818a4e", "first_name": "Carolyn", "last_name": "Hayes", "city": "East Diamond", "state": "Ohio", "zip_code": "41680", "email": "Laurel.Schroeder75@yahoo.com", "phone_number": "(444) 305-8612 x454", "created_at": "2026-12-16T07:49:50.619Z"}, "created_at": "2025-04-05T21:23:06.115Z"}, "date": "2024-10-05", "time": "<value>", "duration": 510480, "location": "<value>", "created_at": "2026-02-24T07:12:56.493Z"}, "gallery_name": "Reception Photos", "picture_count": 89, "is_visible": true, "url": "https://example.com/galleries/reception", "created_at": "2026-05-21T10:35:00Z"}
+    BadRequest:
+      requestBody:
+        application/json: {"project_id": "c2542d62-2158-40d7-958e-d3f200cf14bc", "gallery_name": "<value>", "picture_count": 470532, "is_visible": false, "url": "https://close-soybean.org"}
+        application/x-www-form-urlencoded: {"project_id": "c2542d62-2158-40d7-958e-d3f200cf14bc", "gallery_name": "<value>", "picture_count": 470532, "is_visible": false, "url": "https://close-soybean.org"}
+        multipart/form-data: {"project_id": "c2542d62-2158-40d7-958e-d3f200cf14bc", "gallery_name": "<value>", "picture_count": 470532, "is_visible": false, "url": "https://close-soybean.org"}
+      responses:
+        "400":
+          application/json: {"detail": "Invalid JSON in request body"}
+    Unauthorized:
+      requestBody:
+        application/json: {"project_id": "c2542d62-2158-40d7-958e-d3f200cf14bc", "gallery_name": "<value>", "picture_count": 470532, "is_visible": false, "url": "https://close-soybean.org"}
+        application/x-www-form-urlencoded: {"project_id": "c2542d62-2158-40d7-958e-d3f200cf14bc", "gallery_name": "<value>", "picture_count": 470532, "is_visible": false, "url": "https://close-soybean.org"}
+        multipart/form-data: {"project_id": "c2542d62-2158-40d7-958e-d3f200cf14bc", "gallery_name": "<value>", "picture_count": 470532, "is_visible": false, "url": "https://close-soybean.org"}
+      responses:
+        "401":
+          application/json: {"detail": "Authentication credentials were not provided."}
+  retrieve_gallery:
+    SuccessfulResponse:
+      parameters:
+        path:
+          id: "82ef9e72-f2f7-41ff-ae6d-2d7622a989c6"
+      responses:
+        "200":
+          application/json: {"id": "880e8400-e29b-41d4-a716-446655440000", "booking": {"id": "008e86c7-4c13-4297-a337-1aa3495eee3d", "project": {"id": "e080938b-9650-40a3-8362-6f3188fd197b", "project_name": "<value>", "project_type": "portrait", "client": {"id": "787567ba-d149-445a-a2af-dd342e0ac0dc", "first_name": "Horacio", "last_name": "Grant", "city": "South Gate", "state": "Indiana", "zip_code": "57501-8377", "email": "Ladarius_Cole-Turner92@yahoo.com", "phone_number": "604.694.2361 x27282", "created_at": "2025-01-16T10:39:53.462Z"}, "created_at": "2025-07-18T11:23:43.350Z"}, "date": "2026-10-31", "time": "<value>", "duration": 358091, "location": "<value>", "created_at": "2025-09-12T22:55:45.462Z"}, "gallery_name": "Ceremony Photos", "picture_count": 125, "is_visible": true, "url": "https://example.com/galleries/ceremony", "created_at": "2026-05-21T10:35:00Z"}
+    Unauthorized:
+      parameters:
+        path:
+          id: "648f60a9-9cf0-4d46-9dd2-a4d857b4ff64"
+      responses:
+        "401":
+          application/json: {"detail": "Authentication credentials were not provided."}
+    NotFound:
+      parameters:
+        path:
+          id: "872ea6d0-2552-405a-bdbe-ee0bf98584c2"
+      responses:
+        "404":
+          application/json: {"detail": "Not found."}
+  update_gallery:
+    SuccessfulResponse:
+      parameters:
+        path:
+          id: "2100c23e-0e87-479f-af94-6ece8b52fcb1"
+      requestBody:
+        application/json: {"project_id": "11763bef-7dd9-4b0e-a7f5-658995997d71", "gallery_name": "<value>", "picture_count": 906795, "is_visible": false, "url": "https://well-groomed-bump.name"}
+        application/x-www-form-urlencoded: {"project_id": "11763bef-7dd9-4b0e-a7f5-658995997d71", "gallery_name": "<value>", "picture_count": 906795, "is_visible": false, "url": "https://well-groomed-bump.name"}
+        multipart/form-data: {"project_id": "11763bef-7dd9-4b0e-a7f5-658995997d71", "gallery_name": "<value>", "picture_count": 906795, "is_visible": false, "url": "https://well-groomed-bump.name"}
+      responses:
+        "200":
+          application/json: {"id": "880e8400-e29b-41d4-a716-446655440000", "booking": {"id": "454be424-3ddf-44ef-b285-59bccbb57956", "project": {"id": "a8556f11-41f6-44ea-a653-5292fce54a6f", "project_name": "<value>", "project_type": "event", "client": {"id": "47bdd7bc-fe3f-47ae-9902-d576434fa0c0", "first_name": "Thad", "last_name": "Schamberger", "city": "South Kaitlyn", "state": "Georgia", "zip_code": "23853", "email": "Orie_Connelly84@gmail.com", "phone_number": "697-439-8809 x35925", "created_at": "2025-07-05T05:10:22.831Z"}, "created_at": "2024-07-31T19:43:38.444Z"}, "date": "2025-04-21", "time": "<value>", "duration": 560147, "location": "<value>", "created_at": "2024-07-12T10:25:05.241Z"}, "gallery_name": "Ceremony Photos - Updated", "picture_count": 125, "is_visible": false, "url": "https://example.com/galleries/ceremony", "created_at": "2026-05-21T10:35:00Z"}
+    BadRequest:
+      parameters:
+        path:
+          id: "c01c1e7e-6b02-4f40-a8ea-cc1becd4ea1a"
+      requestBody:
+        application/json: {"project_id": "11763bef-7dd9-4b0e-a7f5-658995997d71", "gallery_name": "<value>", "picture_count": 906795, "is_visible": false, "url": "https://well-groomed-bump.name"}
+        application/x-www-form-urlencoded: {"project_id": "11763bef-7dd9-4b0e-a7f5-658995997d71", "gallery_name": "<value>", "picture_count": 906795, "is_visible": false, "url": "https://well-groomed-bump.name"}
+        multipart/form-data: {"project_id": "11763bef-7dd9-4b0e-a7f5-658995997d71", "gallery_name": "<value>", "picture_count": 906795, "is_visible": false, "url": "https://well-groomed-bump.name"}
+      responses:
+        "400":
+          application/json: {"detail": "Invalid JSON in request body"}
+    Unauthorized:
+      parameters:
+        path:
+          id: "102805ea-7518-4586-8175-2e732c5ed0fe"
+      requestBody:
+        application/json: {"project_id": "11763bef-7dd9-4b0e-a7f5-658995997d71", "gallery_name": "<value>", "picture_count": 906795, "is_visible": false, "url": "https://well-groomed-bump.name"}
+        application/x-www-form-urlencoded: {"project_id": "11763bef-7dd9-4b0e-a7f5-658995997d71", "gallery_name": "<value>", "picture_count": 906795, "is_visible": false, "url": "https://well-groomed-bump.name"}
+        multipart/form-data: {"project_id": "11763bef-7dd9-4b0e-a7f5-658995997d71", "gallery_name": "<value>", "picture_count": 906795, "is_visible": false, "url": "https://well-groomed-bump.name"}
+      responses:
+        "401":
+          application/json: {"detail": "Authentication credentials were not provided."}
+    NotFound:
+      parameters:
+        path:
+          id: "9b238b26-0243-4b6a-8a99-143a9e037373"
+      requestBody:
+        application/json: {"project_id": "11763bef-7dd9-4b0e-a7f5-658995997d71", "gallery_name": "<value>", "picture_count": 906795, "is_visible": false, "url": "https://well-groomed-bump.name"}
+        application/x-www-form-urlencoded: {"project_id": "11763bef-7dd9-4b0e-a7f5-658995997d71", "gallery_name": "<value>", "picture_count": 906795, "is_visible": false, "url": "https://well-groomed-bump.name"}
+        multipart/form-data: {"project_id": "11763bef-7dd9-4b0e-a7f5-658995997d71", "gallery_name": "<value>", "picture_count": 906795, "is_visible": false, "url": "https://well-groomed-bump.name"}
+      responses:
+        "404":
+          application/json: {"detail": "Not found."}
+  partially_update_gallery:
+    speakeasy-default-partially-update-gallery:
+      parameters:
+        path:
+          id: "82f8c80a-84a3-48a9-a76f-2000c2e0bdd4"
+      responses:
+        "200":
+          application/json: {"id": "346f62ba-1397-4b41-ae17-b91f8e0470c0", "booking": {"id": "ba6c610b-23b7-4767-a741-54262b08162b", "project": {"id": "4b84b5af-aac6-4087-b921-9b9f5bae8eef", "project_name": "<value>", "project_type": "portrait", "client": {"id": "30bd6daf-73f8-49eb-8fe6-aefbb39b0744", "first_name": "Laury", "last_name": "Gottlieb-Windler", "city": "North Ardellafort", "state": "Indiana", "zip_code": "94354-0015", "email": "Natasha81@gmail.com", "phone_number": "297.488.0625 x2364", "created_at": "2024-06-20T08:21:36.813Z"}, "created_at": "2025-03-19T14:17:32.740Z"}, "date": "2025-05-01", "time": "<value>", "duration": 539435, "location": "<value>", "created_at": "2025-08-30T21:20:42.235Z"}, "gallery_name": "<value>", "picture_count": 218093, "is_visible": false, "url": "https://upset-polarisation.org", "created_at": "2024-10-04T16:15:39.747Z"}
+        "400":
+          application/json: {"detail": "Invalid JSON in request body"}
+        "401":
+          application/json: {"detail": "Authentication credentials were not provided."}
+        "404":
+          application/json: {"detail": "The requested resource was not found."}
+  delete_gallery:
+    Unauthorized:
+      parameters:
+        path:
+          id: "5ece5a2b-7d31-4cab-8796-66cc9fc5ad56"
+      responses:
+        "401":
+          application/json: {"detail": "Authentication credentials were not provided."}
+    NotFound:
+      parameters:
+        path:
+          id: "e0ff394b-e3cb-40bd-b76c-688cb83a6c23"
+      responses:
+        "404":
+          application/json: {"detail": "Not found."}
+    speakeasy-default-delete-gallery:
+      parameters:
+        path:
+          id: "6005af06-ddad-4a14-9d56-3cc16bfe0afb"
+      responses:
+        "401":
+          application/json: {"detail": "Authentication credentials were not provided."}
+        "404":
+          application/json: {"detail": "The requested resource was not found."}
+  list_projects:
+    SuccessfulResponse:
+      responses:
+        "200":
+          application/json: [{"id": "1da2dca6-e56a-45f6-a72a-83921db91a55", "project_name": "<value>", "project_type": "party", "client": {"id": "50a104a1-efa7-4c6d-9280-d2278502708f", "first_name": "Diana", "last_name": "Jacobs", "city": "MacGyverview", "state": "Michigan", "zip_code": "86170-2762", "email": "Elwin_Goodwin99@hotmail.com", "phone_number": "(283) 288-8005", "created_at": "2026-06-19T03:05:19.043Z"}, "created_at": "2024-08-10T19:12:59.341Z"}]
+    Unauthorized:
+      responses:
+        "401":
+          application/json: {"detail": "Authentication credentials were not provided."}
+  create_project:
+    Request:
+      requestBody:
+        application/json: {"project_name": "Birthday Party", "project_type": "party", "client_id": "550e8400-e29b-41d4-a716-446655440002"}
+        application/x-www-form-urlencoded: {"project_name": "Birthday Party", "project_type": "party", "client_id": "550e8400-e29b-41d4-a716-446655440002"}
+        multipart/form-data: {"project_name": "Birthday Party", "project_type": "party", "client_id": "550e8400-e29b-41d4-a716-446655440002"}
+      responses:
+        "201":
+          application/json: {"id": "77ff63b3-0b5b-472e-b827-7ef4be32589c", "project_name": "<value>", "project_type": "event", "client": {"id": "d826efa0-18ca-4ccc-98f3-97d6dfd53b32", "first_name": "Kacey", "last_name": "Weissnat", "city": "South Mitchell", "state": "Massachusetts", "zip_code": "34780-7138", "email": "Colin_DuBuque57@hotmail.com", "phone_number": "818.808.3333 x43271", "created_at": "2025-06-08T14:43:48.254Z"}, "created_at": "2024-10-29T18:18:45.219Z"}
+        "400":
+          application/json: {"detail": "Invalid JSON in request body"}
+        "401":
+          application/json: {"detail": "Authentication credentials were not provided."}
+    SuccessfulResponse:
+      requestBody:
+        application/json: {"project_name": "<value>", "project_type": "portrait", "client_id": "97687fb3-35ce-4eb8-b192-c0abff07c71c"}
+        application/x-www-form-urlencoded: {"project_name": "<value>", "project_type": "portrait", "client_id": "97687fb3-35ce-4eb8-b192-c0abff07c71c"}
+        multipart/form-data: {"project_name": "<value>", "project_type": "portrait", "client_id": "97687fb3-35ce-4eb8-b192-c0abff07c71c"}
+      responses:
+        "201":
+          application/json: {"id": "660e8400-e29b-41d4-a716-446655440002", "project_name": "Birthday Party", "project_type": "party", "client": {"id": "550e8400-e29b-41d4-a716-446655440002", "first_name": "Alice", "last_name": "Johnson", "city": "Cincinnati", "state": "OH", "zip_code": "45202", "email": "alice.johnson@example.com", "phone_number": "+12161239999", "created_at": "2026-05-21T10:10:00Z"}, "created_at": "2026-05-21T10:25:00Z"}
+    BadRequest:
+      requestBody:
+        application/json: {"project_name": "<value>", "project_type": "portrait", "client_id": "97687fb3-35ce-4eb8-b192-c0abff07c71c"}
+        application/x-www-form-urlencoded: {"project_name": "<value>", "project_type": "portrait", "client_id": "97687fb3-35ce-4eb8-b192-c0abff07c71c"}
+        multipart/form-data: {"project_name": "<value>", "project_type": "portrait", "client_id": "97687fb3-35ce-4eb8-b192-c0abff07c71c"}
+      responses:
+        "400":
+          application/json: {"detail": "Invalid JSON in request body"}
+    Unauthorized:
+      requestBody:
+        application/json: {"project_name": "<value>", "project_type": "portrait", "client_id": "97687fb3-35ce-4eb8-b192-c0abff07c71c"}
+        application/x-www-form-urlencoded: {"project_name": "<value>", "project_type": "portrait", "client_id": "97687fb3-35ce-4eb8-b192-c0abff07c71c"}
+        multipart/form-data: {"project_name": "<value>", "project_type": "portrait", "client_id": "97687fb3-35ce-4eb8-b192-c0abff07c71c"}
+      responses:
+        "401":
+          application/json: {"detail": "Authentication credentials were not provided."}
+  retrieve_project:
+    SuccessfulResponse:
+      parameters:
+        path:
+          id: "fbde4cc2-173b-4a75-a73a-4e7e70b72f3f"
+      responses:
+        "200":
+          application/json: {"id": "660e8400-e29b-41d4-a716-446655440000", "project_name": "Wedding", "project_type": "event", "client": {"id": "550e8400-e29b-41d4-a716-446655440000", "first_name": "John", "last_name": "Doe", "city": "Cleveland", "state": "OH", "zip_code": "44122", "email": "john.doe@example.com", "phone_number": "+12161231234", "created_at": "2026-05-21T10:00:00Z"}, "created_at": "2026-05-21T10:15:00Z"}
+    Unauthorized:
+      parameters:
+        path:
+          id: "25c252dc-fafe-438b-a9d5-58a7b121ff90"
+      responses:
+        "401":
+          application/json: {"detail": "Authentication credentials were not provided."}
+    NotFound:
+      parameters:
+        path:
+          id: "4ef667e2-63a0-4d82-8aef-9636502a7657"
+      responses:
+        "404":
+          application/json: {"detail": "Not found."}
+  update_project:
+    SuccessfulResponse:
+      parameters:
+        path:
+          id: "03bc43a0-a09d-4f68-8072-1fe6aed2ed5e"
+      requestBody:
+        application/json: {"project_name": "<value>", "project_type": "event", "client_id": "e6cdc396-9282-4d2d-ae93-8e844765ecc5"}
+        application/x-www-form-urlencoded: {"project_name": "<value>", "project_type": "event", "client_id": "e6cdc396-9282-4d2d-ae93-8e844765ecc5"}
+        multipart/form-data: {"project_name": "<value>", "project_type": "event", "client_id": "e6cdc396-9282-4d2d-ae93-8e844765ecc5"}
+      responses:
+        "200":
+          application/json: {"id": "660e8400-e29b-41d4-a716-446655440000", "project_name": "Wedding - Updated", "project_type": "event", "client": {"id": "550e8400-e29b-41d4-a716-446655440000", "first_name": "John", "last_name": "Doe", "city": "Cleveland", "state": "OH", "zip_code": "44122", "email": "john.doe@example.com", "phone_number": "+12161231234", "created_at": "2026-05-21T10:00:00Z"}, "created_at": "2026-05-21T10:15:00Z"}
+    BadRequest:
+      parameters:
+        path:
+          id: "6172f420-cc0c-45f3-a081-08ad7c9b021f"
+      requestBody:
+        application/json: {"project_name": "<value>", "project_type": "event", "client_id": "e6cdc396-9282-4d2d-ae93-8e844765ecc5"}
+        application/x-www-form-urlencoded: {"project_name": "<value>", "project_type": "event", "client_id": "e6cdc396-9282-4d2d-ae93-8e844765ecc5"}
+        multipart/form-data: {"project_name": "<value>", "project_type": "event", "client_id": "e6cdc396-9282-4d2d-ae93-8e844765ecc5"}
+      responses:
+        "400":
+          application/json: {"detail": "Invalid JSON in request body"}
+    Unauthorized:
+      parameters:
+        path:
+          id: "2ffca99c-68c9-4c16-9d48-365d7ac052f2"
+      requestBody:
+        application/json: {"project_name": "<value>", "project_type": "event", "client_id": "e6cdc396-9282-4d2d-ae93-8e844765ecc5"}
+        application/x-www-form-urlencoded: {"project_name": "<value>", "project_type": "event", "client_id": "e6cdc396-9282-4d2d-ae93-8e844765ecc5"}
+        multipart/form-data: {"project_name": "<value>", "project_type": "event", "client_id": "e6cdc396-9282-4d2d-ae93-8e844765ecc5"}
+      responses:
+        "401":
+          application/json: {"detail": "Authentication credentials were not provided."}
+    NotFound:
+      parameters:
+        path:
+          id: "a1d677b4-44ba-425a-95f9-73c1ecfee2e9"
+      requestBody:
+        application/json: {"project_name": "<value>", "project_type": "event", "client_id": "e6cdc396-9282-4d2d-ae93-8e844765ecc5"}
+        application/x-www-form-urlencoded: {"project_name": "<value>", "project_type": "event", "client_id": "e6cdc396-9282-4d2d-ae93-8e844765ecc5"}
+        multipart/form-data: {"project_name": "<value>", "project_type": "event", "client_id": "e6cdc396-9282-4d2d-ae93-8e844765ecc5"}
+      responses:
+        "404":
+          application/json: {"detail": "Not found."}
+  partially_update_project:
+    speakeasy-default-partially-update-project:
+      parameters:
+        path:
+          id: "699e6a41-ae9b-4bbd-b956-4f914c7a54a3"
+      responses:
+        "200":
+          application/json: {"id": "2a6912d1-adfb-4722-8907-ea29350737c9", "project_name": "<value>", "project_type": "portrait", "client": {"id": "ec5aadeb-80a9-4147-8572-c24e95e4df01", "first_name": "Santiago", "last_name": "Gerhold", "city": "Bartonland", "state": "Louisiana", "zip_code": "30192-9974", "email": "Abbey_Dickens@gmail.com", "phone_number": "(254) 485-5384 x318", "created_at": "2026-11-10T02:17:58.519Z"}, "created_at": "2026-07-29T19:18:06.433Z"}
+        "400":
+          application/json: {"detail": "Invalid JSON in request body"}
+        "401":
+          application/json: {"detail": "Authentication credentials were not provided."}
+        "404":
+          application/json: {"detail": "The requested resource was not found."}
+  delete_project:
+    Unauthorized:
+      parameters:
+        path:
+          id: "757c3501-8a89-4423-b07a-d32caa14b696"
+      responses:
+        "401":
+          application/json: {"detail": "Authentication credentials were not provided."}
+    NotFound:
+      parameters:
+        path:
+          id: "db383eb5-76b8-4110-ab94-6821bd4775e6"
+      responses:
+        "404":
+          application/json: {"detail": "Not found."}
+    speakeasy-default-delete-project:
+      parameters:
+        path:
+          id: "6b9dff50-a721-4d49-bf11-19fd1818a6a0"
+      responses:
+        "401":
+          application/json: {"detail": "Authentication credentials were not provided."}
+        "404":
+          application/json: {"detail": "The requested resource was not found."}
+  obtain_token:
+    speakeasy-default-obtain-token:
+      requestBody:
+        application/json: {"username": "Watson_Flatley", "password": "Od4r0DaNO_D8IXK"}
+        application/x-www-form-urlencoded: {"username": "Watson_Flatley", "password": "Od4r0DaNO_D8IXK"}
+        multipart/form-data: {"username": "Watson_Flatley", "password": "Od4r0DaNO_D8IXK"}
+      responses:
+        "200":
+          application/json: {}
+        "400":
+          application/json: {"detail": "Authentication credentials were not provided."}
+  refresh_token:
+    speakeasy-default-refresh-token:
+      requestBody:
+        application/json: {"refresh": "<value>"}
+        application/x-www-form-urlencoded: {"refresh": "<value>"}
+        multipart/form-data: {"refresh": "<value>"}
+      responses:
+        "200":
+          application/json: {}
+        "400":
+          application/json: {"detail": "Authentication credentials were not provided."}
+examplesVersion: 1.0.2

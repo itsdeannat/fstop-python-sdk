@@ -1,0 +1,12 @@
+# PatchedProjectCreate
+
+Serializer for creating projects - excludes read-only fields (id, client, created_at)
+
+
+## Fields
+
+| Field                                                                                                    | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `project_name`                                                                                           | *Optional[str]*                                                                                          | :heavy_minus_sign:                                                                                       | Name of the project                                                                                      |
+| `project_type`                                                                                           | [Optional[models.ProjectTypeEnum]](../models/projecttypeenum.md)                                         | :heavy_minus_sign:                                                                                       | Type of project (event, portrait, or party)<br/><br/>* `event` - event<br/>* `portrait` - portrait<br/>* `party` - party |
+| `client_id`                                                                                              | *Optional[str]*                                                                                          | :heavy_minus_sign:                                                                                       | UUID of the client for this project                                                                      |

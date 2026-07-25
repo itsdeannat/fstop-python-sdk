@@ -1,0 +1,16 @@
+# GalleryBooking
+
+Booking associated with this gallery
+
+
+## Fields
+
+| Field                                                                        | Type                                                                         | Required                                                                     | Description                                                                  |
+| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| `id`                                                                         | *str*                                                                        | :heavy_check_mark:                                                           | Unique identifier for the booking                                            |
+| `project`                                                                    | [models.GalleryProject](../models/galleryproject.md)                         | :heavy_check_mark:                                                           | Project associated with this booking                                         |
+| `date_`                                                                      | [datetime](https://docs.python.org/3/library/datetime.html#datetime-objects) | :heavy_check_mark:                                                           | Date of the booking                                                          |
+| `time`                                                                       | *str*                                                                        | :heavy_check_mark:                                                           | Time of the booking                                                          |
+| `duration`                                                                   | *int*                                                                        | :heavy_check_mark:                                                           | Booking duration in minutes                                                  |
+| `location`                                                                   | *str*                                                                        | :heavy_check_mark:                                                           | Booking location                                                             |
+| `created_at`                                                                 | [date](https://docs.python.org/3/library/datetime.html#date-objects)         | :heavy_check_mark:                                                           | When the booking was created                                                 |

@@ -1,0 +1,37 @@
+speakeasyVersion: 1.791.0
+sources:
+    Fstop:
+        sourceNamespace: fstop
+        sourceRevisionDigest: sha256:80e919cd2cd63cd1a67ae161ff0e09a089f0195c0cc56eb7358c640960acfac0
+        sourceBlobDigest: sha256:487fb6e07f9529cb7048be887c9e50846a251241dc0d3419698f6a927ba36dde
+        tags:
+            - latest
+            - 1.0.0
+targets:
+    fstop:
+        source: Fstop
+        sourceNamespace: fstop
+        sourceRevisionDigest: sha256:80e919cd2cd63cd1a67ae161ff0e09a089f0195c0cc56eb7358c640960acfac0
+        sourceBlobDigest: sha256:487fb6e07f9529cb7048be887c9e50846a251241dc0d3419698f6a927ba36dde
+        codeSamplesNamespace: fstop-python-code-samples
+        codeSamplesRevisionDigest: sha256:45a9e884ef55ee32a917926a0a0fa562a8f8f830859d0f3bef37b8a95ae27907
+workflow:
+    workflowVersion: 1.0.0
+    speakeasyVersion: latest
+    sources:
+        Fstop:
+            inputs:
+                - location: ../fstop/schema.yml
+            output: .speakeasy/out.openapi.yaml
+            registry:
+                location: registry.speakeasyapi.dev/fstop/fstop-api/fstop
+    targets:
+        fstop:
+            target: python
+            source: Fstop
+            codeSamples:
+                registry:
+                    location: registry.speakeasyapi.dev/fstop/fstop-api/fstop-python-code-samples
+                labelOverride:
+                    fixedValue: Python (SDK)
+                blocking: false

@@ -1,0 +1,12 @@
+# ProjectCreate
+
+Serializer for creating projects - excludes read-only fields (id, client, created_at)
+
+
+## Fields
+
+| Field                                                                                                    | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `project_name`                                                                                           | *str*                                                                                                    | :heavy_check_mark:                                                                                       | Name of the project                                                                                      |
+| `project_type`                                                                                           | [models.ProjectTypeEnum](../models/projecttypeenum.md)                                                   | :heavy_check_mark:                                                                                       | Type of project (event, portrait, or party)<br/><br/>* `event` - event<br/>* `portrait` - portrait<br/>* `party` - party |
+| `client_id`                                                                                              | *str*                                                                                                    | :heavy_check_mark:                                                                                       | UUID of the client for this project                                                                      |
