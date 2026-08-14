@@ -3,7 +3,7 @@ speakeasyVersion: latest
 sources:
     Fstop:
         inputs:
-            - location: ../fstop/schema.yml
+            - location: ./schema.yml
         output: .speakeasy/out.openapi.yaml
         registry:
             location: registry.speakeasyapi.dev/fstop/fstop-api/fstop
