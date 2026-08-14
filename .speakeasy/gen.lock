@@ -3,19 +3,19 @@ id: b687547f-fec7-4913-85fd-aadcbdde3e3e
 management:
   docChecksum: e8645648842c0a8a3ede2c92b8210333
   docVersion: 1.0.0
-  speakeasyVersion: 1.791.0
-  generationVersion: 2.924.0
-  releaseVersion: 0.0.2
-  configChecksum: ac37a832ec4a501a009de6eda2812665
+  speakeasyVersion: 1.794.0
+  generationVersion: 2.930.0
+  releaseVersion: 0.0.3
+  configChecksum: beda791d6e26dd85034cd08c87f64f16
 persistentEdits:
-  generation_id: 616ef4fa-ebf9-4c66-a5ca-e16514e3e33a
-  pristine_commit_hash: b14c740933dd04c7390e538a3497229624f4d29d
-  pristine_tree_hash: 0959cfef4c50a7646bd0d8debf1d6629be200700
+  generation_id: f245899c-f535-4163-8dc7-95a4ba1d863b
+  pristine_commit_hash: b44a4c09952ff2601e415500501edfc5d9f24c14
+  pristine_tree_hash: 8d6f6ec70427b14d47e547f4363816e9c0a400f9
 features:
   python:
     additionalDependencies: 1.1.0
     constsAndDefaults: 1.0.7
-    core: 6.0.34
+    core: 6.0.36
     defaultEnabledRetries: 0.2.0
     devContainers: 3.0.0
     enumUnions: 0.1.1
@@ -262,8 +262,8 @@ trackedFiles:
     pristine_git_object: c00200cfd072e9febac5d6be783da1925d11dac0
   pyproject.toml:
     id: 5d07e7d72637
-    last_write_checksum: sha1:abd1ab214e3eb426661938a4e69b97ad310a412f
-    pristine_git_object: 1577ad79e40100ea5f6bd654faa9926b78bd94ef
+    last_write_checksum: sha1:96d4252036d8b9da788a5e1ef1073a15c8b19a41
+    pristine_git_object: 5b245aac0026c8ac18a411dfcaa2ef36a2f4eadc
   scripts/publish.sh:
     id: fe273b08f514
     last_write_checksum: sha1:adc9b741c12ad1591ab4870eabe20f0d0a86cd1a
@@ -286,8 +286,8 @@ trackedFiles:
     pristine_git_object: f5caddbdd4194f713d85fcb5b61f5d009060bf95
   src/fstop/_version.py:
     id: da1b63a68197
-    last_write_checksum: sha1:ed5d0bcd827023e6ea612d2dd468006371a9172e
-    pristine_git_object: 7de3caeff4baddc4642fe26ac8f04d0f13f305d9
+    last_write_checksum: sha1:4ab647925d69c7402327669e714849b935f4c3db
+    pristine_git_object: 0548cfca5b62dd1686bf0232c7981f365df74ff3
   src/fstop/basesdk.py:
     id: 2db7f058957d
     last_write_checksum: sha1:bd2aab994353b217b642e94a2db57e630e022105

@@ -1,27 +1,28 @@
-speakeasyVersion: 1.791.0
+speakeasyVersion: 1.794.0
 sources:
     Fstop:
         sourceNamespace: fstop
-        sourceRevisionDigest: sha256:72fde9bbea780901729b5e388accd639bf82f065e52e2ee35f8c4b4f85b3548d
-        sourceBlobDigest: sha256:f860ba102bda69d6b7033de8b708749c3f662e3b06da183d7ceec77c21f3a66d
+        sourceRevisionDigest: sha256:b1e4d8d98fe21171845b01a8308af6c910393e97346cbe2c80f80a67bb97556c
+        sourceBlobDigest: sha256:b8e3d05be60b600d47d78934607c26f12071d752bb03d62e54fd960d0566bd7b
         tags:
             - latest
+            - main
             - 1.0.0
 targets:
     fstop:
         source: Fstop
         sourceNamespace: fstop
-        sourceRevisionDigest: sha256:72fde9bbea780901729b5e388accd639bf82f065e52e2ee35f8c4b4f85b3548d
-        sourceBlobDigest: sha256:f860ba102bda69d6b7033de8b708749c3f662e3b06da183d7ceec77c21f3a66d
+        sourceRevisionDigest: sha256:b1e4d8d98fe21171845b01a8308af6c910393e97346cbe2c80f80a67bb97556c
+        sourceBlobDigest: sha256:b8e3d05be60b600d47d78934607c26f12071d752bb03d62e54fd960d0566bd7b
         codeSamplesNamespace: fstop-python-code-samples
-        codeSamplesRevisionDigest: sha256:f4acf80ce4c782f5f1bff428838a99f084486e266a91df142eac2609154c24db
+        codeSamplesRevisionDigest: sha256:1bbd22b411e6186025e0f0831f5924419899e40b1e8ca010cd5c5f46d1c588e8
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest
     sources:
         Fstop:
             inputs:
-                - location: ../fstop/schema.yml
+                - location: ./schema.yml
             output: .speakeasy/out.openapi.yaml
             registry:
                 location: registry.speakeasyapi.dev/fstop/fstop-api/fstop
