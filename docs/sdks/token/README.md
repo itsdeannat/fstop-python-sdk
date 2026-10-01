@@ -16,12 +16,9 @@ Authenticate and obtain access and refresh tokens.
 <!-- UsageSnippet language="python" operationID="obtain_token" method="post" path="/api/token/" -->
 ```python
 from fstop import Fstop
-import os
 
 
-with Fstop(
-    jwt_auth=os.getenv("FSTOP_JWT_AUTH", ""),
-) as f_client:
+with Fstop() as f_client:
 
     res = f_client.token.obtain_token(username="Watson_Flatley", password="Od4r0DaNO_D8IXK")
 
@@ -58,12 +55,9 @@ Refresh an expired access token using a refresh token.
 <!-- UsageSnippet language="python" operationID="refresh_token" method="post" path="/api/token/refresh/" -->
 ```python
 from fstop import Fstop
-import os
 
 
-with Fstop(
-    jwt_auth=os.getenv("FSTOP_JWT_AUTH", ""),
-) as f_client:
+with Fstop() as f_client:
 
     res = f_client.token.refresh_token(refresh="<value>")
 

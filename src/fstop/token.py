@@ -4,7 +4,6 @@ from .basesdk import BaseSDK
 from fstop import errors, models, utils
 from fstop._hooks import HookContext
 from fstop.types import OptionalNullable, UNSET
-from fstop.utils import get_security_from_env
 from fstop.utils.unmarshal_json_response import unmarshal_json_response
 from typing import Any, Mapping, Optional
 
@@ -54,11 +53,10 @@ class Token(BaseSDK):
             request=request,
             request_body_required=True,
             request_has_path_params=False,
-            request_has_query_params=True,
+            request_has_query_params=False,
             user_agent_header="user-agent",
             accept_header_value="application/json",
             http_headers=http_headers,
-            security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
                 request, False, False, "json", models.TokenObtainPair
             ),
@@ -80,9 +78,7 @@ class Token(BaseSDK):
                 base_url=base_url or "",
                 operation_id="obtain_token",
                 oauth2_scopes=None,
-                security_source=get_security_from_env(
-                    self.sdk_configuration.security, models.Security
-                ),
+                security_source=None,
                 tags=["token"],
                 extensions=None,
             ),
@@ -156,11 +152,10 @@ class Token(BaseSDK):
             request=request,
             request_body_required=True,
             request_has_path_params=False,
-            request_has_query_params=True,
+            request_has_query_params=False,
             user_agent_header="user-agent",
             accept_header_value="application/json",
             http_headers=http_headers,
-            security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
                 request, False, False, "json", models.TokenObtainPair
             ),
@@ -182,9 +177,7 @@ class Token(BaseSDK):
                 base_url=base_url or "",
                 operation_id="obtain_token",
                 oauth2_scopes=None,
-                security_source=get_security_from_env(
-                    self.sdk_configuration.security, models.Security
-                ),
+                security_source=None,
                 tags=["token"],
                 extensions=None,
             ),
@@ -255,11 +248,10 @@ class Token(BaseSDK):
             request=request,
             request_body_required=True,
             request_has_path_params=False,
-            request_has_query_params=True,
+            request_has_query_params=False,
             user_agent_header="user-agent",
             accept_header_value="application/json",
             http_headers=http_headers,
-            security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
                 request, False, False, "json", models.TokenRefresh
             ),
@@ -281,9 +273,7 @@ class Token(BaseSDK):
                 base_url=base_url or "",
                 operation_id="refresh_token",
                 oauth2_scopes=None,
-                security_source=get_security_from_env(
-                    self.sdk_configuration.security, models.Security
-                ),
+                security_source=None,
                 tags=["token"],
                 extensions=None,
             ),
@@ -354,11 +344,10 @@ class Token(BaseSDK):
             request=request,
             request_body_required=True,
             request_has_path_params=False,
-            request_has_query_params=True,
+            request_has_query_params=False,
             user_agent_header="user-agent",
             accept_header_value="application/json",
             http_headers=http_headers,
-            security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
                 request, False, False, "json", models.TokenRefresh
             ),
@@ -380,9 +369,7 @@ class Token(BaseSDK):
                 base_url=base_url or "",
                 operation_id="refresh_token",
                 oauth2_scopes=None,
-                security_source=get_security_from_env(
-                    self.sdk_configuration.security, models.Security
-                ),
+                security_source=None,
                 tags=["token"],
                 extensions=None,
             ),

@@ -5,69 +5,69 @@ from typing import Any, TYPE_CHECKING
 from fstop.utils.dynamic_imports import lazy_getattr, lazy_dir
 
 if TYPE_CHECKING:
-    from .booking import (
-        Booking,
+    from .booking_input import BookingInput, BookingInputTypedDict
+    from .booking_output import (
         BookingClient,
         BookingClientTypedDict,
+        BookingOutput,
+        BookingOutputTypedDict,
         BookingProject,
         BookingProjectTypedDict,
-        BookingTypedDict,
     )
     from .bookingcreate import BookingCreate, BookingCreateTypedDict
+    from .bookings_partial_updateop import (
+        BookingsPartialUpdateRequest,
+        BookingsPartialUpdateRequestTypedDict,
+    )
+    from .bookings_updateop import BookingsUpdateRequest, BookingsUpdateRequestTypedDict
     from .client import Client, ClientTypedDict
+    from .client_input import ClientInput, ClientInputTypedDict
     from .clientcreate import ClientCreate, ClientCreateTypedDict
+    from .clients_partial_updateop import (
+        ClientsPartialUpdateRequest,
+        ClientsPartialUpdateRequestTypedDict,
+    )
+    from .clients_updateop import ClientsUpdateRequest, ClientsUpdateRequestTypedDict
     from .delete_bookingop import DeleteBookingRequest, DeleteBookingRequestTypedDict
     from .delete_clientop import DeleteClientRequest, DeleteClientRequestTypedDict
     from .delete_galleryop import DeleteGalleryRequest, DeleteGalleryRequestTypedDict
     from .delete_projectop import DeleteProjectRequest, DeleteProjectRequestTypedDict
-    from .gallery import (
-        Gallery,
-        GalleryBooking,
-        GalleryBookingTypedDict,
+    from .galleries_partial_updateop import (
+        GalleriesPartialUpdateRequest,
+        GalleriesPartialUpdateRequestTypedDict,
+    )
+    from .galleries_updateop import (
+        GalleriesUpdateRequest,
+        GalleriesUpdateRequestTypedDict,
+    )
+    from .gallery_input import GalleryInput, GalleryInputTypedDict
+    from .gallery_output import (
         GalleryClient,
         GalleryClientTypedDict,
+        GalleryOutput,
+        GalleryOutputTypedDict,
         GalleryProject,
         GalleryProjectTypedDict,
-        GalleryTypedDict,
     )
     from .gallerycreate import GalleryCreate, GalleryCreateTypedDict
     from .obtain_tokenop import ObtainTokenResponse, ObtainTokenResponseTypedDict
-    from .partially_update_bookingop import (
-        PartiallyUpdateBookingRequest,
-        PartiallyUpdateBookingRequestTypedDict,
-    )
-    from .partially_update_clientop import (
-        PartiallyUpdateClientRequest,
-        PartiallyUpdateClientRequestTypedDict,
-    )
-    from .partially_update_galleryop import (
-        PartiallyUpdateGalleryRequest,
-        PartiallyUpdateGalleryRequestTypedDict,
-    )
-    from .partially_update_projectop import (
-        PartiallyUpdateProjectRequest,
-        PartiallyUpdateProjectRequestTypedDict,
-    )
-    from .patchedbookingcreate import (
-        PatchedBookingCreate,
-        PatchedBookingCreateTypedDict,
-    )
-    from .patchedclientcreate import PatchedClientCreate, PatchedClientCreateTypedDict
-    from .patchedgallerycreate import (
-        PatchedGalleryCreate,
-        PatchedGalleryCreateTypedDict,
-    )
-    from .patchedprojectcreate import (
-        PatchedProjectCreate,
-        PatchedProjectCreateTypedDict,
-    )
-    from .project import (
-        Project,
+    from .patchedbooking import PatchedBooking, PatchedBookingTypedDict
+    from .patchedclient import PatchedClient, PatchedClientTypedDict
+    from .patchedgallery import PatchedGallery, PatchedGalleryTypedDict
+    from .patchedproject import PatchedProject, PatchedProjectTypedDict
+    from .project_input import ProjectInput, ProjectInputTypedDict
+    from .project_output import (
         ProjectClient,
         ProjectClientTypedDict,
-        ProjectTypedDict,
+        ProjectOutput,
+        ProjectOutputTypedDict,
     )
     from .projectcreate import ProjectCreate, ProjectCreateTypedDict
+    from .projects_partial_updateop import (
+        ProjectsPartialUpdateRequest,
+        ProjectsPartialUpdateRequestTypedDict,
+    )
+    from .projects_updateop import ProjectsUpdateRequest, ProjectsUpdateRequestTypedDict
     from .projecttypeenum import ProjectTypeEnum
     from .refresh_tokenop import RefreshTokenResponse, RefreshTokenResponseTypedDict
     from .retrieve_bookingop import (
@@ -86,24 +86,32 @@ if TYPE_CHECKING:
     from .security import Security, SecurityTypedDict
     from .tokenobtainpair import TokenObtainPair, TokenObtainPairTypedDict
     from .tokenrefresh import TokenRefresh, TokenRefreshTypedDict
-    from .update_bookingop import UpdateBookingRequest, UpdateBookingRequestTypedDict
-    from .update_clientop import UpdateClientRequest, UpdateClientRequestTypedDict
-    from .update_galleryop import UpdateGalleryRequest, UpdateGalleryRequestTypedDict
-    from .update_projectop import UpdateProjectRequest, UpdateProjectRequestTypedDict
 
 __all__ = [
-    "Booking",
     "BookingClient",
     "BookingClientTypedDict",
     "BookingCreate",
     "BookingCreateTypedDict",
+    "BookingInput",
+    "BookingInputTypedDict",
+    "BookingOutput",
+    "BookingOutputTypedDict",
     "BookingProject",
     "BookingProjectTypedDict",
-    "BookingTypedDict",
+    "BookingsPartialUpdateRequest",
+    "BookingsPartialUpdateRequestTypedDict",
+    "BookingsUpdateRequest",
+    "BookingsUpdateRequestTypedDict",
     "Client",
     "ClientCreate",
     "ClientCreateTypedDict",
+    "ClientInput",
+    "ClientInputTypedDict",
     "ClientTypedDict",
+    "ClientsPartialUpdateRequest",
+    "ClientsPartialUpdateRequestTypedDict",
+    "ClientsUpdateRequest",
+    "ClientsUpdateRequestTypedDict",
     "DeleteBookingRequest",
     "DeleteBookingRequestTypedDict",
     "DeleteClientRequest",
@@ -112,41 +120,43 @@ __all__ = [
     "DeleteGalleryRequestTypedDict",
     "DeleteProjectRequest",
     "DeleteProjectRequestTypedDict",
-    "Gallery",
-    "GalleryBooking",
-    "GalleryBookingTypedDict",
+    "GalleriesPartialUpdateRequest",
+    "GalleriesPartialUpdateRequestTypedDict",
+    "GalleriesUpdateRequest",
+    "GalleriesUpdateRequestTypedDict",
     "GalleryClient",
     "GalleryClientTypedDict",
     "GalleryCreate",
     "GalleryCreateTypedDict",
+    "GalleryInput",
+    "GalleryInputTypedDict",
+    "GalleryOutput",
+    "GalleryOutputTypedDict",
     "GalleryProject",
     "GalleryProjectTypedDict",
-    "GalleryTypedDict",
     "ObtainTokenResponse",
     "ObtainTokenResponseTypedDict",
-    "PartiallyUpdateBookingRequest",
-    "PartiallyUpdateBookingRequestTypedDict",
-    "PartiallyUpdateClientRequest",
-    "PartiallyUpdateClientRequestTypedDict",
-    "PartiallyUpdateGalleryRequest",
-    "PartiallyUpdateGalleryRequestTypedDict",
-    "PartiallyUpdateProjectRequest",
-    "PartiallyUpdateProjectRequestTypedDict",
-    "PatchedBookingCreate",
-    "PatchedBookingCreateTypedDict",
-    "PatchedClientCreate",
-    "PatchedClientCreateTypedDict",
-    "PatchedGalleryCreate",
-    "PatchedGalleryCreateTypedDict",
-    "PatchedProjectCreate",
-    "PatchedProjectCreateTypedDict",
-    "Project",
+    "PatchedBooking",
+    "PatchedBookingTypedDict",
+    "PatchedClient",
+    "PatchedClientTypedDict",
+    "PatchedGallery",
+    "PatchedGalleryTypedDict",
+    "PatchedProject",
+    "PatchedProjectTypedDict",
     "ProjectClient",
     "ProjectClientTypedDict",
     "ProjectCreate",
     "ProjectCreateTypedDict",
+    "ProjectInput",
+    "ProjectInputTypedDict",
+    "ProjectOutput",
+    "ProjectOutputTypedDict",
     "ProjectTypeEnum",
-    "ProjectTypedDict",
+    "ProjectsPartialUpdateRequest",
+    "ProjectsPartialUpdateRequestTypedDict",
+    "ProjectsUpdateRequest",
+    "ProjectsUpdateRequestTypedDict",
     "RefreshTokenResponse",
     "RefreshTokenResponseTypedDict",
     "RetrieveBookingRequest",
@@ -163,29 +173,33 @@ __all__ = [
     "TokenObtainPairTypedDict",
     "TokenRefresh",
     "TokenRefreshTypedDict",
-    "UpdateBookingRequest",
-    "UpdateBookingRequestTypedDict",
-    "UpdateClientRequest",
-    "UpdateClientRequestTypedDict",
-    "UpdateGalleryRequest",
-    "UpdateGalleryRequestTypedDict",
-    "UpdateProjectRequest",
-    "UpdateProjectRequestTypedDict",
 ]
 
 _dynamic_imports: dict[str, str] = {
-    "Booking": ".booking",
-    "BookingClient": ".booking",
-    "BookingClientTypedDict": ".booking",
-    "BookingProject": ".booking",
-    "BookingProjectTypedDict": ".booking",
-    "BookingTypedDict": ".booking",
+    "BookingInput": ".booking_input",
+    "BookingInputTypedDict": ".booking_input",
+    "BookingClient": ".booking_output",
+    "BookingClientTypedDict": ".booking_output",
+    "BookingOutput": ".booking_output",
+    "BookingOutputTypedDict": ".booking_output",
+    "BookingProject": ".booking_output",
+    "BookingProjectTypedDict": ".booking_output",
     "BookingCreate": ".bookingcreate",
     "BookingCreateTypedDict": ".bookingcreate",
+    "BookingsPartialUpdateRequest": ".bookings_partial_updateop",
+    "BookingsPartialUpdateRequestTypedDict": ".bookings_partial_updateop",
+    "BookingsUpdateRequest": ".bookings_updateop",
+    "BookingsUpdateRequestTypedDict": ".bookings_updateop",
     "Client": ".client",
     "ClientTypedDict": ".client",
+    "ClientInput": ".client_input",
+    "ClientInputTypedDict": ".client_input",
     "ClientCreate": ".clientcreate",
     "ClientCreateTypedDict": ".clientcreate",
+    "ClientsPartialUpdateRequest": ".clients_partial_updateop",
+    "ClientsPartialUpdateRequestTypedDict": ".clients_partial_updateop",
+    "ClientsUpdateRequest": ".clients_updateop",
+    "ClientsUpdateRequestTypedDict": ".clients_updateop",
     "DeleteBookingRequest": ".delete_bookingop",
     "DeleteBookingRequestTypedDict": ".delete_bookingop",
     "DeleteClientRequest": ".delete_clientop",
@@ -194,40 +208,42 @@ _dynamic_imports: dict[str, str] = {
     "DeleteGalleryRequestTypedDict": ".delete_galleryop",
     "DeleteProjectRequest": ".delete_projectop",
     "DeleteProjectRequestTypedDict": ".delete_projectop",
-    "Gallery": ".gallery",
-    "GalleryBooking": ".gallery",
-    "GalleryBookingTypedDict": ".gallery",
-    "GalleryClient": ".gallery",
-    "GalleryClientTypedDict": ".gallery",
-    "GalleryProject": ".gallery",
-    "GalleryProjectTypedDict": ".gallery",
-    "GalleryTypedDict": ".gallery",
+    "GalleriesPartialUpdateRequest": ".galleries_partial_updateop",
+    "GalleriesPartialUpdateRequestTypedDict": ".galleries_partial_updateop",
+    "GalleriesUpdateRequest": ".galleries_updateop",
+    "GalleriesUpdateRequestTypedDict": ".galleries_updateop",
+    "GalleryInput": ".gallery_input",
+    "GalleryInputTypedDict": ".gallery_input",
+    "GalleryClient": ".gallery_output",
+    "GalleryClientTypedDict": ".gallery_output",
+    "GalleryOutput": ".gallery_output",
+    "GalleryOutputTypedDict": ".gallery_output",
+    "GalleryProject": ".gallery_output",
+    "GalleryProjectTypedDict": ".gallery_output",
     "GalleryCreate": ".gallerycreate",
     "GalleryCreateTypedDict": ".gallerycreate",
     "ObtainTokenResponse": ".obtain_tokenop",
     "ObtainTokenResponseTypedDict": ".obtain_tokenop",
-    "PartiallyUpdateBookingRequest": ".partially_update_bookingop",
-    "PartiallyUpdateBookingRequestTypedDict": ".partially_update_bookingop",
-    "PartiallyUpdateClientRequest": ".partially_update_clientop",
-    "PartiallyUpdateClientRequestTypedDict": ".partially_update_clientop",
-    "PartiallyUpdateGalleryRequest": ".partially_update_galleryop",
-    "PartiallyUpdateGalleryRequestTypedDict": ".partially_update_galleryop",
-    "PartiallyUpdateProjectRequest": ".partially_update_projectop",
-    "PartiallyUpdateProjectRequestTypedDict": ".partially_update_projectop",
-    "PatchedBookingCreate": ".patchedbookingcreate",
-    "PatchedBookingCreateTypedDict": ".patchedbookingcreate",
-    "PatchedClientCreate": ".patchedclientcreate",
-    "PatchedClientCreateTypedDict": ".patchedclientcreate",
-    "PatchedGalleryCreate": ".patchedgallerycreate",
-    "PatchedGalleryCreateTypedDict": ".patchedgallerycreate",
-    "PatchedProjectCreate": ".patchedprojectcreate",
-    "PatchedProjectCreateTypedDict": ".patchedprojectcreate",
-    "Project": ".project",
-    "ProjectClient": ".project",
-    "ProjectClientTypedDict": ".project",
-    "ProjectTypedDict": ".project",
+    "PatchedBooking": ".patchedbooking",
+    "PatchedBookingTypedDict": ".patchedbooking",
+    "PatchedClient": ".patchedclient",
+    "PatchedClientTypedDict": ".patchedclient",
+    "PatchedGallery": ".patchedgallery",
+    "PatchedGalleryTypedDict": ".patchedgallery",
+    "PatchedProject": ".patchedproject",
+    "PatchedProjectTypedDict": ".patchedproject",
+    "ProjectInput": ".project_input",
+    "ProjectInputTypedDict": ".project_input",
+    "ProjectClient": ".project_output",
+    "ProjectClientTypedDict": ".project_output",
+    "ProjectOutput": ".project_output",
+    "ProjectOutputTypedDict": ".project_output",
     "ProjectCreate": ".projectcreate",
     "ProjectCreateTypedDict": ".projectcreate",
+    "ProjectsPartialUpdateRequest": ".projects_partial_updateop",
+    "ProjectsPartialUpdateRequestTypedDict": ".projects_partial_updateop",
+    "ProjectsUpdateRequest": ".projects_updateop",
+    "ProjectsUpdateRequestTypedDict": ".projects_updateop",
     "ProjectTypeEnum": ".projecttypeenum",
     "RefreshTokenResponse": ".refresh_tokenop",
     "RefreshTokenResponseTypedDict": ".refresh_tokenop",
@@ -245,14 +261,6 @@ _dynamic_imports: dict[str, str] = {
     "TokenObtainPairTypedDict": ".tokenobtainpair",
     "TokenRefresh": ".tokenrefresh",
     "TokenRefreshTypedDict": ".tokenrefresh",
-    "UpdateBookingRequest": ".update_bookingop",
-    "UpdateBookingRequestTypedDict": ".update_bookingop",
-    "UpdateClientRequest": ".update_clientop",
-    "UpdateClientRequestTypedDict": ".update_clientop",
-    "UpdateGalleryRequest": ".update_galleryop",
-    "UpdateGalleryRequestTypedDict": ".update_galleryop",
-    "UpdateProjectRequest": ".update_projectop",
-    "UpdateProjectRequestTypedDict": ".update_projectop",
 }
 
 

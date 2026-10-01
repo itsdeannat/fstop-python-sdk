@@ -7,8 +7,8 @@
 * [list_clients](#list_clients) - List all clients
 * [create_client](#create_client) - Create a client
 * [retrieve_client](#retrieve_client) - Retrieve a client
-* [update_client](#update_client) - Update a client
-* [partially_update_client](#partially_update_client) - Partially update a client
+* [clients_update](#clients_update) - Update a client
+* [clients_partial_update](#clients_partial_update) - Partially update a client
 * [delete_client](#delete_client) - Delete a client
 
 ## list_clients
@@ -180,7 +180,7 @@ with Fstop(
 
 | Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
 | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| `id`                                                                | *str*                                                               | :heavy_check_mark:                                                  | A UUID string identifying this client.                              |
+| `id`                                                                | *str*                                                               | :heavy_check_mark:                                                  | Unique identifier of the resource.                                  |
 | `retries`                                                           | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)    | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
 
 ### Response
@@ -195,13 +195,13 @@ with Fstop(
 | errors.NotFoundError     | 404                      | application/json         |
 | errors.FstopDefaultError | 4XX, 5XX                 | \*/\*                    |
 
-## update_client
+## clients_update
 
-Update an existing client.
+Update a client by ID.
 
-### Example Usage: BadRequest
+### Example Usage
 
-<!-- UsageSnippet language="python" operationID="update_client" method="put" path="/api/clients/{id}/" example="BadRequest" -->
+<!-- UsageSnippet language="python" operationID="clients_update" method="put" path="/api/clients/{id}/" -->
 ```python
 from fstop import Fstop
 import os
@@ -211,61 +211,7 @@ with Fstop(
     jwt_auth=os.getenv("FSTOP_JWT_AUTH", ""),
 ) as f_client:
 
-    res = f_client.clients.update_client(id="8b32958e-9502-42e2-90c2-4d406cd0fdfe", first_name="Maxwell", last_name="Hoeger", city="Schmittshire", state="Michigan", zip_code="14512-8813", email="Madelynn77@hotmail.com", phone_number="917-654-0044 x6213")
-
-    # Handle response
-    print(res)
-
-```
-### Example Usage: NotFound
-
-<!-- UsageSnippet language="python" operationID="update_client" method="put" path="/api/clients/{id}/" example="NotFound" -->
-```python
-from fstop import Fstop
-import os
-
-
-with Fstop(
-    jwt_auth=os.getenv("FSTOP_JWT_AUTH", ""),
-) as f_client:
-
-    res = f_client.clients.update_client(id="b496550f-2ed3-4503-9e52-dbd9e6c8f688", first_name="Maxwell", last_name="Hoeger", city="Schmittshire", state="Michigan", zip_code="14512-8813", email="Madelynn77@hotmail.com", phone_number="917-654-0044 x6213")
-
-    # Handle response
-    print(res)
-
-```
-### Example Usage: SuccessfulResponse
-
-<!-- UsageSnippet language="python" operationID="update_client" method="put" path="/api/clients/{id}/" example="SuccessfulResponse" -->
-```python
-from fstop import Fstop
-import os
-
-
-with Fstop(
-    jwt_auth=os.getenv("FSTOP_JWT_AUTH", ""),
-) as f_client:
-
-    res = f_client.clients.update_client(id="2b946d1c-c429-41ce-8472-c4615bf253ad", first_name="Maxwell", last_name="Hoeger", city="Schmittshire", state="Michigan", zip_code="14512-8813", email="Madelynn77@hotmail.com", phone_number="917-654-0044 x6213")
-
-    # Handle response
-    print(res)
-
-```
-### Example Usage: Unauthorized
-
-<!-- UsageSnippet language="python" operationID="update_client" method="put" path="/api/clients/{id}/" example="Unauthorized" -->
-```python
-from fstop import Fstop
-import os
-
-
-with Fstop(
-    jwt_auth=os.getenv("FSTOP_JWT_AUTH", ""),
-) as f_client:
-
-    res = f_client.clients.update_client(id="96d2995a-51d6-4485-b92b-eb1525c03a13", first_name="Maxwell", last_name="Hoeger", city="Schmittshire", state="Michigan", zip_code="14512-8813", email="Madelynn77@hotmail.com", phone_number="917-654-0044 x6213")
+    res = f_client.clients.clients_update(id="3b1655ff-b54c-49dd-bcdd-dfdaaa356154", first_name="Nestor", last_name="Kilback", city="Charleston", state="Pennsylvania", zip_code="35804", email="Thora85@hotmail.com", phone_number="350.580.4982 x524")
 
     # Handle response
     print(res)
@@ -276,7 +222,7 @@ with Fstop(
 
 | Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
 | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| `id`                                                                | *str*                                                               | :heavy_check_mark:                                                  | A UUID string identifying this client.                              |
+| `id`                                                                | *str*                                                               | :heavy_check_mark:                                                  | Unique identifier of the resource.                                  |
 | `first_name`                                                        | *str*                                                               | :heavy_check_mark:                                                  | Client's first name                                                 |
 | `last_name`                                                         | *str*                                                               | :heavy_check_mark:                                                  | Client's last name                                                  |
 | `city`                                                              | *str*                                                               | :heavy_check_mark:                                                  | City where client is located                                        |
@@ -299,13 +245,13 @@ with Fstop(
 | errors.NotFoundError     | 404                      | application/json         |
 | errors.FstopDefaultError | 4XX, 5XX                 | \*/\*                    |
 
-## partially_update_client
+## clients_partial_update
 
-Partially update an existing client.
+Partially update a client by ID.
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="partially_update_client" method="patch" path="/api/clients/{id}/" -->
+<!-- UsageSnippet language="python" operationID="clients_partial_update" method="patch" path="/api/clients/{id}/" -->
 ```python
 from fstop import Fstop
 import os
@@ -315,7 +261,7 @@ with Fstop(
     jwt_auth=os.getenv("FSTOP_JWT_AUTH", ""),
 ) as f_client:
 
-    res = f_client.clients.partially_update_client(id="5da8c191-5f1a-43a9-b0f9-227f0080cc26")
+    res = f_client.clients.clients_partial_update(id="1cb03e38-893d-48af-892e-6be5bf6fd6f9")
 
     # Handle response
     print(res)
@@ -326,7 +272,7 @@ with Fstop(
 
 | Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
 | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| `id`                                                                | *str*                                                               | :heavy_check_mark:                                                  | A UUID string identifying this client.                              |
+| `id`                                                                | *str*                                                               | :heavy_check_mark:                                                  | Unique identifier of the resource.                                  |
 | `first_name`                                                        | *Optional[str]*                                                     | :heavy_minus_sign:                                                  | Client's first name                                                 |
 | `last_name`                                                         | *Optional[str]*                                                     | :heavy_minus_sign:                                                  | Client's last name                                                  |
 | `city`                                                              | *Optional[str]*                                                     | :heavy_minus_sign:                                                  | City where client is located                                        |
@@ -375,7 +321,7 @@ with Fstop(
 
 | Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
 | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| `id`                                                                | *str*                                                               | :heavy_check_mark:                                                  | A UUID string identifying this client.                              |
+| `id`                                                                | *str*                                                               | :heavy_check_mark:                                                  | Unique identifier of the resource.                                  |
 | `retries`                                                           | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)    | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
 
 ### Errors

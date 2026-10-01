@@ -8,11 +8,11 @@ from typing_extensions import Annotated, TypedDict
 
 class RetrieveProjectRequestTypedDict(TypedDict):
     id: str
-    r"""A UUID string identifying this project."""
+    r"""Unique identifier of the resource."""
 
 
 class RetrieveProjectRequest(BaseModel):
     id: Annotated[
         str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))
     ]
-    r"""A UUID string identifying this project."""
+    r"""Unique identifier of the resource."""

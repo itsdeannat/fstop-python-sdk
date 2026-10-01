@@ -17,10 +17,12 @@ class Projects(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> List[models.Project]:
+    ) -> List[models.ProjectOutput]:
         r"""List all projects
 
         Retrieve a list of all projects. Optionally filter by client_id.
+
+        If set, this operation will use `jwt_auth` from the global security.
 
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -50,6 +52,7 @@ class Projects(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             allow_empty_value=None,
+            allowed_fields=["jwt_auth"],
             timeout_ms=timeout_ms,
         )
 
@@ -80,7 +83,7 @@ class Projects(BaseSDK):
 
         response_data: Any = None
         if utils.match_response(http_res, "200", "application/json"):
-            return unmarshal_json_response(List[models.Project], http_res)
+            return unmarshal_json_response(List[models.ProjectOutput], http_res)
         if utils.match_response(http_res, "401", "application/json"):
             response_data = unmarshal_json_response(
                 errors.UnauthorizedErrorData, http_res
@@ -106,10 +109,12 @@ class Projects(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> List[models.Project]:
+    ) -> List[models.ProjectOutput]:
         r"""List all projects
 
         Retrieve a list of all projects. Optionally filter by client_id.
+
+        If set, this operation will use `jwt_auth` from the global security.
 
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -139,6 +144,7 @@ class Projects(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             allow_empty_value=None,
+            allowed_fields=["jwt_auth"],
             timeout_ms=timeout_ms,
         )
 
@@ -169,7 +175,7 @@ class Projects(BaseSDK):
 
         response_data: Any = None
         if utils.match_response(http_res, "200", "application/json"):
-            return unmarshal_json_response(List[models.Project], http_res)
+            return unmarshal_json_response(List[models.ProjectOutput], http_res)
         if utils.match_response(http_res, "401", "application/json"):
             response_data = unmarshal_json_response(
                 errors.UnauthorizedErrorData, http_res
@@ -198,10 +204,12 @@ class Projects(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> models.Project:
+    ) -> models.ProjectOutput:
         r"""Create a project
 
         Create a new project for a client.
+
+        If set, this operation will use `jwt_auth` from the global security.
 
         :param project_name: Name of the project
         :param project_type: Type of project (event, portrait, or party)
@@ -248,6 +256,7 @@ class Projects(BaseSDK):
                 request, False, False, "json", models.ProjectCreate
             ),
             allow_empty_value=None,
+            allowed_fields=["jwt_auth"],
             timeout_ms=timeout_ms,
         )
 
@@ -278,7 +287,7 @@ class Projects(BaseSDK):
 
         response_data: Any = None
         if utils.match_response(http_res, "201", "application/json"):
-            return unmarshal_json_response(models.Project, http_res)
+            return unmarshal_json_response(models.ProjectOutput, http_res)
         if utils.match_response(http_res, "400", "application/json"):
             response_data = unmarshal_json_response(
                 errors.BadRequestErrorData, http_res
@@ -312,10 +321,12 @@ class Projects(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> models.Project:
+    ) -> models.ProjectOutput:
         r"""Create a project
 
         Create a new project for a client.
+
+        If set, this operation will use `jwt_auth` from the global security.
 
         :param project_name: Name of the project
         :param project_type: Type of project (event, portrait, or party)
@@ -362,6 +373,7 @@ class Projects(BaseSDK):
                 request, False, False, "json", models.ProjectCreate
             ),
             allow_empty_value=None,
+            allowed_fields=["jwt_auth"],
             timeout_ms=timeout_ms,
         )
 
@@ -392,7 +404,7 @@ class Projects(BaseSDK):
 
         response_data: Any = None
         if utils.match_response(http_res, "201", "application/json"):
-            return unmarshal_json_response(models.Project, http_res)
+            return unmarshal_json_response(models.ProjectOutput, http_res)
         if utils.match_response(http_res, "400", "application/json"):
             response_data = unmarshal_json_response(
                 errors.BadRequestErrorData, http_res
@@ -424,12 +436,14 @@ class Projects(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> models.Project:
+    ) -> models.ProjectOutput:
         r"""Retrieve a project
 
         Get a specific project by ID.
 
-        :param id: A UUID string identifying this project.
+        If set, this operation will use `jwt_auth` from the global security.
+
+        :param id: Unique identifier of the resource.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
         :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
@@ -463,6 +477,7 @@ class Projects(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             allow_empty_value=None,
+            allowed_fields=["jwt_auth"],
             timeout_ms=timeout_ms,
         )
 
@@ -493,7 +508,7 @@ class Projects(BaseSDK):
 
         response_data: Any = None
         if utils.match_response(http_res, "200", "application/json"):
-            return unmarshal_json_response(models.Project, http_res)
+            return unmarshal_json_response(models.ProjectOutput, http_res)
         if utils.match_response(http_res, "401", "application/json"):
             response_data = unmarshal_json_response(
                 errors.UnauthorizedErrorData, http_res
@@ -523,12 +538,14 @@ class Projects(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> models.Project:
+    ) -> models.ProjectOutput:
         r"""Retrieve a project
 
         Get a specific project by ID.
 
-        :param id: A UUID string identifying this project.
+        If set, this operation will use `jwt_auth` from the global security.
+
+        :param id: Unique identifier of the resource.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
         :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
@@ -562,6 +579,7 @@ class Projects(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             allow_empty_value=None,
+            allowed_fields=["jwt_auth"],
             timeout_ms=timeout_ms,
         )
 
@@ -592,7 +610,7 @@ class Projects(BaseSDK):
 
         response_data: Any = None
         if utils.match_response(http_res, "200", "application/json"):
-            return unmarshal_json_response(models.Project, http_res)
+            return unmarshal_json_response(models.ProjectOutput, http_res)
         if utils.match_response(http_res, "401", "application/json"):
             response_data = unmarshal_json_response(
                 errors.UnauthorizedErrorData, http_res
@@ -614,7 +632,7 @@ class Projects(BaseSDK):
 
         raise errors.FstopDefaultError("Unexpected response received", http_res)
 
-    def update_project(
+    def projects_update(
         self,
         *,
         id: str,
@@ -625,12 +643,14 @@ class Projects(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> models.Project:
+    ) -> models.ProjectOutput:
         r"""Update a project
 
-        Update an existing project.
+        Update a project by ID.
 
-        :param id: A UUID string identifying this project.
+        If set, this operation will use `jwt_auth` from the global security.
+
+        :param id: Unique identifier of the resource.
         :param project_name: Name of the project
         :param project_type: Type of project (event, portrait, or party)
 
@@ -653,9 +673,9 @@ class Projects(BaseSDK):
         else:
             base_url = self._get_url(base_url, url_variables)
 
-        request = models.UpdateProjectRequest(
+        request = models.ProjectsUpdateRequest(
             id=id,
-            body=models.ProjectCreate(
+            body=models.ProjectInput(
                 project_name=project_name,
                 project_type=project_type,
                 client_id=client_id,
@@ -676,9 +696,10 @@ class Projects(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.body, False, False, "json", models.ProjectCreate
+                request.body, False, False, "json", models.ProjectInput
             ),
             allow_empty_value=None,
+            allowed_fields=["jwt_auth"],
             timeout_ms=timeout_ms,
         )
 
@@ -694,7 +715,7 @@ class Projects(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="update_project",
+                operation_id="projects_update",
                 oauth2_scopes=None,
                 security_source=get_security_from_env(
                     self.sdk_configuration.security, models.Security
@@ -709,7 +730,7 @@ class Projects(BaseSDK):
 
         response_data: Any = None
         if utils.match_response(http_res, "200", "application/json"):
-            return unmarshal_json_response(models.Project, http_res)
+            return unmarshal_json_response(models.ProjectOutput, http_res)
         if utils.match_response(http_res, "400", "application/json"):
             response_data = unmarshal_json_response(
                 errors.BadRequestErrorData, http_res
@@ -736,7 +757,7 @@ class Projects(BaseSDK):
 
         raise errors.FstopDefaultError("Unexpected response received", http_res)
 
-    async def update_project_async(
+    async def projects_update_async(
         self,
         *,
         id: str,
@@ -747,12 +768,14 @@ class Projects(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> models.Project:
+    ) -> models.ProjectOutput:
         r"""Update a project
 
-        Update an existing project.
+        Update a project by ID.
 
-        :param id: A UUID string identifying this project.
+        If set, this operation will use `jwt_auth` from the global security.
+
+        :param id: Unique identifier of the resource.
         :param project_name: Name of the project
         :param project_type: Type of project (event, portrait, or party)
 
@@ -775,9 +798,9 @@ class Projects(BaseSDK):
         else:
             base_url = self._get_url(base_url, url_variables)
 
-        request = models.UpdateProjectRequest(
+        request = models.ProjectsUpdateRequest(
             id=id,
-            body=models.ProjectCreate(
+            body=models.ProjectInput(
                 project_name=project_name,
                 project_type=project_type,
                 client_id=client_id,
@@ -798,9 +821,10 @@ class Projects(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.body, False, False, "json", models.ProjectCreate
+                request.body, False, False, "json", models.ProjectInput
             ),
             allow_empty_value=None,
+            allowed_fields=["jwt_auth"],
             timeout_ms=timeout_ms,
         )
 
@@ -816,7 +840,7 @@ class Projects(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="update_project",
+                operation_id="projects_update",
                 oauth2_scopes=None,
                 security_source=get_security_from_env(
                     self.sdk_configuration.security, models.Security
@@ -831,7 +855,7 @@ class Projects(BaseSDK):
 
         response_data: Any = None
         if utils.match_response(http_res, "200", "application/json"):
-            return unmarshal_json_response(models.Project, http_res)
+            return unmarshal_json_response(models.ProjectOutput, http_res)
         if utils.match_response(http_res, "400", "application/json"):
             response_data = unmarshal_json_response(
                 errors.BadRequestErrorData, http_res
@@ -858,7 +882,7 @@ class Projects(BaseSDK):
 
         raise errors.FstopDefaultError("Unexpected response received", http_res)
 
-    def partially_update_project(
+    def projects_partial_update(
         self,
         *,
         id: str,
@@ -869,12 +893,14 @@ class Projects(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> models.Project:
+    ) -> models.ProjectOutput:
         r"""Partially update a project
 
-        Partially update an existing project.
+        Partially update a project by ID.
 
-        :param id: A UUID string identifying this project.
+        If set, this operation will use `jwt_auth` from the global security.
+
+        :param id: Unique identifier of the resource.
         :param project_name: Name of the project
         :param project_type: Type of project (event, portrait, or party)
 
@@ -897,9 +923,9 @@ class Projects(BaseSDK):
         else:
             base_url = self._get_url(base_url, url_variables)
 
-        request = models.PartiallyUpdateProjectRequest(
+        request = models.ProjectsPartialUpdateRequest(
             id=id,
-            body=models.PatchedProjectCreate(
+            body=models.PatchedProject(
                 project_name=project_name,
                 project_type=project_type,
                 client_id=client_id,
@@ -924,9 +950,10 @@ class Projects(BaseSDK):
                 False,
                 True,
                 "json",
-                Optional[models.PatchedProjectCreate],
+                Optional[models.PatchedProject],
             ),
             allow_empty_value=None,
+            allowed_fields=["jwt_auth"],
             timeout_ms=timeout_ms,
         )
 
@@ -942,7 +969,7 @@ class Projects(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="partially_update_project",
+                operation_id="projects_partial_update",
                 oauth2_scopes=None,
                 security_source=get_security_from_env(
                     self.sdk_configuration.security, models.Security
@@ -957,7 +984,7 @@ class Projects(BaseSDK):
 
         response_data: Any = None
         if utils.match_response(http_res, "200", "application/json"):
-            return unmarshal_json_response(models.Project, http_res)
+            return unmarshal_json_response(models.ProjectOutput, http_res)
         if utils.match_response(http_res, "400", "application/json"):
             response_data = unmarshal_json_response(
                 errors.BadRequestErrorData, http_res
@@ -984,7 +1011,7 @@ class Projects(BaseSDK):
 
         raise errors.FstopDefaultError("Unexpected response received", http_res)
 
-    async def partially_update_project_async(
+    async def projects_partial_update_async(
         self,
         *,
         id: str,
@@ -995,12 +1022,14 @@ class Projects(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> models.Project:
+    ) -> models.ProjectOutput:
         r"""Partially update a project
 
-        Partially update an existing project.
+        Partially update a project by ID.
 
-        :param id: A UUID string identifying this project.
+        If set, this operation will use `jwt_auth` from the global security.
+
+        :param id: Unique identifier of the resource.
         :param project_name: Name of the project
         :param project_type: Type of project (event, portrait, or party)
 
@@ -1023,9 +1052,9 @@ class Projects(BaseSDK):
         else:
             base_url = self._get_url(base_url, url_variables)
 
-        request = models.PartiallyUpdateProjectRequest(
+        request = models.ProjectsPartialUpdateRequest(
             id=id,
-            body=models.PatchedProjectCreate(
+            body=models.PatchedProject(
                 project_name=project_name,
                 project_type=project_type,
                 client_id=client_id,
@@ -1050,9 +1079,10 @@ class Projects(BaseSDK):
                 False,
                 True,
                 "json",
-                Optional[models.PatchedProjectCreate],
+                Optional[models.PatchedProject],
             ),
             allow_empty_value=None,
+            allowed_fields=["jwt_auth"],
             timeout_ms=timeout_ms,
         )
 
@@ -1068,7 +1098,7 @@ class Projects(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="partially_update_project",
+                operation_id="projects_partial_update",
                 oauth2_scopes=None,
                 security_source=get_security_from_env(
                     self.sdk_configuration.security, models.Security
@@ -1083,7 +1113,7 @@ class Projects(BaseSDK):
 
         response_data: Any = None
         if utils.match_response(http_res, "200", "application/json"):
-            return unmarshal_json_response(models.Project, http_res)
+            return unmarshal_json_response(models.ProjectOutput, http_res)
         if utils.match_response(http_res, "400", "application/json"):
             response_data = unmarshal_json_response(
                 errors.BadRequestErrorData, http_res
@@ -1123,7 +1153,9 @@ class Projects(BaseSDK):
 
         Delete a project by ID.
 
-        :param id: A UUID string identifying this project.
+        If set, this operation will use `jwt_auth` from the global security.
+
+        :param id: Unique identifier of the resource.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
         :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
@@ -1157,6 +1189,7 @@ class Projects(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             allow_empty_value=None,
+            allowed_fields=["jwt_auth"],
             timeout_ms=timeout_ms,
         )
 
@@ -1222,7 +1255,9 @@ class Projects(BaseSDK):
 
         Delete a project by ID.
 
-        :param id: A UUID string identifying this project.
+        If set, this operation will use `jwt_auth` from the global security.
+
+        :param id: Unique identifier of the resource.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
         :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
@@ -1256,6 +1291,7 @@ class Projects(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             allow_empty_value=None,
+            allowed_fields=["jwt_auth"],
             timeout_ms=timeout_ms,
         )
 

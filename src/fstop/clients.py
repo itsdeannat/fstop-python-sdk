@@ -22,6 +22,8 @@ class Clients(BaseSDK):
 
         Retrieve a list of all clients in the system.
 
+        If set, this operation will use `jwt_auth` from the global security.
+
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
         :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
@@ -50,6 +52,7 @@ class Clients(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             allow_empty_value=None,
+            allowed_fields=["jwt_auth"],
             timeout_ms=timeout_ms,
         )
 
@@ -111,6 +114,8 @@ class Clients(BaseSDK):
 
         Retrieve a list of all clients in the system.
 
+        If set, this operation will use `jwt_auth` from the global security.
+
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
         :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
@@ -139,6 +144,7 @@ class Clients(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             allow_empty_value=None,
+            allowed_fields=["jwt_auth"],
             timeout_ms=timeout_ms,
         )
 
@@ -207,6 +213,8 @@ class Clients(BaseSDK):
 
         Create a new client.
 
+        If set, this operation will use `jwt_auth` from the global security.
+
         :param first_name: Client's first name
         :param last_name: Client's last name
         :param city: City where client is located
@@ -256,6 +264,7 @@ class Clients(BaseSDK):
                 request, False, False, "json", models.ClientCreate
             ),
             allow_empty_value=None,
+            allowed_fields=["jwt_auth"],
             timeout_ms=timeout_ms,
         )
 
@@ -329,6 +338,8 @@ class Clients(BaseSDK):
 
         Create a new client.
 
+        If set, this operation will use `jwt_auth` from the global security.
+
         :param first_name: Client's first name
         :param last_name: Client's last name
         :param city: City where client is located
@@ -378,6 +389,7 @@ class Clients(BaseSDK):
                 request, False, False, "json", models.ClientCreate
             ),
             allow_empty_value=None,
+            allowed_fields=["jwt_auth"],
             timeout_ms=timeout_ms,
         )
 
@@ -445,7 +457,9 @@ class Clients(BaseSDK):
 
         Get a specific client by ID.
 
-        :param id: A UUID string identifying this client.
+        If set, this operation will use `jwt_auth` from the global security.
+
+        :param id: Unique identifier of the resource.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
         :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
@@ -479,6 +493,7 @@ class Clients(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             allow_empty_value=None,
+            allowed_fields=["jwt_auth"],
             timeout_ms=timeout_ms,
         )
 
@@ -544,7 +559,9 @@ class Clients(BaseSDK):
 
         Get a specific client by ID.
 
-        :param id: A UUID string identifying this client.
+        If set, this operation will use `jwt_auth` from the global security.
+
+        :param id: Unique identifier of the resource.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
         :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
@@ -578,6 +595,7 @@ class Clients(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             allow_empty_value=None,
+            allowed_fields=["jwt_auth"],
             timeout_ms=timeout_ms,
         )
 
@@ -630,7 +648,7 @@ class Clients(BaseSDK):
 
         raise errors.FstopDefaultError("Unexpected response received", http_res)
 
-    def update_client(
+    def clients_update(
         self,
         *,
         id: str,
@@ -648,9 +666,11 @@ class Clients(BaseSDK):
     ) -> models.Client:
         r"""Update a client
 
-        Update an existing client.
+        Update a client by ID.
 
-        :param id: A UUID string identifying this client.
+        If set, this operation will use `jwt_auth` from the global security.
+
+        :param id: Unique identifier of the resource.
         :param first_name: Client's first name
         :param last_name: Client's last name
         :param city: City where client is located
@@ -673,9 +693,9 @@ class Clients(BaseSDK):
         else:
             base_url = self._get_url(base_url, url_variables)
 
-        request = models.UpdateClientRequest(
+        request = models.ClientsUpdateRequest(
             id=id,
-            body=models.ClientCreate(
+            body=models.ClientInput(
                 first_name=first_name,
                 last_name=last_name,
                 city=city,
@@ -700,9 +720,10 @@ class Clients(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.body, False, False, "json", models.ClientCreate
+                request.body, False, False, "json", models.ClientInput
             ),
             allow_empty_value=None,
+            allowed_fields=["jwt_auth"],
             timeout_ms=timeout_ms,
         )
 
@@ -718,7 +739,7 @@ class Clients(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="update_client",
+                operation_id="clients_update",
                 oauth2_scopes=None,
                 security_source=get_security_from_env(
                     self.sdk_configuration.security, models.Security
@@ -760,7 +781,7 @@ class Clients(BaseSDK):
 
         raise errors.FstopDefaultError("Unexpected response received", http_res)
 
-    async def update_client_async(
+    async def clients_update_async(
         self,
         *,
         id: str,
@@ -778,9 +799,11 @@ class Clients(BaseSDK):
     ) -> models.Client:
         r"""Update a client
 
-        Update an existing client.
+        Update a client by ID.
 
-        :param id: A UUID string identifying this client.
+        If set, this operation will use `jwt_auth` from the global security.
+
+        :param id: Unique identifier of the resource.
         :param first_name: Client's first name
         :param last_name: Client's last name
         :param city: City where client is located
@@ -803,9 +826,9 @@ class Clients(BaseSDK):
         else:
             base_url = self._get_url(base_url, url_variables)
 
-        request = models.UpdateClientRequest(
+        request = models.ClientsUpdateRequest(
             id=id,
-            body=models.ClientCreate(
+            body=models.ClientInput(
                 first_name=first_name,
                 last_name=last_name,
                 city=city,
@@ -830,9 +853,10 @@ class Clients(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.body, False, False, "json", models.ClientCreate
+                request.body, False, False, "json", models.ClientInput
             ),
             allow_empty_value=None,
+            allowed_fields=["jwt_auth"],
             timeout_ms=timeout_ms,
         )
 
@@ -848,7 +872,7 @@ class Clients(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="update_client",
+                operation_id="clients_update",
                 oauth2_scopes=None,
                 security_source=get_security_from_env(
                     self.sdk_configuration.security, models.Security
@@ -890,7 +914,7 @@ class Clients(BaseSDK):
 
         raise errors.FstopDefaultError("Unexpected response received", http_res)
 
-    def partially_update_client(
+    def clients_partial_update(
         self,
         *,
         id: str,
@@ -908,9 +932,11 @@ class Clients(BaseSDK):
     ) -> models.Client:
         r"""Partially update a client
 
-        Partially update an existing client.
+        Partially update a client by ID.
 
-        :param id: A UUID string identifying this client.
+        If set, this operation will use `jwt_auth` from the global security.
+
+        :param id: Unique identifier of the resource.
         :param first_name: Client's first name
         :param last_name: Client's last name
         :param city: City where client is located
@@ -933,9 +959,9 @@ class Clients(BaseSDK):
         else:
             base_url = self._get_url(base_url, url_variables)
 
-        request = models.PartiallyUpdateClientRequest(
+        request = models.ClientsPartialUpdateRequest(
             id=id,
-            body=models.PatchedClientCreate(
+            body=models.PatchedClient(
                 first_name=first_name,
                 last_name=last_name,
                 city=city,
@@ -964,9 +990,10 @@ class Clients(BaseSDK):
                 False,
                 True,
                 "json",
-                Optional[models.PatchedClientCreate],
+                Optional[models.PatchedClient],
             ),
             allow_empty_value=None,
+            allowed_fields=["jwt_auth"],
             timeout_ms=timeout_ms,
         )
 
@@ -982,7 +1009,7 @@ class Clients(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="partially_update_client",
+                operation_id="clients_partial_update",
                 oauth2_scopes=None,
                 security_source=get_security_from_env(
                     self.sdk_configuration.security, models.Security
@@ -1024,7 +1051,7 @@ class Clients(BaseSDK):
 
         raise errors.FstopDefaultError("Unexpected response received", http_res)
 
-    async def partially_update_client_async(
+    async def clients_partial_update_async(
         self,
         *,
         id: str,
@@ -1042,9 +1069,11 @@ class Clients(BaseSDK):
     ) -> models.Client:
         r"""Partially update a client
 
-        Partially update an existing client.
+        Partially update a client by ID.
 
-        :param id: A UUID string identifying this client.
+        If set, this operation will use `jwt_auth` from the global security.
+
+        :param id: Unique identifier of the resource.
         :param first_name: Client's first name
         :param last_name: Client's last name
         :param city: City where client is located
@@ -1067,9 +1096,9 @@ class Clients(BaseSDK):
         else:
             base_url = self._get_url(base_url, url_variables)
 
-        request = models.PartiallyUpdateClientRequest(
+        request = models.ClientsPartialUpdateRequest(
             id=id,
-            body=models.PatchedClientCreate(
+            body=models.PatchedClient(
                 first_name=first_name,
                 last_name=last_name,
                 city=city,
@@ -1098,9 +1127,10 @@ class Clients(BaseSDK):
                 False,
                 True,
                 "json",
-                Optional[models.PatchedClientCreate],
+                Optional[models.PatchedClient],
             ),
             allow_empty_value=None,
+            allowed_fields=["jwt_auth"],
             timeout_ms=timeout_ms,
         )
 
@@ -1116,7 +1146,7 @@ class Clients(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="partially_update_client",
+                operation_id="clients_partial_update",
                 oauth2_scopes=None,
                 security_source=get_security_from_env(
                     self.sdk_configuration.security, models.Security
@@ -1171,7 +1201,9 @@ class Clients(BaseSDK):
 
         Delete a client by ID.
 
-        :param id: A UUID string identifying this client.
+        If set, this operation will use `jwt_auth` from the global security.
+
+        :param id: Unique identifier of the resource.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
         :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
@@ -1205,6 +1237,7 @@ class Clients(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             allow_empty_value=None,
+            allowed_fields=["jwt_auth"],
             timeout_ms=timeout_ms,
         )
 
@@ -1270,7 +1303,9 @@ class Clients(BaseSDK):
 
         Delete a client by ID.
 
-        :param id: A UUID string identifying this client.
+        If set, this operation will use `jwt_auth` from the global security.
+
+        :param id: Unique identifier of the resource.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
         :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
@@ -1304,6 +1339,7 @@ class Clients(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             allow_empty_value=None,
+            allowed_fields=["jwt_auth"],
             timeout_ms=timeout_ms,
         )
 

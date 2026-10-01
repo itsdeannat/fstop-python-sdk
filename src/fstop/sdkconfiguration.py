@@ -17,7 +17,7 @@ from typing import Callable, Dict, Optional, Tuple, Union
 
 SERVERS = [
     "https://fstop.photo",
-    # Production server
+    # Fstop Production server
 ]
 """Contains the list of servers available to the SDK"""
 

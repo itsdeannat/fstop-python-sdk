@@ -7,8 +7,8 @@
 * [list_bookings](#list_bookings) - List all bookings
 * [create_booking](#create_booking) - Create a booking
 * [retrieve_booking](#retrieve_booking) - Retrieve a booking
-* [update_booking](#update_booking) - Update a booking
-* [partially_update_booking](#partially_update_booking) - Partially update a booking
+* [bookings_update](#bookings_update) - Update a booking
+* [bookings_partial_update](#bookings_partial_update) - Partially update a booking
 * [delete_booking](#delete_booking) - Delete a booking
 
 ## list_bookings
@@ -42,7 +42,7 @@ with Fstop(
 
 ### Response
 
-**[List[models.Booking]](../../models/.md)**
+**[List[models.BookingOutput]](../../models/.md)**
 
 ### Errors
 
@@ -145,7 +145,7 @@ with Fstop(
 
 ### Response
 
-**[models.Booking](../../models/booking.md)**
+**[models.BookingOutput](../../models/bookingoutput.md)**
 
 ### Errors
 
@@ -182,12 +182,12 @@ with Fstop(
 
 | Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
 | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| `id`                                                                | *str*                                                               | :heavy_check_mark:                                                  | A UUID string identifying this booking.                             |
+| `id`                                                                | *str*                                                               | :heavy_check_mark:                                                  | Unique identifier of the resource.                                  |
 | `retries`                                                           | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)    | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
 
 ### Response
 
-**[models.Booking](../../models/booking.md)**
+**[models.BookingOutput](../../models/bookingoutput.md)**
 
 ### Errors
 
@@ -197,13 +197,13 @@ with Fstop(
 | errors.NotFoundError     | 404                      | application/json         |
 | errors.FstopDefaultError | 4XX, 5XX                 | \*/\*                    |
 
-## update_booking
+## bookings_update
 
-Update an existing booking.
+Update a booking by ID.
 
-### Example Usage: BadRequest
+### Example Usage
 
-<!-- UsageSnippet language="python" operationID="update_booking" method="put" path="/api/bookings/{id}/" example="BadRequest" -->
+<!-- UsageSnippet language="python" operationID="bookings_update" method="put" path="/api/bookings/{id}/" -->
 ```python
 from datetime import date
 from fstop import Fstop
@@ -214,64 +214,7 @@ with Fstop(
     jwt_auth=os.getenv("FSTOP_JWT_AUTH", ""),
 ) as f_client:
 
-    res = f_client.bookings.update_booking(id="88ebe37f-3886-4ec4-a35e-bb09c20e744a", project_id="0b402684-4137-4f75-8dad-69d7335c4dfc", date_=date.fromisoformat("2025-08-19"), time="<value>", duration=279246, location="<value>")
-
-    # Handle response
-    print(res)
-
-```
-### Example Usage: NotFound
-
-<!-- UsageSnippet language="python" operationID="update_booking" method="put" path="/api/bookings/{id}/" example="NotFound" -->
-```python
-from datetime import date
-from fstop import Fstop
-import os
-
-
-with Fstop(
-    jwt_auth=os.getenv("FSTOP_JWT_AUTH", ""),
-) as f_client:
-
-    res = f_client.bookings.update_booking(id="7686ac22-bf10-4da3-89b3-00ac870e7c51", project_id="0b402684-4137-4f75-8dad-69d7335c4dfc", date_=date.fromisoformat("2025-08-19"), time="<value>", duration=279246, location="<value>")
-
-    # Handle response
-    print(res)
-
-```
-### Example Usage: SuccessfulResponse
-
-<!-- UsageSnippet language="python" operationID="update_booking" method="put" path="/api/bookings/{id}/" example="SuccessfulResponse" -->
-```python
-from datetime import date
-from fstop import Fstop
-import os
-
-
-with Fstop(
-    jwt_auth=os.getenv("FSTOP_JWT_AUTH", ""),
-) as f_client:
-
-    res = f_client.bookings.update_booking(id="ddba4ec1-a29c-4b73-a0e0-ae5608cc6d7c", project_id="0b402684-4137-4f75-8dad-69d7335c4dfc", date_=date.fromisoformat("2025-08-19"), time="<value>", duration=279246, location="<value>")
-
-    # Handle response
-    print(res)
-
-```
-### Example Usage: Unauthorized
-
-<!-- UsageSnippet language="python" operationID="update_booking" method="put" path="/api/bookings/{id}/" example="Unauthorized" -->
-```python
-from datetime import date
-from fstop import Fstop
-import os
-
-
-with Fstop(
-    jwt_auth=os.getenv("FSTOP_JWT_AUTH", ""),
-) as f_client:
-
-    res = f_client.bookings.update_booking(id="bfe904dc-10a9-4d1e-8a26-33a34c60d950", project_id="0b402684-4137-4f75-8dad-69d7335c4dfc", date_=date.fromisoformat("2025-08-19"), time="<value>", duration=279246, location="<value>")
+    res = f_client.bookings.bookings_update(id="591beef0-999c-4003-8470-b997a21d62fc", project_id="c62ec803-1632-4541-a02e-21c63e43d349", date_=date.fromisoformat("2026-09-20"), time="<value>", duration=970852, location="<value>")
 
     # Handle response
     print(res)
@@ -282,7 +225,7 @@ with Fstop(
 
 | Parameter                                                                    | Type                                                                         | Required                                                                     | Description                                                                  |
 | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| `id`                                                                         | *str*                                                                        | :heavy_check_mark:                                                           | A UUID string identifying this booking.                                      |
+| `id`                                                                         | *str*                                                                        | :heavy_check_mark:                                                           | Unique identifier of the resource.                                           |
 | `project_id`                                                                 | *str*                                                                        | :heavy_check_mark:                                                           | UUID of the project for this booking                                         |
 | `date_`                                                                      | [datetime](https://docs.python.org/3/library/datetime.html#datetime-objects) | :heavy_check_mark:                                                           | Date of the booking                                                          |
 | `time`                                                                       | *str*                                                                        | :heavy_check_mark:                                                           | Time of the booking                                                          |
@@ -292,7 +235,7 @@ with Fstop(
 
 ### Response
 
-**[models.Booking](../../models/booking.md)**
+**[models.BookingOutput](../../models/bookingoutput.md)**
 
 ### Errors
 
@@ -303,13 +246,13 @@ with Fstop(
 | errors.NotFoundError     | 404                      | application/json         |
 | errors.FstopDefaultError | 4XX, 5XX                 | \*/\*                    |
 
-## partially_update_booking
+## bookings_partial_update
 
-Partially update an existing booking.
+Partially update a booking by ID.
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="partially_update_booking" method="patch" path="/api/bookings/{id}/" -->
+<!-- UsageSnippet language="python" operationID="bookings_partial_update" method="patch" path="/api/bookings/{id}/" -->
 ```python
 from fstop import Fstop
 import os
@@ -319,7 +262,7 @@ with Fstop(
     jwt_auth=os.getenv("FSTOP_JWT_AUTH", ""),
 ) as f_client:
 
-    res = f_client.bookings.partially_update_booking(id="d46f14d5-70f1-4c96-9b1c-9e8136cbec1e")
+    res = f_client.bookings.bookings_partial_update(id="43da1f69-3b3e-439b-aa32-fda50fe0ca39")
 
     # Handle response
     print(res)
@@ -330,7 +273,7 @@ with Fstop(
 
 | Parameter                                                                    | Type                                                                         | Required                                                                     | Description                                                                  |
 | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| `id`                                                                         | *str*                                                                        | :heavy_check_mark:                                                           | A UUID string identifying this booking.                                      |
+| `id`                                                                         | *str*                                                                        | :heavy_check_mark:                                                           | Unique identifier of the resource.                                           |
 | `project_id`                                                                 | *Optional[str]*                                                              | :heavy_minus_sign:                                                           | UUID of the project for this booking                                         |
 | `date_`                                                                      | [datetime](https://docs.python.org/3/library/datetime.html#datetime-objects) | :heavy_minus_sign:                                                           | Date of the booking                                                          |
 | `time`                                                                       | *Optional[str]*                                                              | :heavy_minus_sign:                                                           | Time of the booking                                                          |
@@ -340,7 +283,7 @@ with Fstop(
 
 ### Response
 
-**[models.Booking](../../models/booking.md)**
+**[models.BookingOutput](../../models/bookingoutput.md)**
 
 ### Errors
 
@@ -377,7 +320,7 @@ with Fstop(
 
 | Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
 | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| `id`                                                                | *str*                                                               | :heavy_check_mark:                                                  | A UUID string identifying this booking.                             |
+| `id`                                                                | *str*                                                               | :heavy_check_mark:                                                  | Unique identifier of the resource.                                  |
 | `retries`                                                           | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)    | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
 
 ### Errors

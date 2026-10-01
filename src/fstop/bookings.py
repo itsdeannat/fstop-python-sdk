@@ -18,10 +18,12 @@ class Bookings(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> List[models.Booking]:
+    ) -> List[models.BookingOutput]:
         r"""List all bookings
 
         Retrieve a list of all bookings. Optionally, filter by project_id.
+
+        If set, this operation will use `jwt_auth` from the global security.
 
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -51,6 +53,7 @@ class Bookings(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             allow_empty_value=None,
+            allowed_fields=["jwt_auth"],
             timeout_ms=timeout_ms,
         )
 
@@ -81,7 +84,7 @@ class Bookings(BaseSDK):
 
         response_data: Any = None
         if utils.match_response(http_res, "200", "application/json"):
-            return unmarshal_json_response(List[models.Booking], http_res)
+            return unmarshal_json_response(List[models.BookingOutput], http_res)
         if utils.match_response(http_res, "401", "application/json"):
             response_data = unmarshal_json_response(
                 errors.UnauthorizedErrorData, http_res
@@ -107,10 +110,12 @@ class Bookings(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> List[models.Booking]:
+    ) -> List[models.BookingOutput]:
         r"""List all bookings
 
         Retrieve a list of all bookings. Optionally, filter by project_id.
+
+        If set, this operation will use `jwt_auth` from the global security.
 
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -140,6 +145,7 @@ class Bookings(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             allow_empty_value=None,
+            allowed_fields=["jwt_auth"],
             timeout_ms=timeout_ms,
         )
 
@@ -170,7 +176,7 @@ class Bookings(BaseSDK):
 
         response_data: Any = None
         if utils.match_response(http_res, "200", "application/json"):
-            return unmarshal_json_response(List[models.Booking], http_res)
+            return unmarshal_json_response(List[models.BookingOutput], http_res)
         if utils.match_response(http_res, "401", "application/json"):
             response_data = unmarshal_json_response(
                 errors.UnauthorizedErrorData, http_res
@@ -201,10 +207,12 @@ class Bookings(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> models.Booking:
+    ) -> models.BookingOutput:
         r"""Create a booking
 
         Create a new booking for a project.
+
+        If set, this operation will use `jwt_auth` from the global security.
 
         :param project_id: UUID of the project for this booking
         :param date_: Date of the booking
@@ -251,6 +259,7 @@ class Bookings(BaseSDK):
                 request, False, False, "json", models.BookingCreate
             ),
             allow_empty_value=None,
+            allowed_fields=["jwt_auth"],
             timeout_ms=timeout_ms,
         )
 
@@ -281,7 +290,7 @@ class Bookings(BaseSDK):
 
         response_data: Any = None
         if utils.match_response(http_res, "201", "application/json"):
-            return unmarshal_json_response(models.Booking, http_res)
+            return unmarshal_json_response(models.BookingOutput, http_res)
         if utils.match_response(http_res, "400", "application/json"):
             response_data = unmarshal_json_response(
                 errors.BadRequestErrorData, http_res
@@ -317,10 +326,12 @@ class Bookings(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> models.Booking:
+    ) -> models.BookingOutput:
         r"""Create a booking
 
         Create a new booking for a project.
+
+        If set, this operation will use `jwt_auth` from the global security.
 
         :param project_id: UUID of the project for this booking
         :param date_: Date of the booking
@@ -367,6 +378,7 @@ class Bookings(BaseSDK):
                 request, False, False, "json", models.BookingCreate
             ),
             allow_empty_value=None,
+            allowed_fields=["jwt_auth"],
             timeout_ms=timeout_ms,
         )
 
@@ -397,7 +409,7 @@ class Bookings(BaseSDK):
 
         response_data: Any = None
         if utils.match_response(http_res, "201", "application/json"):
-            return unmarshal_json_response(models.Booking, http_res)
+            return unmarshal_json_response(models.BookingOutput, http_res)
         if utils.match_response(http_res, "400", "application/json"):
             response_data = unmarshal_json_response(
                 errors.BadRequestErrorData, http_res
@@ -429,12 +441,14 @@ class Bookings(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> models.Booking:
+    ) -> models.BookingOutput:
         r"""Retrieve a booking
 
         Get a specific booking by ID.
 
-        :param id: A UUID string identifying this booking.
+        If set, this operation will use `jwt_auth` from the global security.
+
+        :param id: Unique identifier of the resource.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
         :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
@@ -468,6 +482,7 @@ class Bookings(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             allow_empty_value=None,
+            allowed_fields=["jwt_auth"],
             timeout_ms=timeout_ms,
         )
 
@@ -498,7 +513,7 @@ class Bookings(BaseSDK):
 
         response_data: Any = None
         if utils.match_response(http_res, "200", "application/json"):
-            return unmarshal_json_response(models.Booking, http_res)
+            return unmarshal_json_response(models.BookingOutput, http_res)
         if utils.match_response(http_res, "401", "application/json"):
             response_data = unmarshal_json_response(
                 errors.UnauthorizedErrorData, http_res
@@ -528,12 +543,14 @@ class Bookings(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> models.Booking:
+    ) -> models.BookingOutput:
         r"""Retrieve a booking
 
         Get a specific booking by ID.
 
-        :param id: A UUID string identifying this booking.
+        If set, this operation will use `jwt_auth` from the global security.
+
+        :param id: Unique identifier of the resource.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
         :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
@@ -567,6 +584,7 @@ class Bookings(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             allow_empty_value=None,
+            allowed_fields=["jwt_auth"],
             timeout_ms=timeout_ms,
         )
 
@@ -597,7 +615,7 @@ class Bookings(BaseSDK):
 
         response_data: Any = None
         if utils.match_response(http_res, "200", "application/json"):
-            return unmarshal_json_response(models.Booking, http_res)
+            return unmarshal_json_response(models.BookingOutput, http_res)
         if utils.match_response(http_res, "401", "application/json"):
             response_data = unmarshal_json_response(
                 errors.UnauthorizedErrorData, http_res
@@ -619,7 +637,7 @@ class Bookings(BaseSDK):
 
         raise errors.FstopDefaultError("Unexpected response received", http_res)
 
-    def update_booking(
+    def bookings_update(
         self,
         *,
         id: str,
@@ -632,12 +650,14 @@ class Bookings(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> models.Booking:
+    ) -> models.BookingOutput:
         r"""Update a booking
 
-        Update an existing booking.
+        Update a booking by ID.
 
-        :param id: A UUID string identifying this booking.
+        If set, this operation will use `jwt_auth` from the global security.
+
+        :param id: Unique identifier of the resource.
         :param project_id: UUID of the project for this booking
         :param date_: Date of the booking
         :param time: Time of the booking
@@ -658,9 +678,9 @@ class Bookings(BaseSDK):
         else:
             base_url = self._get_url(base_url, url_variables)
 
-        request = models.UpdateBookingRequest(
+        request = models.BookingsUpdateRequest(
             id=id,
-            body=models.BookingCreate(
+            body=models.BookingInput(
                 project_id=project_id,
                 date_=date_,
                 time=time,
@@ -683,9 +703,10 @@ class Bookings(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.body, False, False, "json", models.BookingCreate
+                request.body, False, False, "json", models.BookingInput
             ),
             allow_empty_value=None,
+            allowed_fields=["jwt_auth"],
             timeout_ms=timeout_ms,
         )
 
@@ -701,7 +722,7 @@ class Bookings(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="update_booking",
+                operation_id="bookings_update",
                 oauth2_scopes=None,
                 security_source=get_security_from_env(
                     self.sdk_configuration.security, models.Security
@@ -716,7 +737,7 @@ class Bookings(BaseSDK):
 
         response_data: Any = None
         if utils.match_response(http_res, "200", "application/json"):
-            return unmarshal_json_response(models.Booking, http_res)
+            return unmarshal_json_response(models.BookingOutput, http_res)
         if utils.match_response(http_res, "400", "application/json"):
             response_data = unmarshal_json_response(
                 errors.BadRequestErrorData, http_res
@@ -743,7 +764,7 @@ class Bookings(BaseSDK):
 
         raise errors.FstopDefaultError("Unexpected response received", http_res)
 
-    async def update_booking_async(
+    async def bookings_update_async(
         self,
         *,
         id: str,
@@ -756,12 +777,14 @@ class Bookings(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> models.Booking:
+    ) -> models.BookingOutput:
         r"""Update a booking
 
-        Update an existing booking.
+        Update a booking by ID.
 
-        :param id: A UUID string identifying this booking.
+        If set, this operation will use `jwt_auth` from the global security.
+
+        :param id: Unique identifier of the resource.
         :param project_id: UUID of the project for this booking
         :param date_: Date of the booking
         :param time: Time of the booking
@@ -782,9 +805,9 @@ class Bookings(BaseSDK):
         else:
             base_url = self._get_url(base_url, url_variables)
 
-        request = models.UpdateBookingRequest(
+        request = models.BookingsUpdateRequest(
             id=id,
-            body=models.BookingCreate(
+            body=models.BookingInput(
                 project_id=project_id,
                 date_=date_,
                 time=time,
@@ -807,9 +830,10 @@ class Bookings(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.body, False, False, "json", models.BookingCreate
+                request.body, False, False, "json", models.BookingInput
             ),
             allow_empty_value=None,
+            allowed_fields=["jwt_auth"],
             timeout_ms=timeout_ms,
         )
 
@@ -825,7 +849,7 @@ class Bookings(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="update_booking",
+                operation_id="bookings_update",
                 oauth2_scopes=None,
                 security_source=get_security_from_env(
                     self.sdk_configuration.security, models.Security
@@ -840,7 +864,7 @@ class Bookings(BaseSDK):
 
         response_data: Any = None
         if utils.match_response(http_res, "200", "application/json"):
-            return unmarshal_json_response(models.Booking, http_res)
+            return unmarshal_json_response(models.BookingOutput, http_res)
         if utils.match_response(http_res, "400", "application/json"):
             response_data = unmarshal_json_response(
                 errors.BadRequestErrorData, http_res
@@ -867,7 +891,7 @@ class Bookings(BaseSDK):
 
         raise errors.FstopDefaultError("Unexpected response received", http_res)
 
-    def partially_update_booking(
+    def bookings_partial_update(
         self,
         *,
         id: str,
@@ -880,12 +904,14 @@ class Bookings(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> models.Booking:
+    ) -> models.BookingOutput:
         r"""Partially update a booking
 
-        Partially update an existing booking.
+        Partially update a booking by ID.
 
-        :param id: A UUID string identifying this booking.
+        If set, this operation will use `jwt_auth` from the global security.
+
+        :param id: Unique identifier of the resource.
         :param project_id: UUID of the project for this booking
         :param date_: Date of the booking
         :param time: Time of the booking
@@ -906,9 +932,9 @@ class Bookings(BaseSDK):
         else:
             base_url = self._get_url(base_url, url_variables)
 
-        request = models.PartiallyUpdateBookingRequest(
+        request = models.BookingsPartialUpdateRequest(
             id=id,
-            body=models.PatchedBookingCreate(
+            body=models.PatchedBooking(
                 project_id=project_id,
                 date_=date_,
                 time=time,
@@ -935,9 +961,10 @@ class Bookings(BaseSDK):
                 False,
                 True,
                 "json",
-                Optional[models.PatchedBookingCreate],
+                Optional[models.PatchedBooking],
             ),
             allow_empty_value=None,
+            allowed_fields=["jwt_auth"],
             timeout_ms=timeout_ms,
         )
 
@@ -953,7 +980,7 @@ class Bookings(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="partially_update_booking",
+                operation_id="bookings_partial_update",
                 oauth2_scopes=None,
                 security_source=get_security_from_env(
                     self.sdk_configuration.security, models.Security
@@ -968,7 +995,7 @@ class Bookings(BaseSDK):
 
         response_data: Any = None
         if utils.match_response(http_res, "200", "application/json"):
-            return unmarshal_json_response(models.Booking, http_res)
+            return unmarshal_json_response(models.BookingOutput, http_res)
         if utils.match_response(http_res, "400", "application/json"):
             response_data = unmarshal_json_response(
                 errors.BadRequestErrorData, http_res
@@ -995,7 +1022,7 @@ class Bookings(BaseSDK):
 
         raise errors.FstopDefaultError("Unexpected response received", http_res)
 
-    async def partially_update_booking_async(
+    async def bookings_partial_update_async(
         self,
         *,
         id: str,
@@ -1008,12 +1035,14 @@ class Bookings(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> models.Booking:
+    ) -> models.BookingOutput:
         r"""Partially update a booking
 
-        Partially update an existing booking.
+        Partially update a booking by ID.
 
-        :param id: A UUID string identifying this booking.
+        If set, this operation will use `jwt_auth` from the global security.
+
+        :param id: Unique identifier of the resource.
         :param project_id: UUID of the project for this booking
         :param date_: Date of the booking
         :param time: Time of the booking
@@ -1034,9 +1063,9 @@ class Bookings(BaseSDK):
         else:
             base_url = self._get_url(base_url, url_variables)
 
-        request = models.PartiallyUpdateBookingRequest(
+        request = models.BookingsPartialUpdateRequest(
             id=id,
-            body=models.PatchedBookingCreate(
+            body=models.PatchedBooking(
                 project_id=project_id,
                 date_=date_,
                 time=time,
@@ -1063,9 +1092,10 @@ class Bookings(BaseSDK):
                 False,
                 True,
                 "json",
-                Optional[models.PatchedBookingCreate],
+                Optional[models.PatchedBooking],
             ),
             allow_empty_value=None,
+            allowed_fields=["jwt_auth"],
             timeout_ms=timeout_ms,
         )
 
@@ -1081,7 +1111,7 @@ class Bookings(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="partially_update_booking",
+                operation_id="bookings_partial_update",
                 oauth2_scopes=None,
                 security_source=get_security_from_env(
                     self.sdk_configuration.security, models.Security
@@ -1096,7 +1126,7 @@ class Bookings(BaseSDK):
 
         response_data: Any = None
         if utils.match_response(http_res, "200", "application/json"):
-            return unmarshal_json_response(models.Booking, http_res)
+            return unmarshal_json_response(models.BookingOutput, http_res)
         if utils.match_response(http_res, "400", "application/json"):
             response_data = unmarshal_json_response(
                 errors.BadRequestErrorData, http_res
@@ -1136,7 +1166,9 @@ class Bookings(BaseSDK):
 
         Delete a booking by ID.
 
-        :param id: A UUID string identifying this booking.
+        If set, this operation will use `jwt_auth` from the global security.
+
+        :param id: Unique identifier of the resource.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
         :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
@@ -1170,6 +1202,7 @@ class Bookings(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             allow_empty_value=None,
+            allowed_fields=["jwt_auth"],
             timeout_ms=timeout_ms,
         )
 
@@ -1235,7 +1268,9 @@ class Bookings(BaseSDK):
 
         Delete a booking by ID.
 
-        :param id: A UUID string identifying this booking.
+        If set, this operation will use `jwt_auth` from the global security.
+
+        :param id: Unique identifier of the resource.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
         :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
@@ -1269,6 +1304,7 @@ class Bookings(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             allow_empty_value=None,
+            allowed_fields=["jwt_auth"],
             timeout_ms=timeout_ms,
         )
 

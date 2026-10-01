@@ -1,6 +1,6 @@
 # GalleryProject
 
-Project associated with this booking
+Project associated with this gallery
 
 
 ## Fields

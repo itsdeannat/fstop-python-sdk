@@ -8,11 +8,11 @@ from typing_extensions import Annotated, TypedDict
 
 class RetrieveBookingRequestTypedDict(TypedDict):
     id: str
-    r"""A UUID string identifying this booking."""
+    r"""Unique identifier of the resource."""
 
 
 class RetrieveBookingRequest(BaseModel):
     id: Annotated[
         str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))
     ]
-    r"""A UUID string identifying this booking."""
+    r"""Unique identifier of the resource."""

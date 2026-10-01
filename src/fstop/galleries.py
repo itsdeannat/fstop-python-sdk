@@ -17,10 +17,12 @@ class Galleries(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> List[models.Gallery]:
+    ) -> List[models.GalleryOutput]:
         r"""List all galleries
 
         Retrieve a list of all galleries. Optionally filter by project_id.
+
+        If set, this operation will use `jwt_auth` from the global security.
 
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -50,6 +52,7 @@ class Galleries(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             allow_empty_value=None,
+            allowed_fields=["jwt_auth"],
             timeout_ms=timeout_ms,
         )
 
@@ -80,7 +83,7 @@ class Galleries(BaseSDK):
 
         response_data: Any = None
         if utils.match_response(http_res, "200", "application/json"):
-            return unmarshal_json_response(List[models.Gallery], http_res)
+            return unmarshal_json_response(List[models.GalleryOutput], http_res)
         if utils.match_response(http_res, "401", "application/json"):
             response_data = unmarshal_json_response(
                 errors.UnauthorizedErrorData, http_res
@@ -106,10 +109,12 @@ class Galleries(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> List[models.Gallery]:
+    ) -> List[models.GalleryOutput]:
         r"""List all galleries
 
         Retrieve a list of all galleries. Optionally filter by project_id.
+
+        If set, this operation will use `jwt_auth` from the global security.
 
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -139,6 +144,7 @@ class Galleries(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             allow_empty_value=None,
+            allowed_fields=["jwt_auth"],
             timeout_ms=timeout_ms,
         )
 
@@ -169,7 +175,7 @@ class Galleries(BaseSDK):
 
         response_data: Any = None
         if utils.match_response(http_res, "200", "application/json"):
-            return unmarshal_json_response(List[models.Gallery], http_res)
+            return unmarshal_json_response(List[models.GalleryOutput], http_res)
         if utils.match_response(http_res, "401", "application/json"):
             response_data = unmarshal_json_response(
                 errors.UnauthorizedErrorData, http_res
@@ -200,10 +206,12 @@ class Galleries(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> models.Gallery:
+    ) -> models.GalleryOutput:
         r"""Create a gallery
 
         Create a new gallery for a project.
+
+        If set, this operation will use `jwt_auth` from the global security.
 
         :param project_id: UUID of the project for this gallery
         :param gallery_name: Name of the gallery
@@ -250,6 +258,7 @@ class Galleries(BaseSDK):
                 request, False, False, "json", models.GalleryCreate
             ),
             allow_empty_value=None,
+            allowed_fields=["jwt_auth"],
             timeout_ms=timeout_ms,
         )
 
@@ -280,7 +289,7 @@ class Galleries(BaseSDK):
 
         response_data: Any = None
         if utils.match_response(http_res, "201", "application/json"):
-            return unmarshal_json_response(models.Gallery, http_res)
+            return unmarshal_json_response(models.GalleryOutput, http_res)
         if utils.match_response(http_res, "400", "application/json"):
             response_data = unmarshal_json_response(
                 errors.BadRequestErrorData, http_res
@@ -316,10 +325,12 @@ class Galleries(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> models.Gallery:
+    ) -> models.GalleryOutput:
         r"""Create a gallery
 
         Create a new gallery for a project.
+
+        If set, this operation will use `jwt_auth` from the global security.
 
         :param project_id: UUID of the project for this gallery
         :param gallery_name: Name of the gallery
@@ -366,6 +377,7 @@ class Galleries(BaseSDK):
                 request, False, False, "json", models.GalleryCreate
             ),
             allow_empty_value=None,
+            allowed_fields=["jwt_auth"],
             timeout_ms=timeout_ms,
         )
 
@@ -396,7 +408,7 @@ class Galleries(BaseSDK):
 
         response_data: Any = None
         if utils.match_response(http_res, "201", "application/json"):
-            return unmarshal_json_response(models.Gallery, http_res)
+            return unmarshal_json_response(models.GalleryOutput, http_res)
         if utils.match_response(http_res, "400", "application/json"):
             response_data = unmarshal_json_response(
                 errors.BadRequestErrorData, http_res
@@ -428,12 +440,14 @@ class Galleries(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> models.Gallery:
+    ) -> models.GalleryOutput:
         r"""Retrieve a gallery
 
         Get a specific gallery by ID.
 
-        :param id: A UUID string identifying this gallery.
+        If set, this operation will use `jwt_auth` from the global security.
+
+        :param id: Unique identifier of the resource.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
         :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
@@ -467,6 +481,7 @@ class Galleries(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             allow_empty_value=None,
+            allowed_fields=["jwt_auth"],
             timeout_ms=timeout_ms,
         )
 
@@ -497,7 +512,7 @@ class Galleries(BaseSDK):
 
         response_data: Any = None
         if utils.match_response(http_res, "200", "application/json"):
-            return unmarshal_json_response(models.Gallery, http_res)
+            return unmarshal_json_response(models.GalleryOutput, http_res)
         if utils.match_response(http_res, "401", "application/json"):
             response_data = unmarshal_json_response(
                 errors.UnauthorizedErrorData, http_res
@@ -527,12 +542,14 @@ class Galleries(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> models.Gallery:
+    ) -> models.GalleryOutput:
         r"""Retrieve a gallery
 
         Get a specific gallery by ID.
 
-        :param id: A UUID string identifying this gallery.
+        If set, this operation will use `jwt_auth` from the global security.
+
+        :param id: Unique identifier of the resource.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
         :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
@@ -566,6 +583,7 @@ class Galleries(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             allow_empty_value=None,
+            allowed_fields=["jwt_auth"],
             timeout_ms=timeout_ms,
         )
 
@@ -596,7 +614,7 @@ class Galleries(BaseSDK):
 
         response_data: Any = None
         if utils.match_response(http_res, "200", "application/json"):
-            return unmarshal_json_response(models.Gallery, http_res)
+            return unmarshal_json_response(models.GalleryOutput, http_res)
         if utils.match_response(http_res, "401", "application/json"):
             response_data = unmarshal_json_response(
                 errors.UnauthorizedErrorData, http_res
@@ -618,7 +636,7 @@ class Galleries(BaseSDK):
 
         raise errors.FstopDefaultError("Unexpected response received", http_res)
 
-    def update_gallery(
+    def galleries_update(
         self,
         *,
         id: str,
@@ -631,12 +649,14 @@ class Galleries(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> models.Gallery:
+    ) -> models.GalleryOutput:
         r"""Update a gallery
 
-        Update an existing gallery.
+        Update a gallery by ID.
 
-        :param id: A UUID string identifying this gallery.
+        If set, this operation will use `jwt_auth` from the global security.
+
+        :param id: Unique identifier of the resource.
         :param project_id: UUID of the project for this gallery
         :param gallery_name: Name of the gallery
         :param picture_count: Number of pictures in the gallery
@@ -657,9 +677,9 @@ class Galleries(BaseSDK):
         else:
             base_url = self._get_url(base_url, url_variables)
 
-        request = models.UpdateGalleryRequest(
+        request = models.GalleriesUpdateRequest(
             id=id,
-            body=models.GalleryCreate(
+            body=models.GalleryInput(
                 project_id=project_id,
                 gallery_name=gallery_name,
                 picture_count=picture_count,
@@ -682,9 +702,10 @@ class Galleries(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.body, False, False, "json", models.GalleryCreate
+                request.body, False, False, "json", models.GalleryInput
             ),
             allow_empty_value=None,
+            allowed_fields=["jwt_auth"],
             timeout_ms=timeout_ms,
         )
 
@@ -700,7 +721,7 @@ class Galleries(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="update_gallery",
+                operation_id="galleries_update",
                 oauth2_scopes=None,
                 security_source=get_security_from_env(
                     self.sdk_configuration.security, models.Security
@@ -715,7 +736,7 @@ class Galleries(BaseSDK):
 
         response_data: Any = None
         if utils.match_response(http_res, "200", "application/json"):
-            return unmarshal_json_response(models.Gallery, http_res)
+            return unmarshal_json_response(models.GalleryOutput, http_res)
         if utils.match_response(http_res, "400", "application/json"):
             response_data = unmarshal_json_response(
                 errors.BadRequestErrorData, http_res
@@ -742,7 +763,7 @@ class Galleries(BaseSDK):
 
         raise errors.FstopDefaultError("Unexpected response received", http_res)
 
-    async def update_gallery_async(
+    async def galleries_update_async(
         self,
         *,
         id: str,
@@ -755,12 +776,14 @@ class Galleries(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> models.Gallery:
+    ) -> models.GalleryOutput:
         r"""Update a gallery
 
-        Update an existing gallery.
+        Update a gallery by ID.
 
-        :param id: A UUID string identifying this gallery.
+        If set, this operation will use `jwt_auth` from the global security.
+
+        :param id: Unique identifier of the resource.
         :param project_id: UUID of the project for this gallery
         :param gallery_name: Name of the gallery
         :param picture_count: Number of pictures in the gallery
@@ -781,9 +804,9 @@ class Galleries(BaseSDK):
         else:
             base_url = self._get_url(base_url, url_variables)
 
-        request = models.UpdateGalleryRequest(
+        request = models.GalleriesUpdateRequest(
             id=id,
-            body=models.GalleryCreate(
+            body=models.GalleryInput(
                 project_id=project_id,
                 gallery_name=gallery_name,
                 picture_count=picture_count,
@@ -806,9 +829,10 @@ class Galleries(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.body, False, False, "json", models.GalleryCreate
+                request.body, False, False, "json", models.GalleryInput
             ),
             allow_empty_value=None,
+            allowed_fields=["jwt_auth"],
             timeout_ms=timeout_ms,
         )
 
@@ -824,7 +848,7 @@ class Galleries(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="update_gallery",
+                operation_id="galleries_update",
                 oauth2_scopes=None,
                 security_source=get_security_from_env(
                     self.sdk_configuration.security, models.Security
@@ -839,7 +863,7 @@ class Galleries(BaseSDK):
 
         response_data: Any = None
         if utils.match_response(http_res, "200", "application/json"):
-            return unmarshal_json_response(models.Gallery, http_res)
+            return unmarshal_json_response(models.GalleryOutput, http_res)
         if utils.match_response(http_res, "400", "application/json"):
             response_data = unmarshal_json_response(
                 errors.BadRequestErrorData, http_res
@@ -866,7 +890,7 @@ class Galleries(BaseSDK):
 
         raise errors.FstopDefaultError("Unexpected response received", http_res)
 
-    def partially_update_gallery(
+    def galleries_partial_update(
         self,
         *,
         id: str,
@@ -879,12 +903,14 @@ class Galleries(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> models.Gallery:
+    ) -> models.GalleryOutput:
         r"""Partially update a gallery
 
-        Partially update an existing gallery.
+        Partially update a gallery by ID.
 
-        :param id: A UUID string identifying this gallery.
+        If set, this operation will use `jwt_auth` from the global security.
+
+        :param id: Unique identifier of the resource.
         :param project_id: UUID of the project for this gallery
         :param gallery_name: Name of the gallery
         :param picture_count: Number of pictures in the gallery
@@ -905,9 +931,9 @@ class Galleries(BaseSDK):
         else:
             base_url = self._get_url(base_url, url_variables)
 
-        request = models.PartiallyUpdateGalleryRequest(
+        request = models.GalleriesPartialUpdateRequest(
             id=id,
-            body=models.PatchedGalleryCreate(
+            body=models.PatchedGallery(
                 project_id=project_id,
                 gallery_name=gallery_name,
                 picture_count=picture_count,
@@ -934,9 +960,10 @@ class Galleries(BaseSDK):
                 False,
                 True,
                 "json",
-                Optional[models.PatchedGalleryCreate],
+                Optional[models.PatchedGallery],
             ),
             allow_empty_value=None,
+            allowed_fields=["jwt_auth"],
             timeout_ms=timeout_ms,
         )
 
@@ -952,7 +979,7 @@ class Galleries(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="partially_update_gallery",
+                operation_id="galleries_partial_update",
                 oauth2_scopes=None,
                 security_source=get_security_from_env(
                     self.sdk_configuration.security, models.Security
@@ -967,7 +994,7 @@ class Galleries(BaseSDK):
 
         response_data: Any = None
         if utils.match_response(http_res, "200", "application/json"):
-            return unmarshal_json_response(models.Gallery, http_res)
+            return unmarshal_json_response(models.GalleryOutput, http_res)
         if utils.match_response(http_res, "400", "application/json"):
             response_data = unmarshal_json_response(
                 errors.BadRequestErrorData, http_res
@@ -994,7 +1021,7 @@ class Galleries(BaseSDK):
 
         raise errors.FstopDefaultError("Unexpected response received", http_res)
 
-    async def partially_update_gallery_async(
+    async def galleries_partial_update_async(
         self,
         *,
         id: str,
@@ -1007,12 +1034,14 @@ class Galleries(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
-    ) -> models.Gallery:
+    ) -> models.GalleryOutput:
         r"""Partially update a gallery
 
-        Partially update an existing gallery.
+        Partially update a gallery by ID.
 
-        :param id: A UUID string identifying this gallery.
+        If set, this operation will use `jwt_auth` from the global security.
+
+        :param id: Unique identifier of the resource.
         :param project_id: UUID of the project for this gallery
         :param gallery_name: Name of the gallery
         :param picture_count: Number of pictures in the gallery
@@ -1033,9 +1062,9 @@ class Galleries(BaseSDK):
         else:
             base_url = self._get_url(base_url, url_variables)
 
-        request = models.PartiallyUpdateGalleryRequest(
+        request = models.GalleriesPartialUpdateRequest(
             id=id,
-            body=models.PatchedGalleryCreate(
+            body=models.PatchedGallery(
                 project_id=project_id,
                 gallery_name=gallery_name,
                 picture_count=picture_count,
@@ -1062,9 +1091,10 @@ class Galleries(BaseSDK):
                 False,
                 True,
                 "json",
-                Optional[models.PatchedGalleryCreate],
+                Optional[models.PatchedGallery],
             ),
             allow_empty_value=None,
+            allowed_fields=["jwt_auth"],
             timeout_ms=timeout_ms,
         )
 
@@ -1080,7 +1110,7 @@ class Galleries(BaseSDK):
             hook_ctx=HookContext(
                 config=self.sdk_configuration,
                 base_url=base_url or "",
-                operation_id="partially_update_gallery",
+                operation_id="galleries_partial_update",
                 oauth2_scopes=None,
                 security_source=get_security_from_env(
                     self.sdk_configuration.security, models.Security
@@ -1095,7 +1125,7 @@ class Galleries(BaseSDK):
 
         response_data: Any = None
         if utils.match_response(http_res, "200", "application/json"):
-            return unmarshal_json_response(models.Gallery, http_res)
+            return unmarshal_json_response(models.GalleryOutput, http_res)
         if utils.match_response(http_res, "400", "application/json"):
             response_data = unmarshal_json_response(
                 errors.BadRequestErrorData, http_res
@@ -1135,7 +1165,9 @@ class Galleries(BaseSDK):
 
         Delete a gallery by ID.
 
-        :param id: A UUID string identifying this gallery.
+        If set, this operation will use `jwt_auth` from the global security.
+
+        :param id: Unique identifier of the resource.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
         :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
@@ -1169,6 +1201,7 @@ class Galleries(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             allow_empty_value=None,
+            allowed_fields=["jwt_auth"],
             timeout_ms=timeout_ms,
         )
 
@@ -1234,7 +1267,9 @@ class Galleries(BaseSDK):
 
         Delete a gallery by ID.
 
-        :param id: A UUID string identifying this gallery.
+        If set, this operation will use `jwt_auth` from the global security.
+
+        :param id: Unique identifier of the resource.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
         :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
@@ -1268,6 +1303,7 @@ class Galleries(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             allow_empty_value=None,
+            allowed_fields=["jwt_auth"],
             timeout_ms=timeout_ms,
         )
 

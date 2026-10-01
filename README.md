@@ -260,8 +260,8 @@ with Fstop(
 * [list_bookings](docs/sdks/bookings/README.md#list_bookings) - List all bookings
 * [create_booking](docs/sdks/bookings/README.md#create_booking) - Create a booking
 * [retrieve_booking](docs/sdks/bookings/README.md#retrieve_booking) - Retrieve a booking
-* [update_booking](docs/sdks/bookings/README.md#update_booking) - Update a booking
-* [partially_update_booking](docs/sdks/bookings/README.md#partially_update_booking) - Partially update a booking
+* [bookings_update](docs/sdks/bookings/README.md#bookings_update) - Update a booking
+* [bookings_partial_update](docs/sdks/bookings/README.md#bookings_partial_update) - Partially update a booking
 * [delete_booking](docs/sdks/bookings/README.md#delete_booking) - Delete a booking
 
 ### [Clients](docs/sdks/clients/README.md)
@@ -269,8 +269,8 @@ with Fstop(
 * [list_clients](docs/sdks/clients/README.md#list_clients) - List all clients
 * [create_client](docs/sdks/clients/README.md#create_client) - Create a client
 * [retrieve_client](docs/sdks/clients/README.md#retrieve_client) - Retrieve a client
-* [update_client](docs/sdks/clients/README.md#update_client) - Update a client
-* [partially_update_client](docs/sdks/clients/README.md#partially_update_client) - Partially update a client
+* [clients_update](docs/sdks/clients/README.md#clients_update) - Update a client
+* [clients_partial_update](docs/sdks/clients/README.md#clients_partial_update) - Partially update a client
 * [delete_client](docs/sdks/clients/README.md#delete_client) - Delete a client
 
 ### [Galleries](docs/sdks/galleries/README.md)
@@ -278,8 +278,8 @@ with Fstop(
 * [list_galleries](docs/sdks/galleries/README.md#list_galleries) - List all galleries
 * [create_gallery](docs/sdks/galleries/README.md#create_gallery) - Create a gallery
 * [retrieve_gallery](docs/sdks/galleries/README.md#retrieve_gallery) - Retrieve a gallery
-* [update_gallery](docs/sdks/galleries/README.md#update_gallery) - Update a gallery
-* [partially_update_gallery](docs/sdks/galleries/README.md#partially_update_gallery) - Partially update a gallery
+* [galleries_update](docs/sdks/galleries/README.md#galleries_update) - Update a gallery
+* [galleries_partial_update](docs/sdks/galleries/README.md#galleries_partial_update) - Partially update a gallery
 * [delete_gallery](docs/sdks/galleries/README.md#delete_gallery) - Delete a gallery
 
 ### [Projects](docs/sdks/projects/README.md)
@@ -287,8 +287,8 @@ with Fstop(
 * [list_projects](docs/sdks/projects/README.md#list_projects) - List all projects
 * [create_project](docs/sdks/projects/README.md#create_project) - Create a project
 * [retrieve_project](docs/sdks/projects/README.md#retrieve_project) - Retrieve a project
-* [update_project](docs/sdks/projects/README.md#update_project) - Update a project
-* [partially_update_project](docs/sdks/projects/README.md#partially_update_project) - Partially update a project
+* [projects_update](docs/sdks/projects/README.md#projects_update) - Update a project
+* [projects_partial_update](docs/sdks/projects/README.md#projects_partial_update) - Partially update a project
 * [delete_project](docs/sdks/projects/README.md#delete_project) - Delete a project
 
 ### [Token](docs/sdks/token/README.md)

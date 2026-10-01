@@ -7,8 +7,8 @@
 * [list_projects](#list_projects) - List all projects
 * [create_project](#create_project) - Create a project
 * [retrieve_project](#retrieve_project) - Retrieve a project
-* [update_project](#update_project) - Update a project
-* [partially_update_project](#partially_update_project) - Partially update a project
+* [projects_update](#projects_update) - Update a project
+* [projects_partial_update](#projects_partial_update) - Partially update a project
 * [delete_project](#delete_project) - Delete a project
 
 ## list_projects
@@ -42,7 +42,7 @@ with Fstop(
 
 ### Response
 
-**[List[models.Project]](../../models/.md)**
+**[List[models.ProjectOutput]](../../models/.md)**
 
 ### Errors
 
@@ -139,7 +139,7 @@ with Fstop(
 
 ### Response
 
-**[models.Project](../../models/project.md)**
+**[models.ProjectOutput](../../models/projectoutput.md)**
 
 ### Errors
 
@@ -176,12 +176,12 @@ with Fstop(
 
 | Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
 | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| `id`                                                                | *str*                                                               | :heavy_check_mark:                                                  | A UUID string identifying this project.                             |
+| `id`                                                                | *str*                                                               | :heavy_check_mark:                                                  | Unique identifier of the resource.                                  |
 | `retries`                                                           | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)    | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
 
 ### Response
 
-**[models.Project](../../models/project.md)**
+**[models.ProjectOutput](../../models/projectoutput.md)**
 
 ### Errors
 
@@ -191,13 +191,13 @@ with Fstop(
 | errors.NotFoundError     | 404                      | application/json         |
 | errors.FstopDefaultError | 4XX, 5XX                 | \*/\*                    |
 
-## update_project
+## projects_update
 
-Update an existing project.
+Update a project by ID.
 
-### Example Usage: BadRequest
+### Example Usage
 
-<!-- UsageSnippet language="python" operationID="update_project" method="put" path="/api/projects/{id}/" example="BadRequest" -->
+<!-- UsageSnippet language="python" operationID="projects_update" method="put" path="/api/projects/{id}/" -->
 ```python
 from fstop import Fstop
 import os
@@ -207,61 +207,7 @@ with Fstop(
     jwt_auth=os.getenv("FSTOP_JWT_AUTH", ""),
 ) as f_client:
 
-    res = f_client.projects.update_project(id="6172f420-cc0c-45f3-a081-08ad7c9b021f", project_name="<value>", project_type="event", client_id="e6cdc396-9282-4d2d-ae93-8e844765ecc5")
-
-    # Handle response
-    print(res)
-
-```
-### Example Usage: NotFound
-
-<!-- UsageSnippet language="python" operationID="update_project" method="put" path="/api/projects/{id}/" example="NotFound" -->
-```python
-from fstop import Fstop
-import os
-
-
-with Fstop(
-    jwt_auth=os.getenv("FSTOP_JWT_AUTH", ""),
-) as f_client:
-
-    res = f_client.projects.update_project(id="a1d677b4-44ba-425a-95f9-73c1ecfee2e9", project_name="<value>", project_type="event", client_id="e6cdc396-9282-4d2d-ae93-8e844765ecc5")
-
-    # Handle response
-    print(res)
-
-```
-### Example Usage: SuccessfulResponse
-
-<!-- UsageSnippet language="python" operationID="update_project" method="put" path="/api/projects/{id}/" example="SuccessfulResponse" -->
-```python
-from fstop import Fstop
-import os
-
-
-with Fstop(
-    jwt_auth=os.getenv("FSTOP_JWT_AUTH", ""),
-) as f_client:
-
-    res = f_client.projects.update_project(id="03bc43a0-a09d-4f68-8072-1fe6aed2ed5e", project_name="<value>", project_type="event", client_id="e6cdc396-9282-4d2d-ae93-8e844765ecc5")
-
-    # Handle response
-    print(res)
-
-```
-### Example Usage: Unauthorized
-
-<!-- UsageSnippet language="python" operationID="update_project" method="put" path="/api/projects/{id}/" example="Unauthorized" -->
-```python
-from fstop import Fstop
-import os
-
-
-with Fstop(
-    jwt_auth=os.getenv("FSTOP_JWT_AUTH", ""),
-) as f_client:
-
-    res = f_client.projects.update_project(id="2ffca99c-68c9-4c16-9d48-365d7ac052f2", project_name="<value>", project_type="event", client_id="e6cdc396-9282-4d2d-ae93-8e844765ecc5")
+    res = f_client.projects.projects_update(id="5c1e2a68-61ed-4eb8-a1c3-5cc03b9763f1", project_name="<value>", project_type="party", client_id="7e984de6-a6c3-43b4-9dff-7eb9b88b7616")
 
     # Handle response
     print(res)
@@ -272,7 +218,7 @@ with Fstop(
 
 | Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
 | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `id`                                                                                                     | *str*                                                                                                    | :heavy_check_mark:                                                                                       | A UUID string identifying this project.                                                                  |
+| `id`                                                                                                     | *str*                                                                                                    | :heavy_check_mark:                                                                                       | Unique identifier of the resource.                                                                       |
 | `project_name`                                                                                           | *str*                                                                                                    | :heavy_check_mark:                                                                                       | Name of the project                                                                                      |
 | `project_type`                                                                                           | [models.ProjectTypeEnum](../../models/projecttypeenum.md)                                                | :heavy_check_mark:                                                                                       | Type of project (event, portrait, or party)<br/><br/>* `event` - event<br/>* `portrait` - portrait<br/>* `party` - party |
 | `client_id`                                                                                              | *str*                                                                                                    | :heavy_check_mark:                                                                                       | UUID of the client for this project                                                                      |
@@ -280,7 +226,7 @@ with Fstop(
 
 ### Response
 
-**[models.Project](../../models/project.md)**
+**[models.ProjectOutput](../../models/projectoutput.md)**
 
 ### Errors
 
@@ -291,13 +237,13 @@ with Fstop(
 | errors.NotFoundError     | 404                      | application/json         |
 | errors.FstopDefaultError | 4XX, 5XX                 | \*/\*                    |
 
-## partially_update_project
+## projects_partial_update
 
-Partially update an existing project.
+Partially update a project by ID.
 
 ### Example Usage
 
-<!-- UsageSnippet language="python" operationID="partially_update_project" method="patch" path="/api/projects/{id}/" -->
+<!-- UsageSnippet language="python" operationID="projects_partial_update" method="patch" path="/api/projects/{id}/" -->
 ```python
 from fstop import Fstop
 import os
@@ -307,7 +253,7 @@ with Fstop(
     jwt_auth=os.getenv("FSTOP_JWT_AUTH", ""),
 ) as f_client:
 
-    res = f_client.projects.partially_update_project(id="699e6a41-ae9b-4bbd-b956-4f914c7a54a3")
+    res = f_client.projects.projects_partial_update(id="dbc062af-47b2-40c4-9ea4-1787d6a9e9cb")
 
     # Handle response
     print(res)
@@ -318,7 +264,7 @@ with Fstop(
 
 | Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
 | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `id`                                                                                                     | *str*                                                                                                    | :heavy_check_mark:                                                                                       | A UUID string identifying this project.                                                                  |
+| `id`                                                                                                     | *str*                                                                                                    | :heavy_check_mark:                                                                                       | Unique identifier of the resource.                                                                       |
 | `project_name`                                                                                           | *Optional[str]*                                                                                          | :heavy_minus_sign:                                                                                       | Name of the project                                                                                      |
 | `project_type`                                                                                           | [Optional[models.ProjectTypeEnum]](../../models/projecttypeenum.md)                                      | :heavy_minus_sign:                                                                                       | Type of project (event, portrait, or party)<br/><br/>* `event` - event<br/>* `portrait` - portrait<br/>* `party` - party |
 | `client_id`                                                                                              | *Optional[str]*                                                                                          | :heavy_minus_sign:                                                                                       | UUID of the client for this project                                                                      |
@@ -326,7 +272,7 @@ with Fstop(
 
 ### Response
 
-**[models.Project](../../models/project.md)**
+**[models.ProjectOutput](../../models/projectoutput.md)**
 
 ### Errors
 
@@ -363,7 +309,7 @@ with Fstop(
 
 | Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
 | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| `id`                                                                | *str*                                                               | :heavy_check_mark:                                                  | A UUID string identifying this project.                             |
+| `id`                                                                | *str*                                                               | :heavy_check_mark:                                                  | Unique identifier of the resource.                                  |
 | `retries`                                                           | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)    | :heavy_minus_sign:                                                  | Configuration to override the default retry behavior of the client. |
 
 ### Errors
