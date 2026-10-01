@@ -15,7 +15,7 @@ targets:
         sourceRevisionDigest: sha256:c5f36107f709a7b517210a059d3b8e21f2deb78925506e2fa138f30b3c8bd50e
         sourceBlobDigest: sha256:bacf752b80df96f28667bd249e6bfb067c6c184605bbfbf73d340055c8b9a77d
         codeSamplesNamespace: fstop-python-code-samples
-        codeSamplesRevisionDigest: sha256:36f35ee7434e352ab23aee5cd6db09c35f2e28697024dbf70cebe441a3aa7f21
+        codeSamplesRevisionDigest: sha256:7383b24e07f14bceb0c0e43189ba7036b8cfeb293d9c2e1da7087bfd1f90ff0a
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest
