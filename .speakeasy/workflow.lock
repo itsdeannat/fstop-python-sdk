@@ -1,4 +1,4 @@
-speakeasyVersion: 1.794.0
+speakeasyVersion: 1.800.0
 sources:
     Fstop:
         sourceNamespace: fstop
@@ -15,7 +15,7 @@ targets:
         sourceRevisionDigest: sha256:b1e4d8d98fe21171845b01a8308af6c910393e97346cbe2c80f80a67bb97556c
         sourceBlobDigest: sha256:b8e3d05be60b600d47d78934607c26f12071d752bb03d62e54fd960d0566bd7b
         codeSamplesNamespace: fstop-python-code-samples
-        codeSamplesRevisionDigest: sha256:1bbd22b411e6186025e0f0831f5924419899e40b1e8ca010cd5c5f46d1c588e8
+        codeSamplesRevisionDigest: sha256:fc096a78bf19a31cb840864e23130b2e692859bcbad5316dfda9c2b3185fc9cb
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest

@@ -34,7 +34,7 @@ generation:
     generateNewTests: true
     skipResponseBodyAssertions: false
 python:
-  version: 0.0.3
+  version: 0.1.0
   additionalDependencies:
     dev: {}
     main: {}
@@ -69,6 +69,7 @@ python:
   flatteningOrder: parameters-first
   forwardCompatibleEnumsByDefault: true
   forwardCompatibleUnionsByDefault: tagged-only
+  httpClientLibrary: httpx
   imports:
     option: openapi
     paths:
